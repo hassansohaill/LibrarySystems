@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kevin\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\OnlineLibrary.csproj": {}
+    "C:\\Users\\kevin\\OneDrive\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\OnlineLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kevin\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\OnlineLibrary.csproj": {
+    "C:\\Users\\kevin\\OneDrive\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\OnlineLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\OnlineLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\OnlineLibrary.csproj",
         "projectName": "OnlineLibrary",
-        "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\OnlineLibrary.csproj",
-        "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\OneDrive\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\OnlineLibrary.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\OneDrive\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
