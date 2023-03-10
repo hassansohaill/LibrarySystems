@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ghWC8N/8zrnoqPFm8FN0ZL02xQNFjBtbZR5nx5ciS18UaKTQbs3goFLKy1iT9ZGxOyTriLGwD1+5Z1XXufoD8w==",
+  "dgSpecHash": "S/P1pDqCyrHRSRHv513SLP5+BJ50WjiCB/RSmalYfWSeeCK45SeYFxfQpamlO/reGO3rlHFNjfcBhzY3vCv8eQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kevin\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibraryInterface\\OnlineLibraryInterface\\OnlineLibraryInterface.csproj",
+  "projectFilePath": "C:\\Users\\Kevin\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\OnlineLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kevin\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.3\\microsoft.aspnetcore.authorization.7.0.3.nupkg.sha512",
     "C:\\Users\\Kevin\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.3\\microsoft.aspnetcore.components.7.0.3.nupkg.sha512",

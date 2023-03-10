@@ -1806,11 +1806,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibraryInterface\\OnlineLibraryInterface\\OnlineLibraryInterface.csproj",
-      "projectName": "OnlineLibraryInterface",
-      "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibraryInterface\\OnlineLibraryInterface\\OnlineLibraryInterface.csproj",
+      "projectUniqueName": "C:\\Users\\Kevin\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\OnlineLibrary.csproj",
+      "projectName": "OnlineLibrary",
+      "projectPath": "C:\\Users\\Kevin\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\OnlineLibrary.csproj",
       "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibraryInterface\\OnlineLibraryInterface\\obj\\",
+      "outputPath": "C:\\Users\\Kevin\\Documents\\GitHub\\OnlineLibrarySystem\\OnlineLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
