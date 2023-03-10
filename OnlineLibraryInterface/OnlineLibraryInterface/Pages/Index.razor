@@ -1,9 +1,86 @@
-﻿@page "/"
+@page "/"
 
-<PageTitle>Index</PageTitle>
+<!DOCTYPE html>
+<html>
+    <head>
+        <PageTitle>Library Interfce</PageTitle>
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <style>
+            .subscribe-button {
+                background-color: rgb(200,0,0);
+                color: white;
+                border: none;
+                height: 36px;
+                width: 105px;
+                border-radius: 2px;
+                cursor: pointer;
+                margin-right: 8px;
+            }
 
-<h1>Hello, world!</h1>
+                .subscribe-button:hover {
+                    opacity: 0.8;
+                }
 
-Welcome to your new app.
+                .subscribe-button:active {
+                    opacity: 0.4;
+                }
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+            .join-button {
+                background-color: white;
+                border-color: rgb(41, 118, 221);
+                border-style: solid;
+                border-width: 1px;
+                color: rgb(41, 118, 221);
+                height: 36px;
+                width: 62px;
+                border-radius: 2px;
+                cursor: pointer;
+                vertical-align: bottom;
+            }
+
+            .tweet-button {
+                background-color: rgb(2, 158, 255);
+                border: none;
+                color: white;
+                height: 36px;
+                width: 70px;
+                border-radius: 18px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 15px;
+                margin-left: 8px;
+            }
+        </style>
+
+        <button class="subscribe-button">
+            SUBSCRIBE
+        </button>
+
+        <button class="join-button">
+            JOIN
+        </button>
+
+        <button class="tweet-button">
+            Tweet
+        </button>
+
+
+
+
+        <h1>Hello, world!</h1>
+
+        Welcome to your new app.
+
+        <SurveyPrompt Title="How is Blazor working for you?" />
+
+    </body>
+</html>
+
+
