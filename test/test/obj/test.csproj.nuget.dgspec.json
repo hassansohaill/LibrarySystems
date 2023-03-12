@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jonathan\\Documents\\School\\Cpsc481\\LibSystem\\test\\test\\test.csproj": {}
+    "C:\\Users\\Jonathan\\Documents\\School\\Cpsc481\\Ols\\test\\test\\test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jonathan\\Documents\\School\\Cpsc481\\LibSystem\\test\\test\\test.csproj": {
+    "C:\\Users\\Jonathan\\Documents\\School\\Cpsc481\\Ols\\test\\test\\test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jonathan\\Documents\\School\\Cpsc481\\LibSystem\\test\\test\\test.csproj",
+        "projectUniqueName": "C:\\Users\\Jonathan\\Documents\\School\\Cpsc481\\Ols\\test\\test\\test.csproj",
         "projectName": "test",
-        "projectPath": "C:\\Users\\Jonathan\\Documents\\School\\Cpsc481\\LibSystem\\test\\test\\test.csproj",
+        "projectPath": "C:\\Users\\Jonathan\\Documents\\School\\Cpsc481\\Ols\\test\\test\\test.csproj",
         "packagesPath": "C:\\Users\\Jonathan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jonathan\\Documents\\School\\Cpsc481\\LibSystem\\test\\test\\obj\\",
+        "outputPath": "C:\\Users\\Jonathan\\Documents\\School\\Cpsc481\\Ols\\test\\test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jonathan\\AppData\\Roaming\\NuGet\\NuGet.Config",

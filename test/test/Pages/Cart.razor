@@ -6,14 +6,13 @@
 <head>
     <PageTitle>My Library Cart</PageTitle>
     <link rel="stylesheet" href="~/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/Cart.css" />
+    <link rel="stylesheet" href="~/css/Cart.css" />
 </head>
 
 
 
 <body>
      @* PUT HEADER TASKBAR THING HERE*@
-
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
@@ -24,8 +23,10 @@
                             <td>
                                 <img src="images/Book9.png" alt ="Book Cover" height="120" />
                             </td>
-                            <td class="book-title">Shadow and Bone</td>
-                            <td>Leigh Bardugo</td>
+                            <td class="book-details"> 
+                                <p>Title: Shadow and Bone</p>
+                                <p>Author: Leigh Bardugo</p>
+                            </td>
                             <td>Paperback</td>
                             <td>Return Deadline: 03/12/2023</td>
                             <td>
@@ -35,16 +36,23 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-lg-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Order Summary</h5>
-                        <button class="btn btn-primary">Signout</button>
-                    </div>
-                </div>
-            </div>
+
+
+    <div class="col-lg-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Order Summary</h5>
+          <p class="card-text">Total Number of Books: 3</p>
+          <p class="card-text">Nearest Return Date: 03/12/2023</p>
+          <button class="btn btn-primary">Complete Signout</button>
         </div>
+      </div>
     </div>
 
 
+
+
+
+        </div>
+    </div>
 </body>
