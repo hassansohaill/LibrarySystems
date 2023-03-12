@@ -1,0 +1,71 @@
+﻿@page "/fetchdata"
+@inject HttpClient Http
+
+<PageTitle>LoginPage</PageTitle>
+
+
+
+<div class="loginBox">
+    <div class = "loginLogo"> 
+        <p>LOGIN</p>
+    </div>
+    <div class="username">
+        <form>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+        </form>
+    </div>
+
+    <div class="password">
+        <form>
+            <label for="password">Password:</label><br>
+            <input type="text" id="pasword" name="password"><br>
+        </form>
+    </div>
+
+    <div class="submitButton">
+            <button>
+                <h>Submit</h>
+            </button>
+    </div>
+
+    <div class = "links">
+        
+        <div class="forgetLink">
+            <a href=#home>Forgot Password?</a> 
+        </div>
+
+        <div class="createAccount">
+           <a href=#home>New? Click here to create an account!</a>
+        </div>
+    </div>
+        
+</div>
+
+<style>
+    .links{
+        margin-top: 20px;
+    }
+    .loginLogo{
+        text-align: center;
+    }
+
+    .username {
+        margin-top: 30px;
+    }
+
+    .password{
+        margin-top: 30px;
+    }
+
+    .submitButton{
+        margin-top: 20px;
+    }
+
+    .loginBox {
+        text-align:center;
+    }
+
+</style>
+
+

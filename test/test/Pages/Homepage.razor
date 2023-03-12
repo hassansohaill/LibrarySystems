@@ -1,0 +1,123 @@
+﻿@page "/counter"
+
+<!DOCTYPE html>
+
+
+<head>
+    <PageTitle>Library Interface</PageTitle>
+</head>
+  
+
+<body>
+    <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#cart">My Cart</a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                Log-In
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </div>
+
+    <input class="search" type="text" placeholder=" Search">
+    <div>
+        <div class="Title">
+            Popular
+        </div>
+        <div class="Link">
+            <a href="url">Link text</a>
+        </div>
+    </div>
+  
+    <div>
+            <img class="book1" src="images/Book1.png" />
+            <img class="book1" src="images/Book1.png" />
+            <img class="book1" src="images/Book1.png" />
+            <img class="book1" src="images/Book1.png" />  
+
+    </div>
+    
+    <style>
+        .Link {
+            display: inline-block;
+            justify-content: center;
+        }
+        .book1 {
+            width: 150px;
+            display: inline-block;
+        }
+        .Title {
+            font-size: 30px;
+            font-weight: bold;
+            display: inline-block
+        }
+        .menu {
+            overflow: hidden;
+            background-color: lightgrey;
+            font-family: Arial;
+        }
+        .menu a {
+            float: left;
+            font-size: 16px;
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 20px;
+            background-color: lightgray;
+            font-family: inherit; /* Important for vertical align on mobile phones */
+            margin: 0; /* Important for vertical align on mobile phones */
+        }
+        .menu a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: black;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .search {
+            display: block;
+            margin: auto;
+            width: 45%;
+            font-size: 20px;
+            justify-content: center;
+            margin-top: 25px;
+            border-radius: 15px;
+            border: 1px solid;
+        }
+    </style>
+</body>
