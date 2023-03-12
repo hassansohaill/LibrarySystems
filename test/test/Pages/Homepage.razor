@@ -1,4 +1,4 @@
-@page "/counter"
+﻿@page "/counter"
 
 <!DOCTYPE html>
 
@@ -9,18 +9,30 @@
   
 
 <body>
-    <div class="header">
-        <button class="link1"> Home </button>
-        <a href="#cart" class="link1">My Cart</a>
-        <div class="dropdown">
-            <button class="link1"> Tasks </button>
-            <div class="dropdown-menu">
-                Dropdown Content
+    <nav>
+        <a class="links" href="#">Home</a>
+        <a class="links" href="#">My Bag</a>
+        <div class="dropdown-menu">
+            <button class="menu-btn">My Account </button>
+            <div class="menu-content">
+                <a class="links-hidden" href="#">Profile</a>
+                <a class="links-hidden" href="#">My Books</a>
+                <a class="links-hidden" href="#">On Hold</a>
+                <a class="links-hidden" href="#">Payments</a>
+                <a class="links-hidden" href="#">History</a>
             </div>
         </div>
-
-        <button class="link1"> Login </button>
-    </div>
+        <div class="dropdown-menu">
+            <button class="menu-btn">Login </button>
+            <div class="menu-content">
+                <input class="login" type="text" placeholder="Library Card">
+                <input class="login" type="text" placeholder="PIN">
+                <u><span style="color:blue; margin-left:3px;">Forgot Password?</span></u>
+                <u><span style="color: blue; margin-left:3px;">Create Account</span></u>
+                <a class="links-hidden1" href="#">Login</a>
+            </div>
+        </div>
+    </nav>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -319,39 +331,83 @@
             border: 1px solid;
         }
 
-        .header {
-            background-color: #F3F3F3;
-            display: flex;
-            align-items: baseline;
-            padding: .5rem;
-            gap: 1rem;
-        }
-
-        .link1 {
-            background-color: none;
+        .menu-btn {
+            color: white;
+            background-color: #5990ab;
+            font-size: 18px;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             border: none;
-            text-decoration: none;
-            align-items: baseline;
-            color: #777;
-            font-family: inherit;
-            font-size: inherit;
-            cursor: pointer;
-            padding: 0;
-        }
-
-        .link1:hover {
-            color: black;
         }
 
         .dropdown-menu {
-            position: absolute;
-            left: 0;
-            top: calc(100% + .25rem);
-            background-color: white;
-            padding: .75rem;
-            box-shadow: 0 2px 5px 0 rgba(0,0,0,.1)
+            position: relative;
+            display: inline-block;
+            background-color: #5990ab;
+            border: none;
         }
-        
+
+        .menu-content {
+            display: none;
+            position: absolute;
+            background-color: #5990ab;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        nav {
+            background-color: #5990ab;
+        }
+
+        .links,
+        .links-hidden {
+            display: inline-block;
+            color: white;
+            padding: 10px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .links-hidden, .links-hidden1 {
+            display: block;
+        }
+
+        .links {
+            display: inline-block;
+        }
+
+        .links-hidden:hover,.links-hidden1:hover,
+        .links:hover {
+            background-color: #becdd1;
+            color: white;
+        }
+
+        .dropdown-menu:hover .menu-content {
+            display: block;
+        }
+
+        .dropdown-menu:hover .menu-btn {
+            background-color: #5990ab;
+        }
+
+        .login {
+            margin-left: 3px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            width:153px;
+        }
+
+        .links-hidden1 {
+            display: inline-block;
+            color: white;
+            padding: 0px 5px;
+            background-color: #69747a;
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 3px;
+            margin-bottom: 3px;
+
+        }
     </style>
 </body>
-
