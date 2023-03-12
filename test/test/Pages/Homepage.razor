@@ -1,4 +1,4 @@
-﻿@page "/counter"
+@page "/counter"
 
 <!DOCTYPE html>
 
@@ -9,115 +9,349 @@
   
 
 <body>
-    <div class="menu">
-        <a href="#home">Home</a>
-        <a href="#cart">My Cart</a>
+    <div class="header">
+        <button class="link1"> Home </button>
+        <a href="#cart" class="link1">My Cart</a>
         <div class="dropdown">
-            <button class="dropbtn">
-                Log-In
-                <i class="fa fa-caret-down"></i>
+            <button class="link1"> Tasks </button>
+            <div class="dropdown-menu">
+                Dropdown Content
+            </div>
+        </div>
+
+        <button class="link1"> Login </button>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div style="
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        ">
+        <div>
+            <input class="search" type="text" placeholder="Search...">
+        </div>
+        <div>
+            <button style="
+                opacity: 75%;
+                height: 34px;
+                border: 1px solid;
+            ">Search
             </button>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+        </div>
+    </div>
+    
+    <div class="Header">
+        <div class="Title">
+            Popular
+        </div>
+        <div class="Link>">
+            <a href="url">See All ></a>
+        </div>
+    </div>
+
+    <div class="bookrow">
+        <div>
+            <img class="book1" src="images/Book1.png" />
+            <div style="
+                color: #007185;
+                width: 150px;
+                font-size:15px">
+                <u>Can't Hurt Me</u>
+            </div>
+            <div style="
+                width: 150px;
+                font-size:12px">
+                by David Goggins
+            </div>
+            <div style="
+                color: green;
+                width: 150px;
+                font-size:12px">
+                Available
+            </div>
+        </div>
+
+        <div>
+            <img class="book1" src="images/Book2.png" />
+            <div style="
+                color: #007185;
+                width: 150px;
+                font-size:15px">
+                <u>My Secret Sister</u>
+            </div>
+            <div style="
+                width: 150px;
+                font-size:12px">
+                by Lauren Westwood
+            </div>
+            <div style="
+                color: green;
+                width: 150px;
+                font-size:12px">
+                Available
+            </div>
+        </div>
+
+        <div>
+            <img class="book1" src="images/Book3.png" />
+            <div style="
+                color: #007185;
+                width: 150px;
+                font-size:15px">
+                <u>The Fifth Juror</u>
+            </div>
+            <div style="
+                width: 150px;
+                font-size:12px">
+                by Lori Lacefield
+            </div>
+            <div style="
+                color: red;
+                width: 150px;
+                font-size:12px">
+                Unavailable
+            </div>
+        </div>
+        <div>
+            <img class="book1" src="images/Book4.png" />
+            <div style="
+                color: #007185;
+                width: 150px;
+                font-size:15px">
+                <u>Mad Honey</u>
+            </div>
+            <div style="
+                width: 150px;
+                font-size:12px">
+                by Jennifer Finney Boylan
+            </div>
+            <div style="
+                color: green;
+                width: 150px;
+                font-size:12px">
+                Available
+            </div>
+        </div>
+
+        <div>
+            <img class="book1" src="images/Book5.png" />
+            <div style="
+                color: #007185;
+                width: 150px;
+                font-size:15px">
+                <u>Empath</u>
+            </div>
+            <div style="
+                width: 150px;
+                font-size:12px">
+                by Judy Dyer
+            </div>
+            <div style="
+                color: red;
+                width: 150px;
+                font-size:12px">
+                Unavailable
             </div>
         </div>
     </div>
 
-    <input class="search" type="text" placeholder=" Search">
-    <div>
-        <div class="Title">
-            Popular
-        </div>
-        <div class="Link">
-            <a href="url">Link text</a>
-        </div>
-    </div>
-  
-    <div>
-            <img class="book1" src="images/Book1.png" />
-            <img class="book1" src="images/Book1.png" />
-            <img class="book1" src="images/Book1.png" />
-            <img class="book1" src="images/Book1.png" />  
 
+    <div class="Header">
+        <div class="Title1">
+            New Releases
+        </div>
+        <div class="Link>">
+            <a href="url">See All ></a>
+        </div>
     </div>
-    
+
+    <div class="bookrow">
+        <div>
+            <img class="book1" src="images/Book6.png" />
+            <div style="
+                color: #007185;
+                width: 150px;
+                font-size:15px">
+                <u>Never Never</u>
+            </div>
+            <div style="
+                width: 150px;
+                font-size:12px">
+                by Collen Hoover
+            </div>
+            <div style="
+                color: red;
+                width: 150px;
+                font-size:12px">
+                Unavailable
+            </div>
+        </div>
+
+        <div>
+            <img class="book1" src="images/Book7.png" />
+            <div style="
+                color: #007185;
+                width: 150px;
+                font-size:15px">
+                <u>Dog Man: Twenty Thousand Fleas Under the Sea</u>
+            </div>
+            <div style="
+                width: 150px;
+                font-size:12px">
+                by Dav Pilkey
+            </div>
+            <div style="
+                color: green;
+                width: 150px;
+                font-size:12px">
+                Available
+            </div>
+        </div>
+
+        <div>
+            <img class="book1" src="images/Book8.png" />
+            <div style="
+                color: #007185;
+                width: 150px;
+                font-size:15px">
+                <u>Old Babies in the Woods: Stories</u>
+            </div>
+            <div style="
+                width: 150px;
+                font-size:12px">
+                by Margaret Atwood
+            </div>
+            <div style="
+                color: green;
+                width: 150px;
+                font-size:12px">
+                Available
+            </div>
+        </div>
+
+        <div>
+            <img class="book1" src="images/Book9.png" />
+            <div style="
+                color: #007185;
+                width: 150px;
+                font-size:15px">
+                <u>Outlive</u>
+            </div>
+            <div style="
+                width: 150px;
+                font-size:12px">
+                by Peter Attied, MD
+            </div>
+            <div style="
+                color: green;
+                width: 150px;
+                font-size:12px">
+                Available
+            </div>
+        </div>
+
+        <div>
+            <img class="book1" src="images/Book10.png" />
+            <div style="
+                color: #007185;
+                width: 150px;
+                font-size:15px">
+                <u>Dragon Masters: Cure of the Shadow Dragon</u>
+            </div>
+            <div style="
+                width: 150px;
+                font-size:12px">
+                by Tracy West
+            </div>
+            <div style="
+                color: red;
+                width: 150px;
+                font-size:12px">
+                Unvailable
+            </div>
+        </div>
+    </div>
+
     <style>
-        .Link {
-            display: inline-block;
-            justify-content: center;
+        .bookrow {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
+
+        .Header {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+
+        .Link {
+            flex: 1;
+        }
+
         .book1 {
             width: 150px;
+            height: 250px;
+            object-fit: cover;
             display: inline-block;
+            margin-right: 20px;
         }
+
         .Title {
             font-size: 30px;
             font-weight: bold;
-            display: inline-block
         }
-        .menu {
-            overflow: hidden;
-            background-color: lightgrey;
-            font-family: Arial;
+
+        .Title1 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 10px;
         }
-        .menu a {
-            float: left;
-            font-size: 16px;
-            color: black;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        .dropdown {
-            float: left;
-            overflow: hidden;
-        }
-        .dropdown .dropbtn {
-            font-size: 16px;
-            border: none;
-            outline: none;
-            color: black;
-            padding: 14px 20px;
-            background-color: lightgray;
-            font-family: inherit; /* Important for vertical align on mobile phones */
-            margin: 0; /* Important for vertical align on mobile phones */
-        }
-        .menu a:hover, .dropdown:hover .dropbtn {
-            background-color: red;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: black;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-        .dropdown-content a:hover {
-            background-color: black;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+
         .search {
-            display: block;
-            margin: auto;
-            width: 45%;
+            width: 224.5px;
             font-size: 20px;
-            justify-content: center;
-            margin-top: 25px;
-            border-radius: 15px;
             border: 1px solid;
         }
+
+        .header {
+            background-color: #F3F3F3;
+            display: flex;
+            align-items: baseline;
+            padding: .5rem;
+            gap: 1rem;
+        }
+
+        .link1 {
+            background-color: none;
+            border: none;
+            text-decoration: none;
+            align-items: baseline;
+            color: #777;
+            font-family: inherit;
+            font-size: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .link1:hover {
+            color: black;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            left: 0;
+            top: calc(100% + .25rem);
+            background-color: white;
+            padding: .75rem;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.1)
+        }
+        
     </style>
 </body>
+
