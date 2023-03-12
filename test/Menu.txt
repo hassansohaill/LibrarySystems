@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+    <html>
+
+    <head>
+    </head>
+
+    <body>
+        <nav>
+            <a class="links" href="#">Home</a>
+            <a class="links" href="#">My Bag</a>
+            <div class="dropdown-menu">
+                <button class="menu-btn">My Account </button>
+                <div class="menu-content">
+                    <a class="links-hidden" href="#">Profile</a>
+                    <a class="links-hidden" href="#">My Books</a>
+                    <a class="links-hidden" href="#">On Hold</a>
+                    <a class="links-hidden" href="#">Payments</a>
+                    <a class="links-hidden" href="#">History</a>
+                </div>
+            </div>
+            <div class="dropdown-menu">
+                <button class="menu-btn">Login </button>
+                <div class="menu-content">
+                    <input class="login" type="text" placeholder="Library Card">
+                    <input class="login" type="text" placeholder="PIN">
+                    <u><span style="color:blue; margin-left:3px;">Forgot Password?</span></u>
+                    <u><span style="color: blue; margin-left:3px;">Create Account</span></u>
+                    <a class="links-hidden1" href="#">Login</a>
+                </div>
+            </div>
+        </nav>
+    </body>
+
+    <style>
+    .menu-btn{
+        color: white;
+        background-color: #5990ab;
+        font-size: 18px;
+        font-weight: bolder;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: none;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        display: inline-block;
+        background-color: #5990ab;
+        border: none;
+    }
+
+    .menu-content {
+        display: none;
+        position: absolute;
+        background-color: #5990ab;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    nav {
+        background-color: #5990ab;
+    }
+
+    .links,
+    .links-hidden {
+        display: inline-block;
+        color: white;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .links-hidden, .links-hidden1 {
+        display: block;
+    }
+
+    .links {
+        display: inline-block;
+    }
+
+    .links-hidden:hover, .links-hidden1:hover,
+    .links:hover {
+        background-color: #becdd1;
+        color: white;
+    }
+
+    .dropdown-menu:hover .menu-content {
+        display: block;
+    }
+
+    .dropdown-menu:hover .menu-btn {
+        background-color: #5990ab;
+    }
+
+    .login {
+        margin-left: 3px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        width: 153px;
+    }
+
+    .links-hidden1 {
+        display: inline-block;
+        color: white;
+        padding: 0px 5px;
+        background-color: #69747a;
+        text-decoration: none;
+        font-size: 16px;
+        margin-left: 3px;
+        margin-bottom: 3px;
+    }
+    </style>
+
+    </html>
