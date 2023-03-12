@@ -1,0 +1,50 @@
+﻿@page "/Cart"
+
+<!DOCTYPE html>
+
+
+<head>
+    <PageTitle>My Library Cart</PageTitle>
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/Cart.css" />
+</head>
+
+
+
+<body>
+     @* PUT HEADER TASKBAR THING HERE*@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <h1 id="cart-title">Your Cart</h1>
+                <table class="table">
+                    <tbody>
+                        <tr class="cart-item">
+                            <td>
+                                <img src="images/Book9.png" alt ="Book Cover" height="120" />
+                            </td>
+                            <td class="book-title">Shadow and Bone</td>
+                            <td>Leigh Bardugo</td>
+                            <td>Paperback</td>
+                            <td>Return Deadline: 03/12/2023</td>
+                            <td>
+                                <button>Remove</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Order Summary</h5>
+                        <button class="btn btn-primary">Signout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>

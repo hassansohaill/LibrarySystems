@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\css\Cart.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Include="Pages\Counter.razor" />
   </ItemGroup>
 
