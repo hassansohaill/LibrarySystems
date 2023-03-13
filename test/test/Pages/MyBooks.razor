@@ -1,0 +1,228 @@
+﻿@page "/myBooks"
+
+<PageTitle>myBooks</PageTitle>
+
+<nav>
+    <a class="links" href="#">Home</a>
+    <a class="links" href="#">My Bag</a>
+    <div class="dropdown-menu">
+        <button class="menu-btn">My Account </button>
+        <div class="menu-content">
+            <a class="links-hidden" href="#">Profile</a>
+            <a class="links-hidden" href="#">My Books</a>
+            <a class="links-hidden" href="#">On Hold</a>
+            <a class="links-hidden" href="#">Payments</a>
+            <a class="links-hidden" href="#">History</a>
+        </div>
+    </div>
+    <div class="dropdown-menu">
+        <button class="menu-btn">Login </button>
+        <div class="menu-content">
+            <input class="login" type="text" placeholder="Library Card">
+            <input class="login" type="text" placeholder="PIN">
+            <u><span style="color:blue; margin-left:3px;">Forgot Password?</span></u>
+            <u><span style="color: blue; margin-left:3px;">Create Account</span></u>
+            <a class="links-hidden1" href="#">Login</a>
+        </div>
+    </div>
+</nav>
+
+<p>
+    <br />
+</p>
+
+<h3>MyBooks</h3>
+
+<p>
+    <br />
+</p>
+
+<div class="ebooks">
+    <h4>EBooks:</h4>
+    <hr />
+    <div class="bookrow">
+        <div>
+            <img class="book1" src="images/Book1.png" />
+            <div style="
+                color: blue;
+                width: 150px;
+                font-size:15px">
+                Can't Hurt Me
+            </div>
+            <div style="
+                width: 150px;
+                font-size:15px">
+                Due on 11/03/2023
+            </div>
+            <div class="payfee">
+                <button class="link2"> Pay Fees </button>
+            </div>
+        </div>
+        <div>
+            <img class="book1" src="images/one piece.png" />
+            <div style="
+                color: blue;
+                width: 150px;
+                font-size:15px">
+                One Piece Volume 1
+            </div>
+            <div style="
+                width: 150px;
+                font-size:15px">
+                Due on 20/03/2023
+            </div>
+            <div class="extend">
+                <button class="link3"> Extend </button>
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    <br /> <br />
+</p>
+
+<div class="books">
+    <h4>Books</h4>
+    <hr />
+    <div class="booksrow">
+        <div>
+            <img class="book1" src="images/naruto.png" />
+            <div style="
+                color: blue;
+                width: 150px;
+                font-size:15px">
+                Naruto Volume 1
+            </div>
+            <div style="
+                width: 150px;
+                font-size:15px">
+                Due on 05/03/2023
+            </div>
+            <div class="payfee">
+                <button class="link2"> Pay Fees </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    .ebooks {
+        display: block
+    }
+
+    .bookrow {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .booksrow {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .book1 {
+        width: 150px;
+        height: 250px;
+        object-fit: cover;
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    .link2 {
+        background-color: lightgrey;
+        color: red;
+        border: 2px solid #000000;
+    }
+
+    .link3 {
+        background-color: lightgrey;
+        color: red;
+        border: 2px solid #000000;
+    }
+    .menu-btn {
+        color: white;
+        background-color: #5990ab;
+        font-size: 18px;
+        font-weight: bolder;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: none;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        display: inline-block;
+        background-color: #5990ab;
+        border: none;
+    }
+
+    .menu-content {
+        display: none;
+        position: absolute;
+        background-color: #5990ab;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    nav {
+        background-color: #5990ab;
+    }
+
+    .links,
+    .links-hidden {
+        display: inline-block;
+        color: white;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .links-hidden, .links-hidden1 {
+        display: block;
+    }
+
+    .links {
+        display: inline-block;
+    }
+
+        .links-hidden:hover, .links-hidden1:hover,
+        .links:hover {
+            background-color: #becdd1;
+            color: white;
+        }
+
+    .dropdown-menu:hover .menu-content {
+        display: block;
+    }
+
+    .dropdown-menu:hover .menu-btn {
+        background-color: #5990ab;
+    }
+
+    .login {
+        margin-left: 3px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        width: 153px;
+    }
+
+    .links-hidden1 {
+        display: inline-block;
+        color: white;
+        padding: 0px 5px;
+        background-color: #69747a;
+        text-decoration: none;
+        font-size: 16px;
+        margin-left: 3px;
+        margin-bottom: 3px;
+    }
+</style>
+
+@code {
+
+}
+
