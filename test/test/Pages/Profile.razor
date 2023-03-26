@@ -1,0 +1,265 @@
+﻿@page "/Profile"
+
+<!DOCTYPE html>
+
+<head>
+    <PageTitle>Profile</PageTitle>
+</head>
+
+
+<body>
+    <nav>
+        <a class="links" href="#">Home</a>
+        <a class="links" href="#">My Bag</a>
+        <div class="dropdown-menu">
+            <button class="menu-btn">My Account </button>
+            <div class="menu-content">
+                <a class="links-hidden" href="#">Profile</a>
+                <a class="links-hidden" href="#">My Books</a>
+                <a class="links-hidden" href="#">On Hold</a>
+                <a class="links-hidden" href="#">Payments</a>
+                <a class="links-hidden" href="#">History</a>
+            </div>
+        </div>
+        <div class="dropdown-menu">
+            <button class="menu-btn">John Doe </button>
+            <div class="menu-content">
+                <input class="login" type="text" placeholder="Library Card">
+                <input class="login" type="text" placeholder="PIN">
+                <u><span style="color:blue; margin-left:3px;">Forgot Password?</span></u>
+                <u><span style="color: blue; margin-left:3px;">Create Account</span></u>
+                <a class="links-hidden1" href="#">Login</a>
+            </div>
+        </div>
+    </nav>
+    <div style="
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px; ">
+
+        <div style=" display: flex; flex-direction:column; margin-top: 50px; margin-left : 50px;">
+            <div class="parent">
+                <img class="icon" src="images/ProfileIcon.png" />
+                <input type="image" class="add" src="images/Add.png" />
+
+            </div>
+
+            <div style=" margin-top: 25px; margin-left: 50px;">
+                <div style=" display: flex; flex-direction:row;">
+                    <h1 style="font-size: 125%;"> My Information</h1>
+                    <input type="image" class="pen" src="images/pen.png" />
+
+                </div>
+
+                <div style=" margin-top : 25px;">
+                    <p style="font-size: 100%;"> John Doe</p>
+                    <p style="font-size: 100%;"> Date of Birth: January 1st, 1999</p>
+                    <p style="font-size: 100%;"> Email Address: johndoe@gmail.com</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="vertical"> </div>
+
+
+
+        <div style=" display: flex; flex-direction:column; margin-left: auto; margin-right: auto;">
+
+            <div>
+                <h1 style="font-size: 200%; text-align:center;"> My Profile</h1>
+            </div>
+
+            <div style=" margin-top: 35px; margin-left: auto; margin-right: auto;">
+                <div class="library-card">
+                    <div style=" margin-top: 30px;">
+                        <h2 style="font-size: 150%; text-align:center;"> Library Card</h2>
+                    </div>
+
+                    <div style=" margin-top: 50px;">
+                        <p style=" text-align: center;"> 1234 5678 9101 2131 </p>
+                    </div>
+
+
+                    <div style=" display: flex; flex-direction:row; margin-top: 25px;">
+                        <div style=" margin:auto;">
+                            <p style=" text-align: center;"> xxxxxxx</p>
+                        </div>
+
+                        <div style=" margin:auto;">
+                            <p style=" text-align: center;"> John Doe</p>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div style=" margin-top: 60px; margin-left: -150px;">
+                <h1 style="font-size: 125%;"> Saved Payment Information</h1>
+            </div>
+
+            <div style=" display: flex; flex-direction:row;">
+                <div style=" display: flex; flex-direction: column; margin-top: 50px; margin-left: -150px;">
+                    <p> xxxx xxxx xxxx 1234</p>
+                    <p> 01/26</p>
+                    <p> John Doe</p>
+                </div>
+
+
+                <input type="image" class="add-two" src="images/Add.png" />
+                <p style="font-size: 100%; text-align:center; margin-left: 10px;"> Add Payment Method</p>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>
+</body>
+
+
+<style>
+    .icon {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        display: inline-block;
+    }
+
+    .parent {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-left: 50px;
+    }
+
+    .add {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        top: 10px;
+        left: 250px;
+    }
+
+    .add-two {
+        width: 30px;
+        height: 30px;
+        margin-left: 300px;
+    }
+
+    .pen {
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+    }
+
+    .vertical {
+        border-left: 3px solid black;
+        height: 600px;
+        left: 50%;
+        margin-left: 100px;
+    }
+
+    .card-box {
+        margin: auto;
+    }
+
+    .library-card {
+        width: 400px;
+        height: 225px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: black;
+    }
+
+    .menu-btn {
+        color: white;
+        background-color: #5990ab;
+        font-size: 18px;
+        font-weight: bolder;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: none;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        display: inline-block;
+        background-color: #5990ab;
+        border: none;
+    }
+
+    .menu-content {
+        display: none;
+        position: absolute;
+        background-color: #5990ab;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    nav {
+        background-color: #5990ab;
+    }
+
+    .links,
+    .links-hidden {
+        display: inline-block;
+        color: white;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .links-hidden, .links-hidden1 {
+        display: block;
+    }
+
+    .links {
+        display: inline-block;
+    }
+
+        .links-hidden:hover, .links-hidden1:hover,
+        .links:hover {
+            background-color: #becdd1;
+            color: white;
+        }
+
+    .dropdown-menu:hover .menu-content {
+        display: block;
+    }
+
+    .dropdown-menu:hover .menu-btn {
+        background-color: #5990ab;
+    }
+
+    .login {
+        margin-left: 3px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        width: 153px;
+    }
+
+    .links-hidden1 {
+        display: inline-block;
+        color: white;
+        padding: 0px 5px;
+        background-color: #69747a;
+        text-decoration: none;
+        font-size: 16px;
+        margin-left: 3px;
+        margin-bottom: 3px;
+    }
+</style>
+
