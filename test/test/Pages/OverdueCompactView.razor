@@ -1,0 +1,205 @@
+﻿@page "/OverdueCompactView"
+
+<nav class="menu">
+    <a class="links" href="#">Home</a>
+    <a class="links" href="#">My Bag</a>
+    <div class="dropdown-menu">
+        <button class="menu-btn">My Account </button>
+        <div class="menu-content">
+            <a class="links-hidden" href="#">Profile</a>
+            <a class="links-hidden" href="#">My Books</a>
+            <a class="links-hidden" href="#">On Hold</a>
+            <a class="links-hidden" href="#">Payments</a>
+            <a class="links-hidden" href="#">History</a>
+        </div>
+    </div>
+    <div class="dropdown-menu">
+        <button class="menu-btn">Jon doe </button>
+        <div class="menu-content">
+            <input class="login" type="text" placeholder="Library Card">
+            <input class="login" type="text" placeholder="PIN">
+            <u><span style="color:blue; margin-left:3px;">Forgot Password?</span></u>
+            <u><span style="color: blue; margin-left:3px;">Create Account</span></u>
+            <a class="links-hidden1" href="#">Login</a>
+        </div>
+    </div>
+</nav>
+
+
+<div class="overdueContainer">
+    <h1 class="overduesign">OVERDUE FEES</h1>
+    <h1>Total Fees Due: $12.68 </h1>
+    <button class="paynow"> Pay All </button>
+    <button onclick="myFunction()" id="myBtn">Less Details</button>
+</div>
+
+<div class="view">
+    <button class="view">Compact View</button>
+</div>
+
+
+<table class="table" style="width:70%">
+    <tr>
+        <th>
+            <h2>Book</h2>
+            <button class="sort"> - </button>
+        </th>
+        <th style="width:20%">
+            <h2>Due Date</h2>
+            <button class="sort"> - </button>
+        </th>
+        <th style="width:25%"> <h2>Days overdue</h2> <button class="sort"> - </button>  </th>
+        <th style="width:25%"> <h2>Overdue Cost</h2> <button class="sort"> - </button>  </th>
+        <th> <p>Pay Individually</p>   </th>
+    </tr>
+    <tr class="book1">
+        <td>
+            <p>Title: My Secret Sister</p>
+            <p>Author:Lauren Westwood</p>
+        </td>
+        <td>2023-03-01</td>
+        <td>12</td>
+        <td>$5.47</td>
+        <td><button> Pay Now</button></td>
+    </tr>
+    <tr class="book2">
+        <td>
+            <p>Title: Mad Honey</p>
+            <p>Author:Jennifer Finney Boylan</p>
+        </td>
+        <td>2023-02-25</td>
+        <td>15</td>
+        <td>$7.21</td>
+        <td><button> Pay Now</button></td>
+    </tr>
+
+</table>
+
+
+
+
+<style>
+    .view {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .bookImg {
+        width: 150px;
+        height: 225px;
+    }
+
+    .sort {
+        float: right;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    .table {
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .overduesign {
+        text-align: center;
+    }
+
+    .overdueContainer {
+        text-align: center;
+    }
+
+    .paynow {
+        margin-left: 10px;
+        display: inline-block;
+    }
+
+
+    .Link {
+        flex: 1;
+    }
+
+    .menu-btn {
+        color: white;
+        background-color: #5990ab;
+        font-size: 18px;
+        font-weight: bolder;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: none;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        display: inline-block;
+        background-color: #5990ab;
+        border: none;
+    }
+
+    .menu-content {
+        display: none;
+        position: absolute;
+        background-color: #5990ab;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    nav {
+        background-color: #5990ab;
+    }
+
+    .links,
+    .links-hidden {
+        display: inline-block;
+        color: white;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .links-hidden, .links-hidden1 {
+        display: block;
+    }
+
+    .links {
+        display: inline-block;
+    }
+
+        .links-hidden:hover, .links-hidden1:hover,
+        .links:hover {
+            background-color: #becdd1;
+            color: white;
+        }
+
+    .dropdown-menu:hover .menu-content {
+        display: block;
+    }
+
+    .dropdown-menu:hover .menu-btn {
+        background-color: #5990ab;
+    }
+
+    .login {
+        margin-left: 3px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        width: 153px;
+    }
+
+    .links-hidden1 {
+        display: inline-block;
+        color: white;
+        padding: 0px 5px;
+        background-color: #69747a;
+        text-decoration: none;
+        font-size: 16px;
+        margin-left: 3px;
+        margin-bottom: 3px;
+    }
+</style>
+
+@code {
+
+}
