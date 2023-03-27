@@ -1,0 +1,225 @@
+﻿@page "/Cart"
+
+<!DOCTYPE html>
+
+
+<head>
+    <PageTitle>My Library Cart</PageTitle>
+    <link rel="stylesheet" href="../wwwroot/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../wwwroot/css/Cart.css"/>
+</head>
+
+
+
+<body>
+     @* PUT HEADER TASKBAR THING HERE*@
+    <nav>
+        <a class="links" href="#">Home</a>
+        <a class="links" href="#">My Bag</a>
+        <div class="dropdown-menu">
+            <button class="menu-btn">My Account </button>
+            <div class="menu-content">
+                <a class="links-hidden" href="#">Profile</a>
+                <a class="links-hidden" href="#">My Books</a>
+                <a class="links-hidden" href="#">On Hold</a>
+                <a class="links-hidden" href="#">Payments</a>
+                <a class="links-hidden" href="#">History</a>
+            </div>
+        </div>
+        <div class="dropdown-menu">
+            <button class="menu-btn">Login </button>
+            <div class="menu-content">
+                <input class="login" type="text" placeholder="Library Card">
+                <input class="login" type="text" placeholder="PIN">
+                <u><span style="color:blue; margin-left:3px;">Forgot Password?</span></u>
+                <u><span style="color: blue; margin-left:3px;">Create Account</span></u>
+                <a class="links-hidden1" href="#">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <h1 id="cart-title">My Bag</h1>
+                <div>
+                    <input class="search" type="text" placeholder="Search...">
+                </div>
+                <table class="table">
+                    <tbody>
+
+
+                        <tr class="cart-item">
+                            <td>
+                                <img src="images/Book9.png" alt ="Book Cover" height="120" />
+                            </td>
+                            <td class="book-details"> 
+                                <p>Title: Outlive: The Science and Art of Longetivy</p>
+                                <p>Author: Peter Attia</p>
+                                <p>Type: Paperback</p>
+                            </td>
+
+                            <td>
+                                <p>Return Deadline: 03/12/2023</p>
+                                <p>Location: Nose Hill Library,</p>
+                                <p>1530 Northmount Dr NW</p>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger">Remove</button>
+                            </td>
+                        </tr>
+
+
+                        <tr class="cart-item">
+                            <td>
+                                <img src="images/Book2.png" alt="Book Cover" height="120" />
+                            </td>
+                            <td class="book-details">
+                                <p>Title: My Secret Sister</p>
+                                <p>Author: Lauren Westwood</p>
+                                <p>Type: Online</p>
+                            </td>
+                            <td>
+                                <p>Return Deadline: 03/12/2023</p>
+                                <p>Location: N/A</p>
+                                <p></p>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger">Remove</button>
+                            </td>
+                        </tr>
+
+                        <tr class="cart-item">
+                            <td>
+                                <img src="images/Book3.png" alt="Book Cover" height="120" />
+                            </td>
+                            <td class="book-details">
+                                <p>Title: The Fifth Juror</p>
+                                <p>Author: Lori Lacefield</p>
+                                <p>Type: Online</p>
+                            </td>
+                            <td>
+                                <p>Return Deadline: 03/12/2023</p>
+                                <p>Location: N/A</p>
+                                <p></p>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger">Remove</button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+
+
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Order Summary</h5>
+                <p class="card-text">Total Number of Books: 3</p>
+                <p class="card-text">Nearest Return Date: 03/12/2023</p>
+                <button class="btn btn-primary">Complete Signout</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+        </div>
+    </div>
+</body>
+
+
+
+<style>
+    .menu-btn {
+        color: white;
+        background-color: #5990ab;
+        font-size: 18px;
+        font-weight: bolder;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: none;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        display: inline-block;
+        background-color: #5990ab;
+        border: none;
+    }
+
+    .menu-content {
+        display: none;
+        position: absolute;
+        background-color: #5990ab;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    nav {
+        background-color: #5990ab;
+    }
+
+    .links,
+    .links-hidden {
+        display: inline-block;
+        color: white;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .links-hidden, .links-hidden1 {
+        display: block;
+    }
+
+    .links {
+        display: inline-block;
+    }
+
+        .links-hidden:hover, .links-hidden1:hover,
+        .links:hover {
+            background-color: #becdd1;
+            color: white;
+        }
+
+    .dropdown-menu:hover .menu-content {
+        display: block;
+    }
+
+    .dropdown-menu:hover .menu-btn {
+        background-color: #5990ab;
+    }
+
+    .search {
+        width: 224.5px;
+        font-size: 20px;
+        border: 1px solid;
+    }
+
+    .login {
+        margin-left: 3px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        width: 153px;
+    }
+
+    .links-hidden1 {
+        display: inline-block;
+        color: white;
+        padding: 0px 5px;
+        background-color: #69747a;
+        text-decoration: none;
+        font-size: 16px;
+        margin-left: 3px;
+        margin-bottom: 3px;
+    }
+</style>
