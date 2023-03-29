@@ -9,41 +9,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = test
 build_property.RootNamespace = test
-build_property.ProjectDir = C:\Users\Kevin\source\repos\test\test\
+build_property.ProjectDir = /Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Kevin\source\repos\test\test
+build_property.MSBuildProjectDirectory = /Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Kevin/source/repos/test/test/App.razor]
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/source/repos/test/test/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/Cart.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FydC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/source/repos/test/test/Pages/Homepage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZXBhZ2UucmF6b3I=
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/CreateAccount.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3JlYXRlQWNjb3VudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/source/repos/test/test/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/History.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSGlzdG9yeS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/source/repos/test/test/Shared/SurveyPrompt.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/Hold.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9sZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/source/repos/test/test/_Imports.razor]
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/Homepage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZXBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/MyBooks.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTXlCb29rcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/OpenBook.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3BlbkJvb2sucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/Overdue.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3ZlcmR1ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/OverdueCompactView.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3ZlcmR1ZUNvbXBhY3RWaWV3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/OverdueDefault.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3ZlcmR1ZURlZmF1bHQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kevin/source/repos/test/test/Shared/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-05t2xagzcg
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-12berhuupc
 
-[C:/Users/Kevin/source/repos/test/test/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-rzmiikks0m
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-wbe598c0rt

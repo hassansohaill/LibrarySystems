@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kevin\\source\\repos\\test\\test\\test.csproj": {}
+    "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kevin\\source\\repos\\test\\test\\test.csproj": {
+    "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kevin\\source\\repos\\test\\test\\test.csproj",
+        "projectUniqueName": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/test.csproj",
         "projectName": "test",
-        "projectPath": "C:\\Users\\Kevin\\source\\repos\\test\\test\\test.csproj",
-        "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kevin\\source\\repos\\test\\test\\obj\\",
+        "projectPath": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/test.csproj",
+        "packagesPath": "/Users/darpalpatel/.nuget/packages/",
+        "outputPath": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/darpalpatel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -61,18 +59,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[7.0.3, 7.0.3]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
