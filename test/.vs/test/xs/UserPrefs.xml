@@ -1,19 +1,21 @@
 ﻿<Properties StartupConfiguration="{B783A845-A8D1-4747-8C02-38ECB8159D13}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/Index.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/Profile.razor">
     <Files>
-      <File FileName="test/Pages/Counter.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/MyBooks.razor" />
-      <File FileName="test/Pages/Index.razor" Line="1" Column="9" />
-      <File FileName="test/Pages/Homepage.razor" Line="1" Column="1" />
-      <File FileName="test/Shared/NavMenu.razor" Line="9" Column="1" />
-      <File FileName="test/Pages/LoginPage.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/History.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/Cart.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/OverdueDefault.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/Profile.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/OverdueCompactView.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/Overdue.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/OpenBook.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/MyBooks.razor" Line="7" Column="45" />
+      <File FileName="test/Pages/Homepage.razor" Line="14" Column="49" />
+      <File FileName="test/Shared/NavMenu.razor" Line="11" Column="30" />
+      <File FileName="test/Pages/LoginPage.razor" Line="13" Column="25" />
+      <File FileName="test/Pages/History.razor" Line="7" Column="49" />
+      <File FileName="test/Pages/Cart.razor" Line="18" Column="49" />
+      <File FileName="test/Pages/OverdueDefault.razor" Line="5" Column="45" />
+      <File FileName="test/Pages/Profile.razor" Line="16" Column="13" />
+      <File FileName="test/Pages/OverdueCompactView.razor" Line="5" Column="45" />
+      <File FileName="test/Pages/Overdue.razor" Line="5" Column="45" />
+      <File FileName="test/Pages/OpenBook.razor" Line="13" Column="49" />
+      <File FileName="test/Shared/MainLayout.razor" Line="1" Column="1" />
+      <File FileName="test/Shared/SurveyPrompt.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/CreateAccount.razor" Line="13" Column="49" />
+      <File FileName="test/Pages/Hold.razor" Line="18" Column="49" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,7 +27,7 @@
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
               <Node name="Pages" expanded="True">
-                <Node name="Index.razor" selected="True" />
+                <Node name="Profile.razor" selected="True" />
               </Node>
               <Node name="Properties" expanded="True" />
               <Node name="Shared" expanded="True" />
