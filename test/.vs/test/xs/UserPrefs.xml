@@ -1,21 +1,28 @@
 ﻿<Properties StartupConfiguration="{B783A845-A8D1-4747-8C02-38ECB8159D13}|https">
-  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/Profile.razor">
+  <MonoDevelop.Ide.ItemProperties.test PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/Index.cshtml">
     <Files>
-      <File FileName="test/Pages/MyBooks.razor" Line="7" Column="45" />
-      <File FileName="test/Pages/Homepage.razor" Line="14" Column="49" />
-      <File FileName="test/Shared/NavMenu.razor" Line="11" Column="30" />
-      <File FileName="test/Pages/LoginPage.razor" Line="13" Column="25" />
-      <File FileName="test/Pages/History.razor" Line="7" Column="49" />
-      <File FileName="test/Pages/Cart.razor" Line="18" Column="49" />
-      <File FileName="test/Pages/OverdueDefault.razor" Line="5" Column="45" />
-      <File FileName="test/Pages/Profile.razor" Line="16" Column="13" />
-      <File FileName="test/Pages/OverdueCompactView.razor" Line="5" Column="45" />
-      <File FileName="test/Pages/Overdue.razor" Line="5" Column="45" />
-      <File FileName="test/Pages/OpenBook.razor" Line="13" Column="49" />
-      <File FileName="test/Shared/MainLayout.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/Homepage.razor" Line="12" Column="4" />
+      <File FileName="test/Pages/OpenBook.razor" Line="121" Column="23" />
+      <File FileName="test/Shared/NavMenu.razor" Line="1" Column="1" />
+      <File FileName="test/Shared/MainLayout.razor" Line="4" Column="5" />
+      <File FileName="test/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="test/wwwroot/index.html" Line="1" Column="1" />
+      <File FileName="test/_Imports.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/MyBooks.razor" Line="1" Column="1" />
       <File FileName="test/Shared/SurveyPrompt.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/CreateAccount.razor" Line="13" Column="49" />
-      <File FileName="test/Pages/Hold.razor" Line="18" Column="49" />
+      <File FileName="test/Pages/Overdue.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/CreateAccount.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/Cart.razor" Line="36" Column="54" />
+      <File FileName="test/Pages/LoginPage.razor" Line="1" Column="1" />
+      <File FileName="test/App.razor" Line="1" Column="1" />
+      <File FileName="test/Program.cs" Line="1" Column="1" />
+      <File FileName="test/Pages/Hold.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/Profile.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/Index.cshtml" Line="2" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,11 +34,17 @@
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
               <Node name="Pages" expanded="True">
-                <Node name="Profile.razor" selected="True" />
+                <Node name="Index.cshtml" selected="True" />
               </Node>
               <Node name="Properties" expanded="True" />
               <Node name="Shared" expanded="True" />
-              <Node name="wwwroot" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True">
+                  <Node name="bootstrap" expanded="True" />
+                  <Node name="open-iconic" expanded="True" />
+                </Node>
+                <Node name="sample-data" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -41,8 +54,4 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.test PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

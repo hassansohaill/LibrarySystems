@@ -1,14 +1,15 @@
 ﻿@page "/"
 
 <!DOCTYPE html>
-
+@inject NavigationManager NavigationManager
 
 <head>
     <PageTitle>Library Interface</PageTitle>
 </head>
-  
+
 
 <body>
+   
     <nav>
         <a class="links" href="#">Home</a>
         <a class="links" href="/Cart">My Bag</a>
@@ -23,7 +24,7 @@
             </div>
         </div>
         <div class="dropdown-menu">
-            <button class="menu-btn">Login </button>
+            <a class="menu-btn" href="/loginPage">Login</a>
             <div class="menu-content">
                 <input class="login" type="text" placeholder="Library Card">
                 <input class="login" type="text" placeholder="PIN">
@@ -51,28 +52,29 @@
                 opacity: 75%;
                 height: 34px;
                 border: 1px solid;
-            ">Search
+            ">
+                Search
             </button>
         </div>
     </div>
-    
+
     <div class="Header">
         <div class="Title">
             Popular
         </div>
         <div class="Link>">
-            <a href="url">See All ></a>
+            <a href="#">See All ></a>
         </div>
     </div>
 
     <div class="bookrow">
         <div>
-            <img class="book1" src="images/Book1.png" />
+            <img type="button" @onclick="() => BookOpen(1)" class="book1" src="images/Book1.png" />
             <div style="
                 color: #007185;
                 width: 150px;
                 font-size:15px">
-                <u>Can't Hurt Me</u>
+                <a href="/OpenBook">Can't Hurt Me</a>
             </div>
             <div style="
                 width: 150px;
@@ -88,7 +90,7 @@
         </div>
 
         <div>
-            <img class="book1" src="images/Book2.png" />
+            <img type="button" class="book1" @onclick="() => BookOpen(2)" src="images/Book2.png" />
             <div style="
                 color: #007185;
                 width: 150px;
@@ -109,7 +111,7 @@
         </div>
 
         <div>
-            <img class="book1" src="images/Book3.png" />
+            <img type="button" class="book1" @onclick="() => BookOpen(3)" src="images/Book3.png" />
             <div style="
                 color: #007185;
                 width: 150px;
@@ -129,7 +131,7 @@
             </div>
         </div>
         <div>
-            <img class="book1" src="images/Book4.png" />
+            <img type="button" class="book1" @onclick="() => BookOpen(4)" src="images/Book4.png" />
             <div style="
                 color: #007185;
                 width: 150px;
@@ -150,7 +152,7 @@
         </div>
 
         <div>
-            <img class="book1" src="images/Book5.png" />
+            <img type="button" class="book1" @onclick="() => BookOpen(5)" src="images/Book5.png" />
             <div style="
                 color: #007185;
                 width: 150px;
@@ -177,13 +179,13 @@
             New Releases
         </div>
         <div class="Link>">
-            <a href="url">See All ></a>
+            <a href="#">See All ></a>
         </div>
     </div>
 
     <div class="bookrow">
         <div>
-            <img class="book1" src="images/Book6.png" />
+            <img type="button" class="book1" @onclick="() => BookOpen(6)" src="images/Book6.png" />
             <div style="
                 color: #007185;
                 width: 150px;
@@ -204,7 +206,7 @@
         </div>
 
         <div>
-            <img class="book1" src="images/Book7.png" />
+            <img type="button" class="book1" @onclick="() => BookOpen(7)" src="images/Book7.png" />
             <div style="
                 color: #007185;
                 width: 150px;
@@ -225,7 +227,7 @@
         </div>
 
         <div>
-            <img class="book1" src="images/Book8.png" />
+            <img type="button" class="book1" @onclick="() => BookOpen(8)" src="images/Book8.png" />
             <div style="
                 color: #007185;
                 width: 150px;
@@ -246,7 +248,7 @@
         </div>
 
         <div>
-            <img class="book1" src="images/Book9.png" />
+            <img type="button" class="book1" @onclick="() => BookOpen(9)" src="images/Book9.png" />
             <div style="
                 color: #007185;
                 width: 150px;
@@ -267,7 +269,7 @@
         </div>
 
         <div>
-            <img class="book1" src="images/Book10.png" />
+            <img type="button" class="book1" @onclick="() => BookOpen(10)" src="images/Book10.png" />
             <div style="
                 color: #007185;
                 width: 150px;
@@ -288,7 +290,27 @@
         </div>
     </div>
 
+    @code {
+        void BookOpen(int id)
+        {
+            NavigationManager.NavigateTo($"/OpenBook/{id}");
+
+        }
+
+        private void OpenLogin()
+        {
+            NavigationManager.NavigateTo("/loginPage");
+
+        }
+    }
+
+
+
     <style>
+        .links-hidden1 {
+            align-items: flex-end;
+        }
+
         .bookrow {
             display: flex;
             flex-direction: row;
@@ -338,7 +360,12 @@
             font-weight: bolder;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             border: none;
+            text-decoration: none;
         }
+
+            .menu-btn:hover {
+                color: white;
+            }
 
         .dropdown-menu {
             position: relative;
@@ -377,11 +404,11 @@
             display: inline-block;
         }
 
-        .links-hidden:hover,.links-hidden1:hover,
-        .links:hover {
-            background-color: #becdd1;
-            color: white;
-        }
+            .links-hidden:hover, .links-hidden1:hover,
+            .links:hover {
+                background-color: #becdd1;
+                color: white;
+            }
 
         .dropdown-menu:hover .menu-content {
             display: block;
@@ -395,7 +422,7 @@
             margin-left: 3px;
             margin-bottom: 5px;
             margin-top: 5px;
-            width:153px;
+            width: 153px;
         }
 
         .links-hidden1 {
@@ -407,7 +434,6 @@
             font-size: 16px;
             margin-left: 3px;
             margin-bottom: 3px;
-
         }
     </style>
 </body>
