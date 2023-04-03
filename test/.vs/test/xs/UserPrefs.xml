@@ -1,28 +1,36 @@
 ﻿<Properties StartupConfiguration="{B783A845-A8D1-4747-8C02-38ECB8159D13}|https">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.test PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/NavBar.razor">
     <Files>
-      <File FileName="test/Pages/Homepage.razor" Line="12" Column="4" />
-      <File FileName="test/Pages/OpenBook.razor" Line="121" Column="23" />
+      <File FileName="test/Pages/Homepage.razor" Line="248" Column="74" />
+      <File FileName="test/Pages/OpenBook.razor" Line="4" Column="27" />
       <File FileName="test/Shared/NavMenu.razor" Line="1" Column="1" />
-      <File FileName="test/Shared/MainLayout.razor" Line="4" Column="5" />
-      <File FileName="test/Properties/launchSettings.json" Line="1" Column="1" />
-      <File FileName="test/wwwroot/index.html" Line="1" Column="1" />
-      <File FileName="test/_Imports.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/MyBooks.razor" Line="1" Column="1" />
-      <File FileName="test/Shared/SurveyPrompt.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/Overdue.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/CreateAccount.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/Cart.razor" Line="36" Column="54" />
-      <File FileName="test/Pages/LoginPage.razor" Line="1" Column="1" />
-      <File FileName="test/App.razor" Line="1" Column="1" />
-      <File FileName="test/Program.cs" Line="1" Column="1" />
-      <File FileName="test/Pages/Hold.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/Profile.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/Index.cshtml" Line="2" Column="1" />
+      <File FileName="test/Shared/MainLayout.razor" Line="7" Column="1" />
+      <File FileName="test/Properties/launchSettings.json" />
+      <File FileName="test/wwwroot/index.html" />
+      <File FileName="test/_Imports.razor" Line="10" Column="19" />
+      <File FileName="test/Pages/MyBooks.razor" Line="1" Column="17" />
+      <File FileName="test/Shared/SurveyPrompt.razor" />
+      <File FileName="test/Pages/Overdue.razor" Line="1" Column="17" />
+      <File FileName="test/Pages/CreateAccount.razor" Line="1" Column="22" />
+      <File FileName="test/Pages/Cart.razor" Line="1" Column="14" />
+      <File FileName="test/Pages/LoginPage.razor" Line="81" Column="31" />
+      <File FileName="test/App.razor" />
+      <File FileName="test/Pages/Hold.razor" Line="1" Column="14" />
+      <File FileName="test/Pages/Profile.razor" Line="1" Column="17" />
+      <File FileName="test/Pages/OverdueDefault.razor" Line="1" Column="24" />
+      <File FileName="test/Shared/NavMenu.razor.css" Line="1" Column="1" />
+      <File FileName="test/wwwroot/css/app.css" Line="1" Column="1" />
+      <File FileName="test/Pages/Index.razor" Line="15" Column="40" />
+      <File FileName="test/Pages/History.razor" Line="1" Column="17" />
+      <File FileName="test/Pages/OverdueCompactView.razor" Line="44" Column="24" />
+      <File FileName="test/Shared/HomeController.cs" Line="5" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -30,20 +38,20 @@
           <Node name="test" expanded="True">
             <Node name="test" expanded="True">
               <Node name="Dependencies" expanded="True">
-                <Node name="FrameworkReferences" expanded="True" />
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
               <Node name="Pages" expanded="True">
-                <Node name="Index.cshtml" selected="True" />
+                <Node name="NavBar.razor" selected="True" />
               </Node>
               <Node name="Properties" expanded="True" />
-              <Node name="Shared" expanded="True" />
+              <Node name="Shared" expanded="True">
+                <Node name="NavMenu.razor" expanded="True" />
+              </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True">
                   <Node name="bootstrap" expanded="True" />
                   <Node name="open-iconic" expanded="True" />
                 </Node>
-                <Node name="sample-data" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -51,7 +59,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

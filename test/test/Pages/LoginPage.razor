@@ -1,7 +1,8 @@
 ﻿@page "/loginPage"
+@inject NavigationManager NavigationManager
+@using test.Shared
 
-<PageTitle>LoginPage</PageTitle>
-
+<NavBar />
 
 
 <div class="loginBox">
@@ -11,24 +12,24 @@
     <div class="username">
         <form>
             <label for="username">Library Card ID:</label><br>
-            <input type="text" id="username" name="username"><br>
+            <input type="text" id="username" name="username" @bind="libraryCardValue"><br>
         </form>
     </div>
 
     <div class="password">
         <form>
-            <label for="password">Password:</label><br>
-            <input type="text" id="pasword" name="password"><br>
+            <label for="password">PIN:</label><br>
+            <input type="text" id="pasword" name="password" @bind="pinValue"><br>
         </form>
     </div>
 
     <div class="submitButton">
-        <button>
-            <h>Submit</h>
+        <button @onclick="CheckInputCondition">
+            <h>Login</h>
         </button>
     </div>
 
-    <div class="links">
+    <div class="links2">
 
         <div class="forgetLink">
             <a href=#home>Forgot Password?</a>
@@ -42,7 +43,7 @@
 </div>
 
 <style>
-    .links {
+    .links2 {
         margin-top: 20px;
     }
 
@@ -66,3 +67,32 @@
         text-align: center;
     }
 </style>
+
+@code {
+    private string libraryCardValue;
+    private string pinValue;
+    private string message;
+
+    private async Task CheckInputCondition()
+    {
+        if (!string.IsNullOrEmpty(libraryCardValue) && !string.IsNullOrEmpty(pinValue))
+        {
+            Globals.loginCondition = true;
+            await Task.Delay(2000);
+            NavigationManager.NavigateTo("/");
+
+        }
+        else
+        {
+            message = "Incorrect Library Card Number or PIN";
+        }
+    }
+    private async Task logOut()
+    {
+        Globals.loginCondition = false;
+        await Task.Delay(2000);
+        NavigationManager.NavigateTo("/");
+
+    }
+
+}

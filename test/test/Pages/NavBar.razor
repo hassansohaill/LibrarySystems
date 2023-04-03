@@ -1,0 +1,228 @@
+﻿@page "/Nav"
+
+<!DOCTYPE html>
+@inject NavigationManager NavigationManager
+
+
+@if (Globals.loginCondition)
+{
+    <nav>
+        <a class="links" href="#">Home</a>
+        <a class="links" href="/Cart">My Bag</a>
+        <div class="dropdown-menu">
+            <button class="menu-btn">My Account </button>
+            <div class="menu-content">
+                <a class="links-hidden" href="/Profile">Profile</a>
+                <a class="links-hidden" href="/MyBooks">My Books</a>
+                <a class="links-hidden" href="/Hold">On Hold</a>
+                <a class="links-hidden" href="/OverdueDefault">Payments</a>
+                <a class="links-hidden" href="/History">History</a>
+            </div>
+        </div>
+        <div class="dropdown-menu">
+            <a class="menu-btn" href="/loginPage">Jane Doe</a>
+            <div class="menu-content">
+                <button @onclick="logOut" class="links-hidden1" href="#">Log Out</button>
+            </div>
+        </div>
+    </nav>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+}
+else
+{
+    <nav>
+        <a class="links" href="#">Home</a>
+        <a class="links" href="/loginPage">My Bag</a>
+        <div class="dropdown-menu">
+            <button class="menu-btn">My Account </button>
+            <div class="menu-content">
+                <a class="links-hidden" href="/loginPage">Profile</a>
+                <a class="links-hidden" href="/loginPage">My Books</a>
+                <a class="links-hidden" href="/loginPage">On Hold</a>
+                <a class="links-hidden" href="/loginPage">Payments</a>
+                <a class="links-hidden" href="/loginPage">History</a>
+            </div>
+        </div>
+        <div class="dropdown-menu">
+            <a class="menu-btn" href="/loginPage">Login</a>
+            <div class="menu-content">
+                <input class="login" type="text" placeholder="Library Card" @bind="libraryCardValue" />
+                <input class="login" type="text" placeholder="PIN" @bind="pinValue" />
+                <a href="/createAccount" style="color: blue; margin-left:3px;">Forgot Password</a>
+                <a href="/createAccount" style="color: blue; margin-left:3px;">Create Account</a>
+
+                <button @onclick="CheckInputCondition" class="links-hidden1" href="#">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+}
+
+
+
+
+
+<style>
+    .links-hidden1 {
+        align-items: flex-end;
+    }
+
+    .bookrow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .Header {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    .Link {
+        flex: 1;
+    }
+
+    .book1 {
+        width: 150px;
+        height: 250px;
+        object-fit: cover;
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    .Title {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .Title1 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .search {
+        width: 224.5px;
+        font-size: 20px;
+        border: 1px solid;
+    }
+
+    .menu-btn {
+        color: white;
+        background-color: #5990ab;
+        font-size: 18px;
+        font-weight: bolder;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: none;
+        text-decoration: none;
+    }
+
+        .menu-btn:hover {
+            color: white;
+        }
+
+    .dropdown-menu {
+        position: relative;
+        display: inline-block;
+        background-color: #5990ab;
+        border: none;
+    }
+
+    .menu-content {
+        display: none;
+        position: absolute;
+        background-color: #5990ab;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    nav {
+        background-color: #5990ab;
+    }
+
+    .links,
+    .links-hidden {
+        display: inline-block;
+        color: white;
+        padding: 10px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .links-hidden, .links-hidden1 {
+        display: block;
+    }
+
+    .links {
+        display: inline-block;
+    }
+
+        .links-hidden:hover, .links-hidden1:hover,
+        .links:hover {
+            background-color: #becdd1;
+            color: white;
+        }
+
+    .dropdown-menu:hover .menu-content {
+        display: block;
+    }
+
+    .dropdown-menu:hover .menu-btn {
+        background-color: #5990ab;
+    }
+
+    .login {
+        margin-left: 3px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        width: 153px;
+    }
+
+    .links-hidden1 {
+        display: inline-block;
+        color: white;
+        padding: 0px 5px;
+        background-color: #69747a;
+        text-decoration: none;
+        font-size: 16px;
+        margin-left: 3px;
+        margin-bottom: 3px;
+    }
+</style>
+
+<p>@message</p>
+
+
+@code {
+    private string libraryCardValue;
+    private string pinValue;
+    private string message;
+
+    private async Task CheckInputCondition()
+    {
+        if (!string.IsNullOrEmpty(libraryCardValue) && !string.IsNullOrEmpty(pinValue))
+        {
+            Globals.loginCondition = true;
+            await Task.Delay(5000);
+            NavigationManager.NavigateTo("/");
+
+        }
+        else
+        {
+            message = "Incorrect Library Card Number or PIN";
+        }
+    }
+    private async Task logOut()
+    {
+        Globals.loginCondition = false;
+        await Task.Delay(2000);
+        NavigationManager.NavigateTo("/");
+
+    }
+
+}
