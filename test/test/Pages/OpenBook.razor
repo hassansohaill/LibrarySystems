@@ -9,7 +9,7 @@
     {
         bookTitle = "Can't Hurt Me";
         bookAuthor = "David Goggins";
-        bookDescription = " For David Goggins, childhood was a nightmare - poverty, prejudice, and physical abuse colored his days and haunted his nights. But through self-discipline, mental toughness, and hard work, Goggins transformed himself from a depressed, overweight young man with no future into a U.S. Armed Forces icon and one of the world's top endurance athletes. The only man in history to complete elite training as a Navy SEAL, Army Ranger, and Air Force Tactical Air Controller, he went on to set records in numerous endurance events, inspiring Outside magazine to name him The Fittest (Real) Man in America.  In Can't Hurt Me , he shares his astonishing life story and reveals that most of us tap into only 40% of our capabilities. Goggins calls this The 40% Rule, and his story illuminates a path that anyone can follow to push past pain, demolish fear, and reach their full potential.";
+        bookDescription =
         bookImage = "images/Book1.png";
     }
 
@@ -107,16 +107,16 @@
                 font-size:16px">
                         <b>Description:</b>
                         @if (showFullText)
-                        {
+                            {
                             @bookDescription
                             <button @onclick="ToggleShowFullText" style="background-color:transparent;border: none; color: blue; text-decoration: underline; margin-left: 520px; padding-top: 0px;">See less</button>
-                        }
-                        else
-                        {
+                            }
+                            else
+                            {
 
                             <p style="padding-bottom: 0px;">@bookDescription.Substring(0, 500)...</p>
                             <button @onclick="ToggleShowFullText" style="background-color:transparent;border: none; color: blue; text-decoration: underline; margin-left: 530px; padding-top: 0px;">See all</button>
-                        }
+                            }
                     </div>
                     <div style="margin-top: 7px;">
                         <label for="library"><b>Choose Library:</b></label>
@@ -165,11 +165,10 @@
 }
 
 @code {
-    [Parameter] public int id { get; set; }
-    bool showFullText = false;
-    void ToggleShowFullText()
-    {
-        showFullText = !showFullText;
+        [Parameter] public int id { get; set; }
+        bool showFullText = false;
+        void ToggleShowFullText()
+        {
+            showFullText = !showFullText;
+        }
     }
-}
-

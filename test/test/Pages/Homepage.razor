@@ -8,321 +8,243 @@
     <PageTitle>Library Interface</PageTitle>
 </head>
 
-<body>
-    <NavBar/>
+    <NavBar />
+    <body class="overlay">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <div style="
+        <div style="
         margin-top: 25px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         ">
-        <div>
-            <input class="search" type="text" placeholder="Search...">
-        </div>
-        <div>
-            <button style="
+            <div>
+                <input class="search" type="text" placeholder="Search...">
+            </div>
+            <div>
+                <button style="
                 opacity: 75%;
                 height: 34px;
                 border: 1px solid;
             ">
-                Search
-            </button>
-        </div>
-    </div>
-
-    <div class="Header">
-        <div class="Title">
-            Popular
-        </div>
-        <div class="Link>">
-            <a href="#">See All ></a>
-        </div>
-    </div>
-
-    <div class="bookrow">
-        <div>
-            <img type="button" @onclick="() => BookOpen(1)" class="book1" src="images/Book1.png" />
-            <div style="
-                color: #007185;
-                width: 150px;
-                font-size:15px">
-                <a href="/OpenBook">Can't Hurt Me</a>
-            </div>
-            <div style="
-                width: 150px;
-                font-size:12px">
-                by David Goggins
-            </div>
-            <div style="
-                color: green;
-                width: 150px;
-                font-size:12px">
-                Available
+                    Search
+                </button>
             </div>
         </div>
 
-        <div>
-            <img type="button" class="book1" @onclick="() => BookOpen(2)" src="images/Book2.png" />
-            <div style="
-                color: #007185;
-                width: 150px;
-                font-size:15px">
-                <u>My Secret Sister</u>
-            </div>
-            <div style="
-                width: 150px;
-                font-size:12px">
-                by Lauren Westwood
-            </div>
-            <div style="
-                color: green;
-                width: 150px;
-                font-size:12px">
-                Available
-            </div>
-        </div>
-
-        <div>
-            <img type="button" class="book1" @onclick="() => BookOpen(3)" src="images/Book3.png" />
-            <div style="
-                color: #007185;
-                width: 150px;
-                font-size:15px">
-                <u>The Fifth Juror</u>
-            </div>
-            <div style="
-                width: 150px;
-                font-size:12px">
-                by Lori Lacefield
-            </div>
-            <div style="
-                color: red;
-                width: 150px;
-                font-size:12px">
-                Unavailable
-            </div>
-        </div>
-        <div>
-            <img type="button" class="book1" @onclick="() => BookOpen(4)" src="images/Book4.png" />
-            <div style="
-                color: #007185;
-                width: 150px;
-                font-size:15px">
-                <u>Mad Honey</u>
-            </div>
-            <div style="
-                width: 150px;
-                font-size:12px">
-                by Jennifer Finney Boylan
-            </div>
-            <div style="
-                color: green;
-                width: 150px;
-                font-size:12px">
-                Available
-            </div>
-        </div>
-
-        <div>
-            <img type="button" class="book1" @onclick="() => BookOpen(5)" src="images/Book5.png" />
-            <div style="
-                color: #007185;
-                width: 150px;
-                font-size:15px">
-                <u>Empath</u>
-            </div>
-            <div style="
-                width: 150px;
-                font-size:12px">
-                by Judy Dyer
-            </div>
-            <div style="
-                color: red;
-                width: 150px;
-                font-size:12px">
-                Unavailable
-            </div>
-        </div>
-    </div>
-
-
-    <div class="Header">
-        <div class="Title1">
-            New Releases
-        </div>
-        <div class="Link>">
-            <a href="#">See All ></a>
-        </div>
-    </div>
-
-    <div class="bookrow">
-        <div>
-            <img type="button" class="book1" @onclick="() => BookOpen(6)" src="images/Book6.png" />
-            <div style="
-                color: #007185;
-                width: 150px;
-                font-size:15px">
-                <u>Never Never</u>
-            </div>
-            <div style="
-                width: 150px;
-                font-size:12px">
-                by Collen Hoover
-            </div>
-            <div style="
-                color: red;
-                width: 150px;
-                font-size:12px">
-                Unavailable
-            </div>
-        </div>
-
-        <div>
-            <img type="button" class="book1" @onclick="() => BookOpen(7)" src="images/Book7.png" />
-            <div style="
-                color: #007185;
-                width: 150px;
-                font-size:15px">
-                <u>Dog Man: Twenty Thousand Fleas Under the Sea</u>
-            </div>
-            <div style="
-                width: 150px;
-                font-size:12px">
-                by Dav Pilkey
-            </div>
-            <div style="
-                color: green;
-                width: 150px;
-                font-size:12px">
-                Available
-            </div>
-        </div>
-
-        <div>
-            <img type="button" class="book1" @onclick="() => BookOpen(8)" src="images/Book8.png" />
-            <div style="
-                color: #007185;
-                width: 150px;
-                font-size:15px">
-                <u>Old Babies in the Woods: Stories</u>
-            </div>
-            <div style="
-                width: 150px;
-                font-size:12px">
-                by Margaret Atwood
-            </div>
-            <div style="
-                color: green;
-                width: 150px;
-                font-size:12px">
-                Available
-            </div>
-        </div>
-
-        <div>
-            <img type="button" class="book1" @onclick="() => BookOpen(9)" src="images/Book9.png" />
-            <div style="
-                color: #007185;
-                width: 150px;
-                font-size:15px">
-                <u>Outlive</u>
-            </div>
-            <div style="
-                width: 150px;
-                font-size:12px">
-                by Peter Attied, MD
-            </div>
-            <div style="
-                color: green;
-                width: 150px;
-                font-size:12px">
-                Available
-            </div>
-        </div>
-
-        <div>
-            <img type="button" class="book1" @onclick="() => BookOpen(10)" src="images/Book10.png" />
-            <div style="
-                color: #007185;
-                width: 150px;
-                font-size:15px">
-                <u>Dragon Masters: Cure of the Shadow Dragon</u>
-            </div>
-            <div style="
-                width: 150px;
-                font-size:12px">
-                by Tracy West
-            </div>
-            <div style="
-                color: red;
-                width: 150px;
-                font-size:12px">
-                Unvailable
-            </div>
-        </div>
-    </div>
-
-    @code {
-        void BookOpen(int id)
+        @foreach (var category in bookDictionary.Keys)
         {
-            NavigationManager.NavigateTo($"/OpenBook/{id}");
+            <div class="Header">
+                <div class="Title">
+                    @category
+                </div>
+                <div class="Link>">
+                    <a href="#">See All ></a>
+                </div>
+            </div>
+            <ul class="bookList">
+                @foreach (var book in bookDictionary[category])
+                {
+                    <li class="bookItem">
+                        <img type="button" @onclick="(e) => TogglePopup(book.Author, book.Title, book.Image, book.Description)" class="book1" src=@book.Image />
+                        <div class="bookTitle" style="color: #007185; font-size: 15px; width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                            <a href="/OpenBook">@book.Title</a>
+                        </div>
+
+                        <div style="font-size: 12px; width: 150px;">
+                            by @book.Author
+                        </div>
+                        @if (@book.Status == "Available")
+                        {
+                            <div style="color: green; font-size: 12px;">
+                                @book.Status
+                            </div>
+                        }
+                        else
+                        {
+                            <div style="color: red; font-size: 12px;">
+                                @book.Status
+                            </div>
+                        }
+
+                    </li>
+                }
+            </ul>
+        }
+
+    </body>
+
+        @if (showPopup)
+        {
+            <div style="position: fixed; top: 65px; right: 0; width: 500px; height: calc(100% - 65px); background-color: white; overflow: auto;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -90%);">
+                    <img class="book2" src= "@popupImage" />
+                </div>
+            </div>
+
+            <style>
+                body {
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    opacity:0.5;
+                }
+            </style>
+        }
+        else
+        {
+            <style>
+                body {
+                    position: static;
+                    width: auto;
+                    height: auto;
+                    overflow: auto;
+                    opacity: 1;
+                }
+            </style>
+        }
+
+
+        @code {
+
+            public class Book
+            {
+                public string Author { get; set; }
+                public string Title { get; set; }
+                public string Category { get; set; }
+                public string Status { get; set; }
+                public string Image { get; set; }
+                public int num { get; set; }
+                public string Description { get; set; }
+            }
+
+            private List<Book> books = new List<Book>()
+                        {
+            new Book() { Author = " David Goggins", Title = "Can't Hurt Me", Category = "Popular" , Status = "Available" , num = 1 , Image = "images/Book1.png", Description = ""},
+            new Book() { Author = "Lauren Westwood", Title = "My Secret Sister", Category = "Popular" ,Status = "Available", num = 2 , Image = "images/Book2.png", Description = "" },
+            new Book() { Author = "Lori Lacefield", Title = "The Fifth Juror", Category = "Popular",Status =  "Available", num = 3 , Image = "images/Book3.png", Description = ""},
+            new Book() { Author = "Jennifer Finney Boylan", Title = "Mad Honey", Category = "Popular", Status = "Available", num = 4 , Image = "images/Book4.png", Description = ""},
+            new Book() { Author = "Judy Dyer", Title = "Empath", Category = "Popular" , Status = "Unavailable" , num = 5 , Image = "images/Book5.png", Description = ""},
+            new Book() { Author = "Kate Morton", Title = "Homecoming: A Novel", Category = "Popular" , Status = "Unavailable" , num = 11 , Image = "images/Book11.png", Description = ""},
+            new Book() { Author = "Kelly Starrett", Title = "Built to Move: The Ten Essential Habits to Help You Move Freely and Live Fully", Category = "Popular" , Status = "Available" , num = 12 , Image = "images/Book12.png", Description = ""},
+            new Book() { Author = "Curtis Sittenfeld ", Title = "Romantic Comedy: A Novel", Category = "Popular" , Status = "Available" , num = 13 , Image = "images/Book13.png", Description = ""},
+            new Book() { Author = "Laura Dostaler", Title = "Spring Skills Workbook 2023", Category = "Popular" , Status = "Unavailable" , num = 14 , Image = "images/Book14.png", Description = ""},
+
+            new Book() { Author = "Collen Hoover", Title = "Never Never", Category = "New Releases", Status = "Unavailable" , num = 6  , Image = "images/Book6.png", Description = ""},
+            new Book() { Author = "Dav Pilkey", Title = "Dog Man: Twenty Thousand Fleas Under the Sea", Category = "New Releases" ,Status = "Available" , num = 7 , Image = "images/Book7.png", Description = ""},
+            new Book() { Author = "Margaret Atwood", Title = "Old Babies in the Woods: Stories", Category = "New Releases" , Status = "Unavailable" , num = 8 , Image = "images/Book8.png", Description = ""},
+            new Book() { Author = "Peter Attied, MD", Title = "Outlive", Category = "New Releases" , Status = "Available" , num = 9 , Image = "images/Book9.png"},
+            new Book() { Author = "Tracy West", Title = "Dragon Masters: Cure of the Shadow Dragon", Category = "New Releases" , Status = "Available", num = 10 , Image = "images/Book10.png", Description = ""},
+
+        };
+
+            private Dictionary<string, List<Book>> bookDictionary;
+
+            protected override void OnInitialized()
+            {
+                bookDictionary = books.GroupBy(b => b.Category)
+                    .ToDictionary(g => g.Key, g => g.ToList());
+            }
+
+
+            void BookOpen(int id)
+            {
+                NavigationManager.NavigateTo($"/OpenBook/{id}");
+
+            }
+
 
         }
+
+        <style>
+            .links-hidden1 {
+                align-items: flex-end;
+            }
+
+            .bookrow {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .Header {
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+                justify-content: space-between;
+            }
+
+            .Link {
+                flex: 1;
+            }
+
+            .book1 {
+                width: 150px;
+                height: 250px;
+                object-fit: cover;
+                display: inline-block;
+                margin-right: 20px;
+            }
+
+            .book2 {
+                width: 200px;
+                height: 300px;
+                object-fit: cover;
+                display: inline-block;
+            }
+
+            .Title {
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .Title1 {
+                font-size: 30px;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+
+            .search {
+                width: 224.5px;
+                font-size: 20px;
+                border: 1px solid;
+            }
+
+            .bookList {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                white-space: nowrap;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+
+            .bookItem {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 10px;
+            }
+        </style>
+    
+
+
+
+@code {
+    bool showPopup = false;
+    string popupAuthor;
+    string popupTitle;
+    string popupImage;
+    string popupDescription;
+
+    void TogglePopup(string author, string title, string image, string description)
+    {
+        showPopup = !showPopup;
+        popupAuthor = author;
+        popupTitle = title;
+        popupImage = image;
+        popupDescription = description;
 
     }
-
-
-
-    <style>
-        .links-hidden1 {
-            align-items: flex-end;
-        }
-
-        .bookrow {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .Header {
-            display: flex;
-            flex-direction: row;
-            align-items: baseline;
-            justify-content: space-between;
-        }
-
-        .Link {
-            flex: 1;
-        }
-
-        .book1 {
-            width: 150px;
-            height: 250px;
-            object-fit: cover;
-            display: inline-block;
-            margin-right: 20px;
-        }
-
-        .Title {
-            font-size: 30px;
-            font-weight: bold;
-        }
-
-        .Title1 {
-            font-size: 30px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .search {
-            width: 224.5px;
-            font-size: 20px;
-            border: 1px solid;
-        }
-        }
-    </style>
-</body>
+}

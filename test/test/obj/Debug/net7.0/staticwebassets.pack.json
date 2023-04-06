@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/test.styles.css"
     },
     {
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
       "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/css/app.css",
       "PackagePath": "staticwebassets/css/app.css"
     },
@@ -79,6 +83,22 @@
     {
       "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book10.png",
       "PackagePath": "staticwebassets/images/Book10.png"
+    },
+    {
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book11.png",
+      "PackagePath": "staticwebassets/images/Book11.png"
+    },
+    {
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book12.png",
+      "PackagePath": "staticwebassets/images/Book12.png"
+    },
+    {
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book13.png",
+      "PackagePath": "staticwebassets/images/Book13.png"
+    },
+    {
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book14.png",
+      "PackagePath": "staticwebassets/images/Book14.png"
     },
     {
       "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book2.png",
