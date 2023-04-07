@@ -77,26 +77,27 @@
 
         @if (showPopup)
         {
-            <div style="position: fixed; top: 65px; right: 0; width: 500px; height: calc(100% - 65px); background-color: white; overflow: auto;">
+            <div style="position: fixed; top: 65px; right: 0; width: 500px; height: calc(100% - 65px); background-color: white; overflow: auto; opacity:1;">
                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -90%);">
                     <img class="book2" src= "@popupImage" />
                 </div>
             </div>
 
             <style>
-                body {
+                .overlay {
                     position: fixed;
                     width: 100%;
                     height: 100%;
                     overflow: hidden;
-                    opacity:0.5;
+                    opacity: 0.7;
                 }
+                    
             </style>
         }
         else
         {
             <style>
-                body {
+                overlay {
                     position: static;
                     width: auto;
                     height: auto;
@@ -137,6 +138,7 @@
             new Book() { Author = "Margaret Atwood", Title = "Old Babies in the Woods: Stories", Category = "New Releases" , Status = "Unavailable" , num = 8 , Image = "images/Book8.png", Description = ""},
             new Book() { Author = "Peter Attied, MD", Title = "Outlive", Category = "New Releases" , Status = "Available" , num = 9 , Image = "images/Book9.png"},
             new Book() { Author = "Tracy West", Title = "Dragon Masters: Cure of the Shadow Dragon", Category = "New Releases" , Status = "Available", num = 10 , Image = "images/Book10.png", Description = ""},
+
 
         };
 
@@ -193,6 +195,7 @@
                 height: 300px;
                 object-fit: cover;
                 display: inline-block;
+                opacity: 1;
             }
 
             .Title {

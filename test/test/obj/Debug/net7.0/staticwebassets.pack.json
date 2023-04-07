@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets/icon-192.png"
     },
     {
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/.DS_Store",
+      "PackagePath": "staticwebassets/images/.DS_Store"
+    },
+    {
       "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Add.png",
       "PackagePath": "staticwebassets/images/Add.png"
     },

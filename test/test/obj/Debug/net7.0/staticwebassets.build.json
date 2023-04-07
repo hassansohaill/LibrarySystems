@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5aNfZhWI1Ce0aCvUu9ZcGNy/nLvGsbRGMCtahmBu6Yo=",
+  "Hash": "ETHyPMJAwPLA3w8ihn7XaB4uI0ja9QRAC8MK7Mm732g=",
   "Source": "test",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,74 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/staticwebassets/BlazorStrap.bundle.scp.css",
+      "SourceId": "BlazorStrap",
+      "SourceType": "Package",
+      "ContentRoot": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/staticwebassets/",
+      "BasePath": "_content/BlazorStrap",
+      "RelativePath": "BlazorStrap.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/staticwebassets/BlazorStrap.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/staticwebassets/blazorstrap.js",
+      "SourceId": "BlazorStrap",
+      "SourceType": "Package",
+      "ContentRoot": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/staticwebassets/",
+      "BasePath": "_content/BlazorStrap",
+      "RelativePath": "blazorstrap.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/staticwebassets/blazorstrap.js"
+    },
+    {
+      "Identity": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/staticwebassets/blazorstrap.min.js",
+      "SourceId": "BlazorStrap",
+      "SourceType": "Package",
+      "ContentRoot": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/staticwebassets/",
+      "BasePath": "_content/BlazorStrap",
+      "RelativePath": "blazorstrap.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/staticwebassets/blazorstrap.min.js"
+    },
+    {
+      "Identity": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/staticwebassets/popper.min.js",
+      "SourceId": "BlazorStrap",
+      "SourceType": "Package",
+      "ContentRoot": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/staticwebassets/",
+      "BasePath": "_content/BlazorStrap",
+      "RelativePath": "popper.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/staticwebassets/popper.min.js"
+    },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/blazor.boot.json",
       "SourceId": "test",
@@ -49,6 +117,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.components.webassembly/7.0.3/build/net7.0/blazor.webassembly.js"
+    },
+    {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/BlazorComponentUtilities.dll",
+      "SourceId": "test",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/BlazorComponentUtilities.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/blazorcomponentutilities/1.7.1/lib/netstandard2.0/BlazorComponentUtilities.dll"
+    },
+    {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/BlazorStrap.dll",
+      "SourceId": "test",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/BlazorStrap.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/lib/net7.0/BlazorStrap.dll"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/dotnet.7.0.4.9h66m8xu50.js",
@@ -184,7 +286,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.authorization/7.0.3/lib/net7.0/Microsoft.AspNetCore.Authorization.dll"
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.authorization/7.0.4/lib/net7.0/Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.dll",
@@ -201,7 +303,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.components/7.0.3/lib/net7.0/Microsoft.AspNetCore.Components.dll"
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.components/7.0.4/lib/net7.0/Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.Forms.dll",
@@ -218,7 +320,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.components.forms/7.0.3/lib/net7.0/Microsoft.AspNetCore.Components.Forms.dll"
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.components.forms/7.0.4/lib/net7.0/Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.Web.dll",
@@ -235,7 +337,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.components.web/7.0.3/lib/net7.0/Microsoft.AspNetCore.Components.Web.dll"
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.components.web/7.0.4/lib/net7.0/Microsoft.AspNetCore.Components.Web.dll"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.WebAssembly.dll",
@@ -269,7 +371,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.metadata/7.0.3/lib/net7.0/Microsoft.AspNetCore.Metadata.dll"
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.metadata/7.0.4/lib/net7.0/Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.CSharp.dll",
@@ -541,7 +643,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/microsoft.jsinterop/7.0.3/lib/net7.0/Microsoft.JSInterop.dll"
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/microsoft.jsinterop/7.0.4/lib/net7.0/Microsoft.JSInterop.dll"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.JSInterop.WebAssembly.dll",
@@ -3451,23 +3553,6 @@
       "OriginalItemSpec": "/usr/local/share/dotnet/packs/Microsoft.NETCore.App.Runtime.Mono.browser-wasm/7.0.4/runtimes/browser-wasm/lib/net7.0/WindowsBase.dll"
     },
     {
-      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/+4ALNApj.gz",
-      "SourceId": "test",
-      "SourceType": "Computed",
-      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.dll"
-    },
-    {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/+7pHJw5t.gz",
       "SourceId": "test",
       "SourceType": "Computed",
@@ -3704,6 +3789,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/System.Xml.XmlSerializer.dll"
+    },
+    {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/33iAO66P.gz",
+      "SourceId": "test",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.JSInterop.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.JSInterop.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.JSInterop.dll"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/39PrXofj.gz",
@@ -4114,6 +4216,23 @@
       "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/System.Security.Cryptography.OpenSsl.dll"
     },
     {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/awmBFbtv.gz",
+      "SourceId": "test",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Metadata.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Metadata.dll"
+    },
+    {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/B0F3eLiO.gz",
       "SourceId": "test",
       "SourceType": "Computed",
@@ -4333,6 +4452,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/System.IO.Compression.dll"
+    },
+    {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/csuVn8IF.gz",
+      "SourceId": "test",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/dgfYcgop.gz",
@@ -4556,21 +4692,21 @@
       "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/System.Linq.Parallel.dll"
     },
     {
-      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/G0c+84MC.gz",
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/fLDS8sov.gz",
       "SourceId": "test",
       "SourceType": "Computed",
       "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
       "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Web.dll.gz",
+      "RelativePath": "_framework/BlazorStrap.dll.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
-      "RelatedAsset": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.Web.dll",
+      "RelatedAsset": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/BlazorStrap.dll",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.Web.dll"
+      "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/BlazorStrap.dll"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/G5AIVC4I.gz",
@@ -5593,6 +5729,23 @@
       "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/System.Security.Cryptography.Cng.dll"
     },
     {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/pf78UXxH.gz",
+      "SourceId": "test",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll"
+    },
+    {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/pfFRUHNR.gz",
       "SourceId": "test",
       "SourceType": "Computed",
@@ -5763,6 +5916,23 @@
       "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.Extensions.Options.dll"
     },
     {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/qcGt1a8D.gz",
+      "SourceId": "test",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Web.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.Web.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Components.Web.dll"
+    },
+    {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/QDmfbpeu.gz",
       "SourceId": "test",
       "SourceType": "Computed",
@@ -5846,6 +6016,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/System.Threading.Tasks.Parallel.dll"
+    },
+    {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/R2Kag35g.gz",
+      "SourceId": "test",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/BlazorComponentUtilities.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/BlazorComponentUtilities.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/BlazorComponentUtilities.dll"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/RaFVMtlm.gz",
@@ -6069,40 +6256,6 @@
       "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/System.IO.FileSystem.Watcher.dll"
     },
     {
-      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/stHWsfCt.gz",
-      "SourceId": "test",
-      "SourceType": "Computed",
-      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.dll"
-    },
-    {
-      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/Sv1ucQ6z.gz",
-      "SourceId": "test",
-      "SourceType": "Computed",
-      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Metadata.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.AspNetCore.Metadata.dll"
-    },
-    {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/SX8WMGHD.gz",
       "SourceId": "test",
       "SourceType": "Computed",
@@ -6239,7 +6392,7 @@
       "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/System.Threading.Channels.dll"
     },
     {
-      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/Ur7ecpGD.gz",
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/UlHEzAau.gz",
       "SourceId": "test",
       "SourceType": "Computed",
       "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
@@ -6800,23 +6953,6 @@
       "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/System.Private.Xml.Linq.dll"
     },
     {
-      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/Z7GKngI7.gz",
-      "SourceId": "test",
-      "SourceType": "Computed",
-      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.JSInterop.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.JSInterop.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/Microsoft.JSInterop.dll"
-    },
-    {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/Zpha4GuL.gz",
       "SourceId": "test",
       "SourceType": "Computed",
@@ -7155,6 +7291,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/icon-192.png"
+    },
+    {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/.DS_Store",
+      "SourceId": "test",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "images/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/.DS_Store"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Add.png",
