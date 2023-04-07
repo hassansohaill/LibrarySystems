@@ -1,36 +1,41 @@
 ﻿<Properties StartupConfiguration="{B783A845-A8D1-4747-8C02-38ECB8159D13}|https">
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.test PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/NavBar.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/LoginPageCart.razor">
     <Files>
-      <File FileName="test/Pages/Homepage.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/OpenBook.razor" />
+      <File FileName="test/Pages/Homepage.razor" Line="165" Column="14" />
+      <File FileName="test/Pages/OpenBook.razor" Line="174" Column="6" />
       <File FileName="test/Shared/NavMenu.razor" />
-      <File FileName="test/Shared/MainLayout.razor" />
+      <File FileName="test/Shared/MainLayout.razor" Line="9" Column="1" />
       <File FileName="test/Properties/launchSettings.json" />
       <File FileName="test/wwwroot/index.html" />
       <File FileName="test/_Imports.razor" />
-      <File FileName="test/Pages/MyBooks.razor" />
+      <File FileName="test/Pages/MyBooks.razor" Line="8" Column="6" />
       <File FileName="test/Shared/SurveyPrompt.razor" />
-      <File FileName="test/Pages/Overdue.razor" />
-      <File FileName="test/Pages/CreateAccount.razor" />
-      <File FileName="test/Pages/Cart.razor" />
-      <File FileName="test/Pages/LoginPage.razor" />
-      <File FileName="test/App.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/Hold.razor" />
-      <File FileName="test/Pages/Profile.razor" />
-      <File FileName="test/Pages/OverdueDefault.razor" />
+      <File FileName="test/Pages/Overdue.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/CreateAccount.razor" Line="1" Column="7" />
+      <File FileName="test/Pages/Cart.razor" Line="16" Column="5" />
+      <File FileName="test/Pages/LoginPage.razor" Line="19" Column="16" />
+      <File FileName="test/App.razor" />
+      <File FileName="test/Pages/Hold.razor" Line="14" Column="11" />
+      <File FileName="test/Pages/Profile.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/OverdueDefault.razor" Line="1" Column="1" />
       <File FileName="test/Shared/NavMenu.razor.css" />
       <File FileName="test/wwwroot/css/app.css" />
-      <File FileName="test/Pages/History.razor" />
+      <File FileName="test/Pages/History.razor" Line="1" Column="1" />
       <File FileName="test/Pages/OverdueCompactView.razor" />
       <File FileName="test/Shared/HomeController.cs" />
-      <File FileName="test/Pages/NavBar.razor" Line="221" Column="40" />
+      <File FileName="test/Pages/NavBar.razor" Line="35" Column="114" />
+      <File FileName="test/Pages/LoginPageHistory.razor" Line="60" Column="51" />
+      <File FileName="test/Pages/LoginPageHold.razor" Line="60" Column="48" />
+      <File FileName="test/Pages/LoginPageMyBooks.razor" Line="60" Column="51" />
+      <File FileName="test/Pages/LoginPagePayments.razor" Line="62" Column="13" />
+      <File FileName="test/Pages/LoginPageProfile.razor" Line="60" Column="51" />
+      <File FileName="test/Pages/LoginPageCart.razor" Line="12" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -41,7 +46,7 @@
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
               <Node name="Pages" expanded="True">
-                <Node name="NavBar.razor" selected="True" />
+                <Node name="LoginPageCart.razor" selected="True" />
               </Node>
               <Node name="Properties" expanded="True" />
               <Node name="Shared" expanded="True">
@@ -53,4 +58,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

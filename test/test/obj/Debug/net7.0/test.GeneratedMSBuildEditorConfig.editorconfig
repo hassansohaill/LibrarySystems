@@ -44,6 +44,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPageCart.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlQ2FydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPageHistory.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlSGlzdG9yeS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPageHold.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlSG9sZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPageMyBooks.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlTXlCb29rcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPagePayments.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlUGF5bWVudHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPageProfile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlUHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/MyBooks.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTXlCb29rcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

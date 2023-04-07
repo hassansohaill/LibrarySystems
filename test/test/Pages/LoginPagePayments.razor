@@ -1,4 +1,4 @@
-﻿@page "/loginPage"
+﻿@page "/loginPagePayments"
 @inject NavigationManager NavigationManager
 @using test.Shared
 
@@ -57,7 +57,7 @@
         if (!string.IsNullOrEmpty(libraryCardValue) && !string.IsNullOrEmpty(pinValue))
         {
             Globals.loginCondition = true;
-            NavigationManager.NavigateTo("/");
+            NavigationManager.NavigateTo("/OverdueDefault");
         }
         else
         {
