@@ -4,10 +4,11 @@
 @inject NavigationManager NavigationManager
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-fU6eJG6Ikl2toZeeJweZ5+5cj5v5J7Agy29/+OFwzQ2Qcq+GUONz4bZJnEAAq7WnHvblpCmSdPzYExlNXQ8/BQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 @if (Globals.loginCondition)
 {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <nav>
         <a class="links" href="#"><i class="fa fa-home"></i> Home</a>
         <a class="links" href="/Cart"><i class="fa fa-shopping-cart"></i> Checkout</a>
@@ -23,15 +24,12 @@
         </div>
 
         <button @onclick="logOut" class="menu-btn"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</button>
-
-
     </nav>
-
-
 
 }
 else
 {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <nav>
         <a class="links" href="#"><i class="fa fa-home"></i> Home</a>
         <a class="links" href="/Cart"><i class="fa fa-shopping-cart"></i> Checkout</a>
@@ -50,10 +48,11 @@ else
             <div class="menu-content">
                 <input class="login" type="text" placeholder="Library Card" @bind="libraryCardValue" />
                 <input class="login" type="password" placeholder="PIN" @bind="pinValue" />
-                <a href="/createAccount" style="color: blue; margin-left:3px;">Forgot Password</a>
-                <a href="/createAccount" style="color: blue; margin-left:3px;">Create Account</a>
-
-                <button @onclick="CheckInputCondition" class="links-hidden1" href="#">Login</button>
+                <div style="text-align: center;">
+                    <div><a href="#" style="color: #bfbeba; font-size: 15px; ">Forgot Password?</a></div>
+                    <div><a href="/createAccount" style="color: #bfbeba; ">Create Account</a></div>
+                    <div><button @onclick="CheckInputCondition" style="margin-top:5px;" class="links-hidden1" href="#">Login</button></div>
+                </div>
             </div>
         </div>
     </nav>
@@ -111,7 +110,7 @@ else
 
     .menu-btn {
         color: white;
-        background-color: #5990ab;
+        background-color: #302f2e;
         font-size: 18px;
         font-weight: bolder;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -126,7 +125,7 @@ else
     .dropdown-menu {
         position: relative;
         display: inline-block;
-        background-color: #5990ab;
+        background-color: #302f2e;
         padding: 10px 16px;
         border: none;
     }
@@ -134,13 +133,13 @@ else
     .menu-content {
         display: none;
         position: absolute;
-        background-color: #5990ab;
+        background-color: #302f2e;
         min-width: 160px;
         z-index: 1;
     }
 
     nav {
-        background-color: #5990ab;
+        background-color: #302f2e;
     }
 
     .links,
@@ -163,7 +162,7 @@ else
 
         .links-hidden:hover, .links-hidden1:hover,
         .links:hover {
-            background-color: #becdd1;
+            background-color: #7d7a78;
             color: white;
         }
 
@@ -172,7 +171,7 @@ else
     }
 
     .dropdown-menu:hover .menu-btn {
-        background-color: #5990ab;
+        background-color: #302f2e;
     }
 
     .login {
@@ -201,8 +200,9 @@ else
 
 @if (!string.IsNullOrEmpty(message1))
 {
-    <p style="color:red">@message1</p">
-}
+    <p style="color:red">
+        @message1</p">
+    }
 
 @code {
     private string libraryCardValue;
@@ -211,14 +211,19 @@ else
     private string message1;
 
 
+    void GoToLogin(string arg)
+    {
+        NavigationManager.NavigateTo($"/loginPage?arg={arg}");
+    }
+
     private async Task CheckInputCondition()
     {
         await Task.Delay(2000);
         if (!string.IsNullOrEmpty(libraryCardValue) && !string.IsNullOrEmpty(pinValue))
         {
+
             Globals.loginCondition = true;
-            NavigationManager.NavigateTo("/");
-            message = "Successful Login!";
+            message = "Login Successful!";
             await InvokeAsync(() => StateHasChanged());
             await Task.Delay(5000);
             message = "";
@@ -228,7 +233,8 @@ else
         else
         {
             message1 = "Incorrect Library Card Number or PIN";
-            await Task.Delay(5000);
+            await InvokeAsync(() => StateHasChanged());
+            await Task.Delay(10000);
             message1 = "";
             await InvokeAsync(() => StateHasChanged());
 
@@ -239,7 +245,7 @@ else
         await Task.Delay(2000);
         Globals.loginCondition = false;
         NavigationManager.NavigateTo("/");
-        message = "Successful Logout!";
+        message = "Logout Successful!";
         await InvokeAsync(() => StateHasChanged());
         await Task.Delay(5000);
         message = "";
@@ -250,4 +256,5 @@ else
     {
         await Task.CompletedTask;
     }
+
 }

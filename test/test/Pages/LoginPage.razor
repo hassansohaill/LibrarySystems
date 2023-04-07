@@ -2,97 +2,74 @@
 @inject NavigationManager NavigationManager
 @using test.Shared
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 <NavBar />
 
+@if (!string.IsNullOrEmpty(message))
+{
+    <p style="color:green">@message</p>
+}
 
-<div class="loginBox">
-    <div class="loginLogo">
-        <p>LOGIN</p>
-    </div>
-    <div class="username">
-        <form>
-            <label for="username">Library Card ID:</label><br>
-            <input type="text" id="username" name="username" @bind="libraryCardValue"><br>
-        </form>
-    </div>
 
-    <div class="password">
-        <form>
-            <label for="password">PIN:</label><br>
-            <input type="password" id="pasword" name="password" @bind="pinValue"><br>
-        </form>
-    </div>
 
-    <div class="submitButton">
-        <button @onclick="CheckInputCondition">
-            <h>Login</h>
-        </button>
-    </div>
-
-    <div class="links2">
-
-        <div class="forgetLink">
-            <a href=#home>Forgot Password?</a>
+<section style="margin-top:50px;">
+    <div class="container py-3 h-75">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card" style="background-color: #222222; border-radius: 1rem; ">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-md-4 mt-md-3 pb-4">
+                            <h2 class="fw-bold mb-2 text-uppercase" style="color: #ffffff;">Login</h2>
+                            <p class="text-white-50 mb-3">Please enter your library card number and PIN!</p>
+                            <div style="margin-top:30px;" class="form-outline form-white mb-3">
+                                <input type="email" id="typeEmailX" class="form-control form-control-lg" style="background-color: #333333; color: #ffffff;" placeholder="Library Card" @bind="libraryCardValue" />
+                            </div>
+                            <div class="form-outline form-white mb-3">
+                                <input type="password" id="typePasswordX" class="form-control form-control-lg" style="background-color: #333333; color: #ffffff;" placeholder="PIN" @bind="pinValue" />
+                            </div>
+                            <p class="small mb-3 pb-lg-2"><a class="text-white-50" href="#!" style="color: #ffffff;">Forgot password?</a></p>
+                            <button @onclick="CheckInputCondition" class="btn btn-outline-light btn-lg px-4" type="submit" style="color: #ffffff; border-color: #ffffff;">Login</button>
+                        </div>
+                        <div>
+                            <p class="mb-0" style="color: #ffffff;">
+                                Don't have an account? <a href="/createAccount" class="text-white-50 fw-bold" style="color: #ffffff;">Create Account</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="createAccount">
-            <a href=#home>New? Click here to create an account!</a>
-        </div>
     </div>
+</section>
 
-</div>
 
-<style>
-    .links2 {
-        margin-top: 20px;
-    }
 
-    .loginLogo {
-        text-align: center;
-    }
-
-    .username {
-        margin-top: 30px;
-    }
-
-    .password {
-        margin-top: 30px;
-    }
-
-    .submitButton {
-        margin-top: 20px;
-    }
-
-    .loginBox {
-        text-align: center;
-    }
-</style>
 
 @code {
     private string libraryCardValue;
     private string pinValue;
     private string message;
 
+
     private async Task CheckInputCondition()
     {
+        await Task.Delay(2000);
         if (!string.IsNullOrEmpty(libraryCardValue) && !string.IsNullOrEmpty(pinValue))
         {
             Globals.loginCondition = true;
-            await Task.Delay(2000);
             NavigationManager.NavigateTo("/");
-
         }
         else
         {
             message = "Incorrect Library Card Number or PIN";
+            await InvokeAsync(() => StateHasChanged());
+            await Task.Delay(5000);
+            message = "";
+
         }
     }
-    private async Task logOut()
+    protected override async Task OnInitializedAsync()
     {
-        Globals.loginCondition = false;
-        await Task.Delay(2000);
-        NavigationManager.NavigateTo("/");
-
+        await Task.CompletedTask;
     }
-
 }
