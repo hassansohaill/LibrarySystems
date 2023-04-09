@@ -1,7 +1,5 @@
 ﻿@page "/Hold"
 
-<!DOCTYPE html>
-
 <NavBar />
 
 <head>
@@ -9,7 +7,6 @@
     <link rel="stylesheet" href="../wwwroot/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../wwwroot/css/Hold.css" />
 </head>
-
 
 <body>    
     <div class="container">
@@ -21,144 +18,102 @@
                 </div>
                 <table class="table">
                     <tbody>
-
-
-                        <tr class="hold-item">
-                            <td>
-                                <img src="images/Book9.png" alt="Book Cover" height="120" />
-                            </td>
-                            <td class="book-details">
-                                <p>Title: Outlive: The Science and Art of Longetivy</p>
-                                <p>Author: Peter Attia</p>
-                                <p>Type: Paperback</p>
-                            </td>
-                            <td>
-                                <p>Location: Nose Hill Library,</p>
-                                <p>1530 Northmount Dr NW</p>
-
-                            </td>
-
-                            <td>
-                                <p class="hold-status">Status: Ready to be picked up</p>
-                                <p>Holding Until: 03/20/2023</p>
-                            </td>
-                            <td>
-                                <button class="btn btn-danger">Remove</button>
-                            </td>
-                        </tr>
-
-
-                        <tr class="hold-item">
-                            <td>
-                                <img src="images/Book2.png" alt="Book Cover" height="120" />
-                            </td>
-                            <td class="book-details">
-                                <p>Title: My Secret Sister</p>
-                                <p>Author: Lauren Westwood</p>
-                                <p>Type: Paperback</p>
-                            </td>
-                            <td>
-                                <p>Location: Nose Hill Library,</p>
-                                <p>1530 Northmount Dr NW</p>
-
-                            </td>
-                            <td>
-                                <p class="hold-status">Status: Waitlist Pos 10</p>
-                                <p>Holding Until: N/A</p>
-                            </td>
-                            <td>
-                                <button class="btn btn-danger">Remove</button>
-                            </td>
-                        </tr>
-
-                        <tr class="hold-item">
-                            <td>
-                                <img src="images/Book3.png" alt="Book Cover" height="120" />
-                            </td>
-                            <td class="book-details">
-                                <p>Title: The Fifth Juror</p>
-                                <p>Author: Lori Lacefield</p>
-                                <p>Type: Paperback</p>
-                            </td>
-                            <td>
-                                <p>Location: Nose Hill Library,</p>
-                                <p>1530 Northmount Dr NW</p>
-
-                            </td>
-                            <td>
-                                <p class="hold-status">Status: Waitlist Pos 4</p>
-                                <p>Holding Until: N/A</p>
-                            </td>
-                            <td>
-                                <button class="btn btn-danger">Remove</button>
-                            </td>
-                        </tr>
-
-                        <tr class="hold-item">
-                            <td>
-                                <img src="images/Book4.png" alt="Book Cover" height="120" />
-                            </td>
-                            <td class="book-details">
-                                <p>Title: Mad Honey</p>
-                                <p>Author: Jennifer Finney Boylan</p>
-                                <p>Type: Hardcover</p>
-                            </td>
-                            <td>
-                                <p>Location: Nose Hill Library,</p>
-                                <p>1530 Northmount Dr NW</p>
-
-                            </td>
-
-                            <td>
-                                <p class="hold-status">Status: Waitlist Pos 4</p>
-                                <p>Holding Until: N/A</p>
-                            </td>
-
-                            <td>
-                                <button class="btn btn-danger">Remove</button>
-                            </td>
-                        </tr>
-
-                        <tr class="hold-item">
-                            <td>
-                                <img src="images/Book5.png" alt="Book Cover" height="120" />
-                            </td>
-                            <td class="book-details">
-                                <p>Title: Empath</p>
-                                <p>Author: Judy Byce</p>
-                                <p>Type: Paperback</p>
-                            </td>
-                            <td>
-                                <p>Location: Nose Hill Library,</p>
-                                <p>1530 Northmount Dr NW</p>
-
-                            </td>
-
-                            <td>
-                                <p class="hold-status">Status: Waitlist Pos 4</p>
-                                <p>Holding Until: N/A</p>
-                            </td>
-
-                            <td>
-                                <button class="btn btn-danger">Remove</button>
-                            </td>
-                        </tr>
-
-
-
-
-
+                        @foreach (var book in books)
+                        {
+                            <tr class="hold-item">
+                                <td>
+                                    <img src="@book.CoverImage" alt="Book Cover" height="120" />
+                                </td>
+                                <td class="book-details">
+                                    <p>Title: @book.Title</p>
+                                    <p>Author: @book.Author</p>
+                                    <p>Type: @book.Type</p>
+                                </td>
+                                <td>
+                                    <p>Location: @book.Location,</p>
+                                    <p>@book.LocationAddress</p>
+                                </td>
+                                <td>
+                                    <p class="hold-status">Status: @book.Status</p>
+                                    <p>Holding Until: @book.HoldingUntil</p>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger" @onclick="(() => RemoveBook(book))">Remove</button>
+                                </td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>
-
-
             <div class="col-lg-1"></div>
-
-
-
-
-
         </div>
     </div>
 </body>
+
+
+@code {
+    private List<Book> books = new List<Book>
+    {
+        new Book
+        {
+            CoverImage = "images/Book9.png",
+            Title = "Outlive: The Science and Art of Longetivy",
+            Author = "Peter Attia",
+            Type = "Paperback",
+            Location = "Nose Hill Library",
+            LocationAddress = "1530 Northmount Dr NW",
+            Status = "Ready to be picked up",
+            HoldingUntil = "03/20/2023"
+        },
+        new Book
+        {
+            CoverImage = "images/Book2.png",
+            Title = "My Secret Sister",
+            Author = "Lauren Westwood",
+            Type = "Paperback",
+            Location = "Nose Hill Library",
+            LocationAddress = "1530 Northmount Dr NW",
+            Status = "Waitlist Pos 10",
+            HoldingUntil = "N/A"
+        },
+        new Book
+        {
+            CoverImage = "images/Book3.png",
+            Title = "The Fifth Juror",
+            Author = "Lori Lacefield",
+            Type = "Paperback",
+            Location = "Nose Hill Library",
+            LocationAddress = "1530 Northmount Dr NW",
+            Status = "Waitlist Pos 4",
+            HoldingUntil = "N/A"
+        },
+        new Book
+        {
+            CoverImage = "images/Book4.png",
+            Title = "Mad Honey",
+            Author = "Jennifer Finney Boylan",
+            Type = "Hardcover",
+            Location = "Nose Hill Library",
+            LocationAddress = "1530 Northmount Dr NW",
+            Status = "Waitlist Pos 4",
+            HoldingUntil = "N/A"
+        }
+    };
+
+    private void RemoveBook(Book book)
+    {
+        books.Remove(book);
+    }
+
+    private class Book
+    {
+        public string CoverImage { get; set; }
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string Type { get; set; }
+        public string Location { get; set; }
+        public string LocationAddress { get; set; }
+        public string Status { get; set; }
+        public string HoldingUntil { get; set; }
+    }
+}
