@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-11">
-                <h1 id="hold-title">My Books On Hold</h1>
+                <h1 id="hold-title">On Hold</h1>
                 <div>
                     <input class="search" type="text" placeholder="Search...">
                 </div>
@@ -38,7 +38,7 @@
                                     <p>Holding Until: @book.HoldingUntil</p>
                                 </td>
                                 <td>
-                                    <button class="btn btn-danger" @onclick="(() => RemoveBook(book))">Remove</button>
+                                    <button class="btn btn-danger" @onclick="(() => RemoveBook(book))">Cancel</button>
                                 </td>
                             </tr>
                         }

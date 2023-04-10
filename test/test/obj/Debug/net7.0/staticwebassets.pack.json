@@ -105,6 +105,22 @@
       "PackagePath": "staticwebassets/images/Book14.png"
     },
     {
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book15.png",
+      "PackagePath": "staticwebassets/images/Book15.png"
+    },
+    {
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book16.png",
+      "PackagePath": "staticwebassets/images/Book16.png"
+    },
+    {
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book17.png",
+      "PackagePath": "staticwebassets/images/Book17.png"
+    },
+    {
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book18.png",
+      "PackagePath": "staticwebassets/images/Book18.png"
+    },
+    {
       "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book2.png",
       "PackagePath": "staticwebassets/images/Book2.png"
     },
