@@ -5,182 +5,119 @@
 <div class="overdueContainer">
     <h1 class="overduesign">OVERDUE FEES</h1>
     <h1>Total Fees Due: $12.68 </h1>
+    <button class="btn btn-danger" > Pay All </button>
+</div>
 
-
-    @{
-        if (expandView)
-        {
-            <div>
-                <button class="paynow"> Pay All </button>
-                <button @onclick="expand" id="myBtn">Less Details</button>
-                <div style="margin-top:30px;"> <button @onclick="view">Compact View</button></div>
-
-                @if (changeView)
-                {
-                    <table class="table" style="width:70%">
-                        <tr>
-                            <th>
-                                <h2>Book</h2>
-                                <button class="sort"> - </button>
-                            </th>
-                            <th style="width:20%">
-                                <h2>Due Date</h2>
-                                <button class="sort"> - </button>
-                            </th>
-                            <th style="width:25%"> <h2>Days overdue</h2> <button class="sort"> - </button>  </th>
-                            <th style="width:25%"> <h2>Overdue Cost</h2> <button class="sort"> - </button>  </th>
-                            <th> <p>Pay Individually</p>   </th>
-                        </tr>
-                        <tr class="book1">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-11">
+            <table class="table">
+                <tbody>
+                    @foreach (var book in books)
+                    {
+                        <tr class="hold-item">
                             <td>
-                                <img class="bookImg" src="images/Book2.png" />
-                                <p>Title: My Secret Sister</p>
-                                <p>Author:Lauren Westwood</p>
+                                <img src="@book.CoverImage" alt="Book Cover" height="120" />
                             </td>
-                            <td>2023-03-01</td>
-                            <td>12</td>
-                            <td>$5.47</td>
-                            <td><button> Pay Now</button></td>
-                        </tr>
-                        <tr class="book2">
+                            <td class="book-details">
+                                <p>Title: @book.Title</p>
+                                <p>Author: @book.Author</p>
+                                <p>Type: @book.Type</p>
+                            </td>
                             <td>
-                                <img class="bookImg" src="images/Book4.png" />
-                                <p>Title: Mad Honey</p>
-                                <p>Author:Jennifer Finney Boylan</p>
+                                <p>Due Date: @book.Location,</p>
+                                <p>Days Overdue: @book.LocationAddress</p>
                             </td>
-                            <td>2023-02-25</td>
-                            <td>15</td>
-                            <td>$7.21</td>
-                            <td><button> Pay Now</button></td>
+                            <td>
+                                <p></p>
+                                <p>Cost: @book.HoldingUntil</p>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger" @onclick="(() => RemoveBook(book))"> Pay </button>
+                            </td>
                         </tr>
-
-                    </table>
-
-                    <style>
-                        .view {
-                            text-align: center;
-                            margin-top: 20px;
-                        }
-
-                        .bookImg {
-                            width: 150px;
-                            height: 225px;
-                        }
-
-                        .sort {
-                            float: right;
-                        }
-
-                        table, th, td {
-                            border: 1px solid black;
-                        }
-
-                        .table {
-                            margin-top: 30px;
-                            margin-left: auto;
-                            margin-right: auto;
-                        }
-                    </style>
-                }
-            </div>
-            <table class="table" style="width:70%">
-                <tr>
-                    <th>
-                        <h2>Book</h2>
-                        <button class="sort"> - </button>
-                    </th>
-                    <th style="width:20%">
-                        <h2>Due Date</h2>
-                        <button class="sort"> - </button>
-                    </th>
-                    <th style="width:25%"> <h2>Days overdue</h2> <button class="sort"> - </button>  </th>
-                    <th style="width:25%"> <h2>Overdue Cost</h2> <button class="sort"> - </button>  </th>
-                    <th> <p>Pay Individually</p>   </th>
-                </tr>
-                <tr class="book1">
-                    <td>
-                        <p>Title: My Secret Sister</p>
-                        <p>Author:Lauren Westwood</p>
-                    </td>
-                    <td>2023-03-01</td>
-                    <td>12</td>
-                    <td>$5.47</td>
-                    <td><button> Pay Now</button></td>
-                </tr>
-                <tr class="book2">
-                    <td>
-                        <p>Title: Mad Honey</p>
-                        <p>Author:Jennifer Finney Boylan</p>
-                    </td>
-                    <td>2023-02-25</td>
-                    <td>15</td>
-                    <td>$7.21</td>
-                    <td><button> Pay Now</button></td>
-                </tr>
-
+                    }
+                </tbody>
             </table>
-            <style>
-                .view {
-                    text-align: center;
-                    margin-top: 20px;
-                }
-
-                .bookImg {
-                    width: 150px;
-                    height: 225px;
-                }
-
-                .sort {
-                    float: right;
-                }
-
-                table, th, td {
-                    border: 1px solid black;
-                }
-
-                .table {
-                    margin-top: 30px;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-                }
-            </style>
-        }
-        else
-        {
-            <div>
-                <button class="paynow"> Pay All </button>
-                <button @onclick="expand" id="myBtn">More Details</button>
-            </div>
-        }
-    }
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
 </div>
 
 <style>
-    .overduesign {
-        text-align: center;
-    }
 
     .overdueContainer {
         text-align: center;
+        margin-top: 50px;
+
+
     }
 
     .paynow {
         margin-left: 10px;
         display: inline-block;
     }
+
+    .container {
+        margin-top: 100px;
+
+
+    }
 </style>
 
 @code {
-    bool expandView = false;
-    bool changeView = false;
-    void expand()
+    private List<Book> books = new List<Book>
     {
-        expandView = !expandView;
+        new Book
+        {
+            CoverImage = "images/Book9.png",
+            Title = "Outlive: The Science and Art of Longetivy",
+            Author = "Peter Attia",
+            Type = "Paperback",
+            Location = "03/01/2023",
+            LocationAddress = "40 Days",
+            Status = "Ready to be picked up",
+            HoldingUntil = "$4.58",
+        },
+        new Book
+        {
+            CoverImage = "images/Book2.png",
+            Title = "My Secret Sister",
+            Author = "Lauren Westwood",
+            Type = "Paperback",
+            Location = "03/21/2023",
+            LocationAddress = "20 Days",
+            Status = "Waitlist Pos 10",
+            HoldingUntil = "$2.57"
+        },
+        new Book
+        {
+            CoverImage = "images/Book3.png",
+            Title = "The Fifth Juror",
+            Author = "Lori Lacefield",
+            Type = "Paperback",
+            Location = "04/05/2023",
+            LocationAddress = "5 Days",
+            Status = "Waitlist Pos 4",
+            HoldingUntil = "$0.75"
+        },
+    };
+
+    private void RemoveBook(Book book)
+    {
+        books.Remove(book);
     }
-    void view()
+
+    private class Book
     {
-        changeView = !changeView;
+        public string CoverImage { get; set; }
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string Type { get; set; }
+        public string Location { get; set; }
+        public string LocationAddress { get; set; }
+        public string Status { get; set; }
+        public string HoldingUntil { get; set; }
     }
 }
 
