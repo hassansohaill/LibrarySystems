@@ -1,14 +1,9 @@
-﻿@page "/"
-
-<!DOCTYPE html>
+﻿@page "/SeeAll/{cat}"
 @inject NavigationManager NavigationManager
 @using test.Shared
 
-<head>
-    <PageTitle>Library Interface</PageTitle>
-</head>
-
 <NavBar />
+
 <body class="overlay">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -31,60 +26,72 @@
         </div>
     </div>
 
+
     @foreach (var category in bookDictionary.Keys)
     {
-        <div class="Header">
-            <div class="Title">
-                @category
+        if (category == cat)
+        {
+            <div class="Header">
+                <div class="Title">
+                    @cat
+                </div>
             </div>
-            <div class="Link>">
-                <a href="/SeeAll/@category">See All ></a>
-            </div>
-        </div>
-        <ul class="bookList">
-            @foreach (var book in bookDictionary[category])
-            {
-                <li class="bookItem">
-                    <img type="button" @onclick="(e) => TogglePopup(book.Author, book.Title, book.Image,book.Type, book.Description, book.Status)" class="book1" src=@book.Image />
-                    <div class="bookTitle" style="color: #007185; font-size: 15px; width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                        <a href="/OpenBook">@book.Title</a>
-                    </div>
+            <ul class="bookList">
+                @foreach (var book in bookDictionary[category])
+                {
+                    <li class="bookItem">
+                        <img type="button" @onclick="(e) => TogglePopup(book.Author, book.Title, book.Image,book.Type, book.Description, book.Status)" class="book1" src=@book.Image />
+                        <div class="bookTitle" style="color: #007185; font-size: 15px; width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                            <a href="/OpenBook">@book.Title</a>
+                        </div>
 
-                    <div style="font-size: 12px; width: 150px;">
-                        by @book.Author
-                    </div>
-                    @if (@book.Type == "paper")
-                    {
-                        <div style="color:black; font-size: 12px;">
-                            <i class="fas fa-book"></i> Book
+                        <div style="font-size: 12px; width: 150px;">
+                            by @book.Author
                         </div>
-                    }
-                    else
-                    {
-                        <div style="color:black; font-size: 12px;">
-                            <i class="fas fa-tablet-alt"></i> eBook
-                        </div>
-                    }
+                        @if (@book.Type == "paper")
+                        {
+                            <div style="color:black; font-size: 12px;">
+                                <i class="fas fa-book"></i> Book
+                            </div>
+                        }
+                        else
+                        {
+                            <div style="color:black; font-size: 12px;">
+                                <i class="fas fa-tablet-alt"></i> eBook
+                            </div>
+                        }
 
-                    @if (@book.Status == "Available")
-                    {
-                        <div style="color: green; font-size: 12px;">
-                            @book.Status
-                        </div>
-                    }
-                    else
-                    {
-                        <div style="color: red; font-size: 12px;">
-                            @book.Status
-                        </div>
-                    }
+                        @if (@book.Status == "Available")
+                        {
+                            <div style="color: green; font-size: 12px;">
+                                @book.Status
+                            </div>
+                        }
+                        else
+                        {
+                            <div style="color: red; font-size: 12px;">
+                                @book.Status
+                            </div>
+                        }
+                    </li>
+                }
+            </ul>
+        }
 
-                </li>
-            }
-        </ul>
     }
 
 </body>
+<style>
+    .bookList {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bookItem {
+        margin: 0px;
+        margin-bottom: 12px;
+    }
+</style>
 
 @if (showPopup)
 {
@@ -146,7 +153,7 @@
                     {
                         <div>
                             <button @onclick="(e) => AddCart(popupTitle)" style="margin-top: 20px; font-size: 16px; " class="bag-button">
-                                <span> Add to Bag </span>
+                                <span> Add to Bag</span>
                                 <i class="fas fa-shopping-bag"></i>
                             </button>
                         </div>
@@ -166,7 +173,7 @@
                             </button>
                         </div>
                         <div>
-                            <button @onclick="(e) => AddHold(popupTitle)" style="margin-top: 20px; font-size: 16px; " class="bag-button">
+                            <button  @onclick="(e) => AddHold(popupTitle)" style="margin-top: 20px; font-size: 16px; " class="bag-button">
                                 <span> Place Hold </span>
                                 <i class="fas fa-clock"></i>
                             </button>
@@ -257,6 +264,7 @@ else
 
 
 @code {
+    [Parameter] public string cat { get; set; }
 
     public class Book
     {
@@ -304,6 +312,11 @@ else
     }
 
 
+    void BookOpen(int id)
+    {
+        NavigationManager.NavigateTo($"/OpenBook/{id}");
+
+    }
     async Task AddHold(string title)
     {
         await Task.Delay(2000);
