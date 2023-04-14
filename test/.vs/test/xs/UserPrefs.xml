@@ -1,30 +1,32 @@
 ﻿<Properties StartupConfiguration="{B783A845-A8D1-4747-8C02-38ECB8159D13}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.test PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/Hold.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/Homepage.razor">
     <Files>
-      <File FileName="test/Pages/Homepage.razor" Line="316" Column="6" />
+      <File FileName="test/Pages/Homepage.razor" Line="179" Column="68" />
       <File FileName="test/Shared/NavMenu.razor" />
       <File FileName="test/Shared/MainLayout.razor" />
       <File FileName="test/Properties/launchSettings.json" />
       <File FileName="test/wwwroot/index.html" />
       <File FileName="test/_Imports.razor" />
-      <File FileName="test/Pages/MyBooks.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/MyBooks.razor" />
       <File FileName="test/Shared/SurveyPrompt.razor" />
       <File FileName="test/Pages/Overdue.razor" />
-      <File FileName="test/Pages/CreateAccount.razor" Line="1" Column="1" />
-      <File FileName="test/Pages/Cart.razor" Line="131" Column="3" />
-      <File FileName="test/Pages/LoginPage.razor" Line="12" Column="1" />
+      <File FileName="test/Pages/CreateAccount.razor" />
+      <File FileName="test/Pages/Cart.razor" />
+      <File FileName="test/Pages/LoginPage.razor" />
       <File FileName="test/App.razor" />
       <File FileName="test/Pages/Hold.razor" Line="43" Column="70" />
-      <File FileName="test/Pages/Profile.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/Profile.razor" />
       <File FileName="test/Pages/OverdueDefault.razor" />
       <File FileName="test/Shared/NavMenu.razor.css" />
       <File FileName="test/wwwroot/css/app.css" />
-      <File FileName="test/Pages/History.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/History.razor" />
       <File FileName="test/Pages/OverdueCompactView.razor" />
-      <File FileName="test/Pages/NavBar.razor" Line="35" Column="37" />
+      <File FileName="test/Pages/NavBar.razor" />
       <File FileName="test/Pages/LoginPageHistory.razor" />
       <File FileName="test/Pages/LoginPageHold.razor" />
       <File FileName="test/Pages/LoginPageMyBooks.razor" />
@@ -33,8 +35,8 @@
       <File FileName="test/Pages/LoginPageCart.razor" />
       <File FileName="test/Program.cs" />
       <File FileName="test/Shared/MainLayout.razor.css" />
-      <File FileName="test/Pages/SeeAll.razor" Line="325" Column="5" />
-      <File FileName="test/Shared/Dictionary.cs" Line="10" Column="79" />
+      <File FileName="test/Pages/SeeAll.razor" />
+      <File FileName="test/Shared/Dictionary.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -42,12 +44,12 @@
           <Node name="test" expanded="True">
             <Node name="test" expanded="True">
               <Node name="Dependencies" expanded="True">
-                <Node name="FrameworkReferences" expanded="True" />
+                <Node name="FrameworkReferences" expanded="True">
+                  <Node name="Microsoft.NETCore.App" selected="True" />
+                </Node>
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
-              <Node name="Pages" expanded="True">
-                <Node name="Hold.razor" selected="True" />
-              </Node>
+              <Node name="Pages" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Shared" expanded="True">
                 <Node name="MainLayout.razor" expanded="True" />
@@ -65,8 +67,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.test PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

@@ -117,29 +117,43 @@
                         </div>
                     }
 
-                    <label style="margin-top:12px;" for="library"><b>Choose Library:</b></label>
-                    <div style="display:flex; flex-direction:row;">
+                <label style="margin-top:12px;" for="library"><b>Choose Library:</b></label>
+                <div style="display:flex; flex-direction:row;">
+
+                    @if (@popupType == "paper")
+                    {
                         <select name="library" id="library">
                             <option value="Foxtowne">Foxtowne</option>
                             <option value="Cresent River">Cresent River</option>
                             <option value="Turner Hill">Turner Hill</option>
                             <option value="Lofton">Lofton</option>
                         </select>
+                    }
 
-                        @if (popupStatus == "Available")
-                        {
-                            <div style="color: green; margin-left: 4px; ">
-                                @popupStatus
-                            </div>
-                        }
-                        else
-                        {
-                            <div style="color: red; margin-left: 4px; ">
-                                @popupStatus
-                            </div>
-                        }
+                    else
+                    {
+                        <select name="library" id="library" disabled>
+                            <option value="Foxtowne">N/A</option>
+                            <option value="Cresent River">Cresent River</option>
+                            <option value="Turner Hill">Turner Hill</option>
+                            <option value="Lofton">Lofton</option>
+                        </select>
+                    }
 
-                    </div>
+                    @if (popupStatus == "Available")
+                    {
+                        <div style="color: green; margin-left: 4px; ">
+                            @popupStatus
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="color: red; margin-left: 4px; ">
+                            @popupStatus
+                        </div>
+                    }
+
+                </div>
 
 
                     @if (popupStatus == "Available")
@@ -166,7 +180,7 @@
                             </button>
                         </div>
                         <div>
-                            <button @onclick="(e) => AddHold(popupTitle)" style="margin-top: 20px; font-size: 16px; " class="bag-button">
+                            <button @onclick="(e) => AddHold(popupTitle)"   style="margin-top: 20px; font-size: 16px; " class="bag-button">
                                 <span> Place Hold </span>
                                 <i class="fas fa-clock"></i>
                             </button>
