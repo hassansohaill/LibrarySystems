@@ -6,7 +6,7 @@
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/Homepage.razor">
     <Files>
-      <File FileName="test/Pages/Homepage.razor" Line="179" Column="68" />
+      <File FileName="test/Pages/Homepage.razor" Line="105" Column="29" />
       <File FileName="test/Shared/NavMenu.razor" />
       <File FileName="test/Shared/MainLayout.razor" />
       <File FileName="test/Properties/launchSettings.json" />
@@ -17,9 +17,9 @@
       <File FileName="test/Pages/Overdue.razor" />
       <File FileName="test/Pages/CreateAccount.razor" />
       <File FileName="test/Pages/Cart.razor" />
-      <File FileName="test/Pages/LoginPage.razor" />
+      <File FileName="test/Pages/LoginPage.razor" Line="12" Column="1" />
       <File FileName="test/App.razor" />
-      <File FileName="test/Pages/Hold.razor" Line="43" Column="70" />
+      <File FileName="test/Pages/Hold.razor" />
       <File FileName="test/Pages/Profile.razor" />
       <File FileName="test/Pages/OverdueDefault.razor" />
       <File FileName="test/Shared/NavMenu.razor.css" />
@@ -37,6 +37,7 @@
       <File FileName="test/Shared/MainLayout.razor.css" />
       <File FileName="test/Pages/SeeAll.razor" />
       <File FileName="test/Shared/Dictionary.cs" />
+      <File FileName="test/Pages/ForgotPasswordPage.razor" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -44,12 +45,12 @@
           <Node name="test" expanded="True">
             <Node name="test" expanded="True">
               <Node name="Dependencies" expanded="True">
-                <Node name="FrameworkReferences" expanded="True">
-                  <Node name="Microsoft.NETCore.App" selected="True" />
-                </Node>
+                <Node name="FrameworkReferences" expanded="True" />
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
-              <Node name="Pages" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Homepage.razor" selected="True" />
+              </Node>
               <Node name="Properties" expanded="True" />
               <Node name="Shared" expanded="True">
                 <Node name="MainLayout.razor" expanded="True" />
