@@ -1,0 +1,72 @@
+﻿@page "/PaymentMethods"
+@inject NavigationManager NavigationManager
+@using test.Shared
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<NavBar />
+
+<section style="margin-top:50px;">
+    <div class="container py-3 h-75">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card" style="background-color: #222222; border-radius: 1rem; ">
+                    <div class="card-body p-4 text-center">
+                        <div class="mb-md-4 mt-md-3 pb-4">
+                            <h2 class="fw-bold mb-2 text-uppercase" style="color: #ffffff;">Add Payment Method</h2>
+                            <div style="margin-top:30px;" class="form-outline mb-4">
+                                <input type="text" id="typeCreditCardNumber" class="form-control" placeholder="Credit Card Number" @bind="creditCardNumberValue" />
+                            </div>
+                            <div style="margin-top:30px;" class="form-outline mb-4">
+                                <input type="text" id="typeExpiryDate" class="form-control" placeholder="Expiry Date" @bind="expiryDateValue" />
+                            </div>
+                            <div style="margin-top:30px;" class="form-outline mb-4">
+                                <input type="text" id="typeCVV" class="form-control" placeholder="CVV" @bind="cvvValue" />
+                            </div>
+                            <h5 class="mb-3" style="color: #ffffff;">Billing Information</h5>
+                            <div class="form-outline mb-4">
+                                <input type="text" id="typeName" class="form-control" placeholder="Name" @bind="nameValue" />
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" id="typeAddress" class="form-control" placeholder="Address" @bind="addressValue" />
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" id="typeCountry" class="form-control" placeholder="Country" @bind="countryValue" />
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" id="typeCity" class="form-control" placeholder="City" @bind="cityValue" />
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" id="typeState" class="form-control" placeholder="State / Province" @bind="stateValue" />
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" id="typePostalCode" class="form-control" placeholder="Postal Code" @bind="postalCodeValue" />
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #007bff; border-color: #007bff; margin-top: 50px;" @onclick="AddPaymentMethod">
+                                Add Payment Method
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    private string creditCardNumberValue;
+    private string expiryDateValue;
+    private string cvvValue;
+    private string nameValue;
+    private string addressValue;
+    private string countryValue;
+    private string cityValue;
+    private string stateValue;
+    private string postalCodeValue;
+
+    private async Task AddPaymentMethod()
+    {
+        // add payment method logic here
+        NavigationManager.NavigateTo("/Profile");
+    }
+}
+
