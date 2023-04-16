@@ -1,4 +1,5 @@
 ﻿@page "/Cart"
+@inject NavigationManager NavigationManager
 
 <!DOCTYPE html>
 
@@ -19,67 +20,92 @@
         <div class="row">
             <div class="col-lg-9">
                 <h1 id="cart-title">My Bag</h1>
-                <div>
-                    <input class="search" type="text" placeholder="Search...">
-                </div>
-                <table class="table">
-                    <tbody>
-                        @foreach (var str in ListCart.StringsCart)
-                        {
-                            @foreach (var book in bookDictionary[str])
-                            {
-                                <tr class="hold-item">
-                                    <td>
-                                        <img src="@book.Image" alt="Book Cover" height="120" />
-                                    </td>
-                                    <td class="book-details">
-                                        <p>@book.Title</p>
-                                        <p>@book.Author</p>
-                                        @if (@book.Type == "paper")
-                                        {
-                                            <div style="color:black;">
-                                                <i class="fas fa-book"></i> Book
-                                            </div>
-                                        }
-                                        else
-                                        {
-                                            <div style="color:black;">
-                                                <i class="fas fa-tablet-alt"></i> eBook
-                                            </div>
-                                        }
-                                    </td>
-                                    <td>
-                                        <p>Location: @book.Location,</p>
-                                    </td>
-                                    <td>
-                                        <p class="hold-status">Status: @book.Holding</p>
-                                        <p>Holding Until: @book.Holding</p>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-danger" @onclick="(() => RemoveBookCart(book.Title))" >Cancel</button>
-                                    </td>
-                                </tr>
-                            }
-                        }
-                    </tbody>
-                </table>
+
+                @if (ListCart.StringsCart.Count == 0)
+                    {
+
+                    <p style="font-size: 18px;">Your bag is currently empty! You can browse items by returning <a href="/">Home</a>.</p>
+                    }
+                    else
+                    {
+                    <div>
+                        <input class="search" type="text" placeholder="Search...">
+                    </div>
+                    <table class="table">
+
+                        <tbody>
+
+                            @foreach (var str in ListCart.StringsCart)
+                                {
+                                @foreach (var book in bookDictionary[str])
+                                    {
+                                    <tr class="hold-item">
+                                        <td>
+                                            <img src="@book.Image" alt="Book Cover" height="120" />
+                                        </td>
+                                        <td class="book-details">
+                                            <p>@book.Title</p>
+                                            <p>@book.Author</p>
+                                            @if (@book.Type == "paper")
+                                                {
+                                                <div style="color:black;">
+                                                    <i class="fas fa-book"></i> Book
+                                                </div>
+                                                }
+                                                else
+                                                {
+                                                <div style="color:black;">
+                                                    <i class="fas fa-tablet-alt"></i> eBook
+                                                </div>
+                                                }
+                                        </td>
+                                        <td>
+                                            <p>Location: @book.Location,</p>
+                                        </td>
+                                        <td>
+                                            <p class="hold-status">Status: @book.Holding</p>
+                                            <p>Holding Until: @book.Holding</p>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-danger" @onclick="(() => RemoveBookCart(book.Title))">Remove</button>
+                                        </td>
+                                    </tr>
+                                    }
+                                }
+                        </tbody>
+                    </table>
+                    }
+
             </div>
 
 
-            <div class="col-lg-3">
+            <div style="margin-top: 45px; " class="col-lg-3">
                 <div class="card">
-                    <div class="card-body">
+                    <div style="background-color: #dedcd9 " class="card-body">
                         <h5 class="card-title">Order Summary</h5>
-                        <p class="card-text">Total Number of Books: 3</p>
-                        <p class="card-text">Nearest Return Date: 03/12/2023</p>
-                        <button class="btn btn-primary">Complete Signout</button>
+                        <p class="card-text">Total Number of Books: @ListCart.StringsCart.Count</p>
+                        <p class="card-text">Nearest Return Date: N/A</p>
+                        @if (ListCart.StringsCart.Count == 0)
+                            {
+                            <button style="background-color: #c2bfbc; border: none" class="btn btn-primary" disabled>Complete Signout</button>
+
+                            }
+                            else
+                            {
+                            <button style="background-color: #5c5854; border: none" class="btn btn-primary">Complete Signout</button>
+                            }
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
+<style>
+    .btn btn-primary:hover {
+        background-color: gray;
+    }
+</style>
 @code {
     public class Book
     {
@@ -128,9 +154,13 @@
         bookDictionary = books.GroupBy(b => b.Title)
             .ToDictionary(g => g.Key, g => g.ToList());
     }
-  
+
     private void RemoveBookCart(string title)
     {
         ListCart.StringsCart.Remove(title);
     }
-}
+
+    //private void CheckOut()
+    }
+    
+

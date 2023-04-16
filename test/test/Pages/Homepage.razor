@@ -389,27 +389,27 @@ else
 
     async Task AddHold(string title, string position)
     {
-        await Task.Delay(3000);
+        await Task.Delay(1500);
         ListHold.Strings.Add(title);
         HoldMessage(position);
     }
     async Task AddCart(string title)
     {
-        await Task.Delay(3000);
+        await Task.Delay(1500);
         ListCart.StringsCart.Add(title);
         CartMessage(title);
 
     }
     async Task RemoveCart(string title)
     {
-        await Task.Delay(3000);
+        await Task.Delay(1500);
         ListCart.StringsCart.Remove(title);
         CartMessageRemove(title);
 
     }
     async Task RemoveHold(string title)
     {
-        await Task.Delay(3000);
+        await Task.Delay(1500);
         ListHold.Strings.Remove(title);
         HoldMessageRemove(title);
 

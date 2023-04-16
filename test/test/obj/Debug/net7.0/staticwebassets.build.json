@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zyOCBeI+WdfSsNCSvQawS9mC3cD/57DcZAvPJBXzMI4=",
+  "Hash": "R4f0AuTawl956yL3gLg+B8QIP1gweWPdPgtbnhch2Zk=",
   "Source": "test",
   "BasePath": "/",
   "Mode": "Root",
@@ -7648,6 +7648,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/Book9.png"
+    },
+    {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/cv.png",
+      "SourceId": "test",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "images/cv.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/cv.png"
+    },
+    {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/cvvv.png",
+      "SourceId": "test",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "images/cvvv.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/cvvv.png"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/naruto.png",

@@ -165,6 +165,14 @@
       "PackagePath": "staticwebassets/images/ProfileIcon.png"
     },
     {
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/cv.png",
+      "PackagePath": "staticwebassets/images/cv.png"
+    },
+    {
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/cvvv.png",
+      "PackagePath": "staticwebassets/images/cvvv.png"
+    },
+    {
       "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/naruto.png",
       "PackagePath": "staticwebassets/images/naruto.png"
     },

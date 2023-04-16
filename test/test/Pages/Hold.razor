@@ -30,8 +30,8 @@
                                         <img src="@book.Image" alt="Book Cover" height="120" />
                                     </td>
                                     <td class="book-details">
-                                        <p>@book.Title</p>
-                                        <p>@book.Author</p>
+                                        <b><p style="font-size:larger">@book.Title</p></b>
+                                        <p>by @book.Author</p>
                                         @if (@book.Type == "paper")
                                         {
                                             <div style="color:black;">
@@ -46,11 +46,11 @@
                                         }
                                     </td>
                                     <td>
-                                        <p>Location: @book.Location,</p>
+                                        <p><b>Location:</b> @book.Location </p>
                                     </td>
                                     <td>
-                                        <p class="hold-status">Status: @book.Holding</p>
-                                        <p>Holding Until: @book.Holding</p>
+                                        <p class="hold-status"><b>Status:</b> @book.Pickup</p>
+                                        <p><b>Holding Until:</b> @book.Holding</p>
                                     </td>
                                     <td>
                                         <button class="btn btn-danger" @onclick="(() => RemoveBook(book.Title))">Cancel</button>
