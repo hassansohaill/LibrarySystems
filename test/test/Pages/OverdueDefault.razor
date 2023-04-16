@@ -4,20 +4,37 @@
 
 <div class="overdueContainer">
     <body>
-        <h1 class="overduesign">OVERDUE FEES</h1>
-        <h1>Total Fees Due: $@feeOutput </h1>
-        <button class="btn btn-danger" @onclick="(() =>payAllTogglePopup())"> Pay All </button>
+        
+        @if (fees == 0)
+        {
+            <h1>You have no outstanding fees </h1>
+        } else
+        {
+            <h1 class="overduesign">OVERDUE FEES</h1>
+            <h1>Total Fees Due: $@feeOutput </h1>
+            <button class="btn btn-danger" @onclick="(() =>payAllTogglePopup())"> Pay All </button>
+        }
+        
     </body>
         
         @if (showAllPopup)
         {
+            @if (savedPayment)
+            {
             <div style="position: absolute; top: 68px; left: 50%;top:50% ;transform: translate(-50%,-50%); width: 700px; height: 700px; background-color: #e8f4f8; overflow: auto; opacity: 1; box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); text-align: center;overflow: hidden;">
                 <button @onclick="payAllTogglePopup" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
-                <p>Payment</p> 
-                <p>Payment</p><p>Payment</p>
+
+                <button class="btn btn-danger" style="top: 90%; position:fixed;transform: translateX(-50%); " @onclick="(() => RemoveAll())"> Finalize Payment </button>
+            </div>
+            } else{
+            <div style="position: absolute; top: 68px; left: 50%;top:50% ;transform: translate(-50%,-50%); width: 700px; height: 700px; background-color: #e8f4f8; overflow: auto; opacity: 1; box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); text-align: center;overflow: hidden;">
+                <button @onclick="payAllTogglePopup" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
+                <p>Payment</p>
                 <p>Payment</p>
                 <button class="btn btn-danger" style="top: 90%; position:fixed;transform: translateX(-50%); " @onclick="(() => RemoveAll())"> Finalize Payment </button>
             </div>
+            }
+        
         }
 </div>
 
@@ -203,7 +220,7 @@
         public string Cost { get; set; }
     }
 
-
+    bool savedPayment = false;
     bool showPopup = false;
     bool showAllPopup = false;  
     string popupAuthor;
