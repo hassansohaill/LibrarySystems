@@ -22,7 +22,7 @@
       <File FileName="test/App.razor" />
       <File FileName="test/Pages/Hold.razor" />
       <File FileName="test/Pages/Profile.razor" />
-      <File FileName="test/Pages/OverdueDefault.razor" Line="240" Column="6" />
+      <File FileName="test/Pages/OverdueDefault.razor" Line="64" Column="42" />
       <File FileName="test/Shared/NavMenu.razor.css" />
       <File FileName="test/wwwroot/css/app.css" />
       <File FileName="test/Pages/History.razor" />

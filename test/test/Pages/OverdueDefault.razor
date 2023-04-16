@@ -60,7 +60,7 @@ else
                                     <img src="@book.Image" alt="Book Cover" height="120" />
                                 </td>
                                 <td class="book-details">
-                                    <b><p style="font-size:larger">@book.Title</p></b>
+                                    <b><p style="font-size:larger" >@book.Title</p></b>
                                     <p>by @book.Author</p>
                                     @if (@book.Type == "paper")
                                     {
@@ -76,7 +76,7 @@ else
                                     }
                                 </td>
                                 <td>
-                                    <p><i class="fas fa-exclamation-circle"></i><b>Due date:</b> @book.DueDate,</p>
+                                    <p><b>Due date:</b> @book.DueDate,</p>
                                     <p><i class="fas fa-exclamation-circle"></i> <b>@book.DaysDue overdue</b></p>
                                 </td>
                                 <td>
