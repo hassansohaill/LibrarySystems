@@ -13,30 +13,48 @@
         <div class="col-lg-11">
             <table class="table">
                 <tbody>
-                    @foreach (var book in books)
-                    {
-                        <tr class="hold-item">
-                            <td>
-                                <img src="@book.CoverImage" alt="Book Cover" height="120" />
-                            </td>
-                            <td class="book-details">
-                                <p>Title: @book.Title</p>
-                                <p>Author: @book.Author</p>
-                                <p>Type: @book.Type</p>
-                            </td>
-                            <td>
-                                <p>Due Date: @book.Location,</p>
-                                <p>Days Overdue: @book.LocationAddress</p>
-                            </td>
-                            <td>
-                                <p></p>
-                                <p>Cost: @book.HoldingUntil</p>
-                            </td>
-                            <td>
-                                <button class="btn btn-danger" @onclick="(() => RemoveBook(book))"> Pay </button>
-                            </td>
-                        </tr>
-                    }
+
+                        @foreach (var book in books)
+                        {
+
+                            <tr class="hold-item">
+                                <td>
+                                    <img src="@book.CoverImage" alt="Book Cover" height="120" />
+                                </td>
+                                <td class="book-details">
+                                    <p>Title: @book.Title</p>
+                                    <p>Author: @book.Author</p>
+                                    <p>Type: @book.Type</p>
+                                </td>
+                                <td>
+                                    <p>Due Date: @book.DueDate,</p>
+                                    <p>Days Overdue: @book.DaysDue</p>
+                                </td>
+                                <td>
+                                    <p></p>
+                                    <p>Cost: @book.Cost</p>
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger" @onclick="(() =>  TogglePopup(book.Author, book.Title, book.Cost, book.Type, book.DaysDue, book.Status, book))"> Pay </button>
+                                    @if (showPopup)
+                                    {
+                                        <div style="position: absolute; top: 68px; left: 50%;top:50% ;transform: translate(-50%,-50%); width: 700px; height: 700px; background-color: #e8f4f8; overflow: auto; opacity: 1; box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); text-align: center;overflow: hidden;">
+                                            <button @onclick="Toggleclose" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
+                                            <p>Payment</p>
+                                            <p>Payment</p><p>Payment</p>
+                                            <p>Payment</p>
+                                            <button class="btn btn-danger" style="top: 90%; position:fixed;transform: translateX(-50%); " @onclick="(() => RemoveBook(selected))"> Finalize Payment </button>
+                                        </div>
+                                    }
+
+                                </td>.
+
+                            </tr>
+
+
+                        }
+                    
+                    
                 </tbody>
             </table>
         </div>
@@ -44,22 +62,55 @@
     </div>
 </div>
 
+
+
+
+
+
+
 <style>
+    .popup button {
+    display: block;
+    margin: 0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff;
+    background: #03549a;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    }
+    .paymentPopup{
+    width: 420px;
+    padding: 30px 40px;
+    position: = fixed;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    display: none;
+    font-family: “Poppins”,sans-serif;
+    text-align: center;
+    background-color: #0855ae;
+    }
 
     .overdueContainer {
-        text-align: center;
-        margin-top: 50px;
+    text-align: center;
+    margin-top: 50px;
 
 
     }
 
     .paynow {
-        margin-left: 10px;
-        display: inline-block;
+    margin-left: 10px;
+    display: inline-block;
     }
 
     .container {
-        margin-top: 100px;
+    margin-top: 100px;
 
 
     }
@@ -74,10 +125,10 @@
             Title = "Outlive: The Science and Art of Longetivy",
             Author = "Peter Attia",
             Type = "Paperback",
-            Location = "03/01/2023",
-            LocationAddress = "40 Days",
+            DueDate = "03/01/2023",
+            DaysDue = "40 Days",
             Status = "Ready to be picked up",
-            HoldingUntil = "$4.58",
+            Cost = "$4.58",
         },
         new Book
         {
@@ -85,10 +136,10 @@
             Title = "My Secret Sister",
             Author = "Lauren Westwood",
             Type = "Paperback",
-            Location = "03/21/2023",
-            LocationAddress = "20 Days",
+            DueDate = "03/21/2023",
+            DaysDue = "20 Days",
             Status = "Waitlist Pos 10",
-            HoldingUntil = "$2.57"
+            Cost = "$2.57"
         },
         new Book
         {
@@ -96,16 +147,17 @@
             Title = "The Fifth Juror",
             Author = "Lori Lacefield",
             Type = "Paperback",
-            Location = "04/05/2023",
-            LocationAddress = "5 Days",
+            DueDate = "04/05/2023",
+            DaysDue = "5 Days",
             Status = "Waitlist Pos 4",
-            HoldingUntil = "$0.75"
+            Cost = "$0.75"
         },
     };
 
-    private void RemoveBook(Book book)
+    private void RemoveBook(Book remove)
     {
-        books.Remove(book);
+        books.Remove(remove);
+        Toggleclose();
     }
 
     private class Book
@@ -114,10 +166,38 @@
         public string Title { get; set; }
         public string Author { get; set; }
         public string Type { get; set; }
-        public string Location { get; set; }
-        public string LocationAddress { get; set; }
+        public string DueDate { get; set; }
+        public string DaysDue { get; set; }
         public string Status { get; set; }
-        public string HoldingUntil { get; set; }
+        public string Cost { get; set; }
     }
+
+
+    bool showPopup = false;
+    string popupAuthor;
+    string popupTitle;
+    string popupCost;
+    string popupDueDays;
+    string popupType;
+    string popupDate;
+    Book selected;
+    bool showFullText = false;
+
+    void TogglePopup(string author, string title, string cost, string type, string days, string dueDate, Book selectBook)
+    {
+        showPopup = !showPopup;
+        popupAuthor = author;
+        popupTitle = title;
+        popupCost = cost;
+        popupDueDays = days;
+        popupType = type;
+        popupDate = dueDate;
+        selected = selectBook;
+    }
+    void Toggleclose()
+    {
+        showPopup = !showPopup;
+    }
+
 }
 
