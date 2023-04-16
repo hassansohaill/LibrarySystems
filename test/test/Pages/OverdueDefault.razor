@@ -4,16 +4,16 @@
 
 @if (fees == 0)
 {
-    <h1 id="cart-title">Overdue Fees</h1>
+    <h1 id="cart-title" style= "text-align: center">Overdue Fees</h1>
 
-    <p style="font-size: 18px;">You have no outstanding fees. You can continue browse items by returning <a href="/">Home</a>.</p>
+    <p style="font-size: 18px;text-align: center">You have no outstanding fees. You can continue browse items by returning <a href="/">Home</a>.</p>
 }
 else
 {
 
-    <h1 id="cart-title">Overdue Fees</h1>
-    
-    <div style="background-color: #eb9e98; width: 300px; border-radius: 10px; margin-top: 15px;" class="card-body">
+    <h1 id="cart-title" style="text-align: center" >Overdue Fees</h1>
+
+    <div class="card-body">
         
         <p style="font-size: 20px;"><i class="fas fa-exclamation-triangle"></i>Total fees due:<b> <p style="font-size:45px;">$@feeOutput</p></b> </p>
         <button class="btn btn-danger" style="font-size: 21px;" @onclick="(() => payAllTogglePopup())"> Pay All </button>
@@ -31,10 +31,46 @@ else
             }
             else
             {
-                <div style="position: absolute; top: 68px; left: 50%;top:50% ;transform: translate(-50%,-50%); width: 700px; height: 700px; background-color: #e8f4f8; overflow: auto; opacity: 1; box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); text-align: center;overflow: hidden;">
+                <div class = "paymentPopup">
                     <button @onclick="payAllTogglePopup" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
-                    <p>Payment</p>
-                    <p>Payment</p>
+                    <div class="form-outline mb-4">
+                        <label for="typeCardHolderName" style="color: #ffffff; text-align: left; display: block; ">Cardholder Name</label>
+                        <input type="text" id="typeCardName" class="form-control"  style="position: relative; width = 90%" placeholder="Enter name as written on the card" @bind="nameValue" />
+                    </div>
+                    <div class="form-outline mb-4">
+                        <label for="typeCreditCardNumber" style="color: #ffffff; text-align: left; display: block;">Credit Card Number</label>
+                        <input type="text" id="typeCreditCardNumber" class="form-control" placeholder="1234 1234 1234 1234" @bind="creditCardNumberValue" />
+                    </div>
+                    <div class="form-group row mb-4">
+                        <div class="col-md-6">
+                            <label for="typeExpiryDate" style="color: #ffffff; text-align: left; display: block;">Expiry Date</label>
+                            <input type="text" id="typeExpiryDate" placeholder="MM/YY" style="max-width: 220px;" class="form-control" @bind="expiryDateValue" />
+                        </div>
+                        <div class="col-md-3">
+                            <label for="typeCVV" style="color: #ffffff; text-align: left; display: block;">CVV</label>
+                            <input type="text" id="typeCVV" placeholder="CVV" style="max-width: 100px" class="form-control" @bind="cvvValue" />
+                        </div>
+                        <div class="col-md-3">
+                            <img src="images/cv.png" width="100" height="60" style="margin-left: 0px;" />
+                        </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                        <div class="col-md-6">
+                            <label for="typePostalCode" style="color: #ffffff; text-align: left; display: block;">Postal Code</label>
+                            <input type="text" id="typePostalCode" placeholder="000 000" style="max-width: 220px;" class="form-control" @bind="postalCodeValue" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="typeCountry" style="color: #ffffff; text-align: left; display: block;">Country</label>
+                            <select id="typeCountry" style="max-width: 250px;" class="form-select" @bind="countryValue">
+                                <option value="">Select Country</option>
+                                <option value="USA">United States of America</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Mexico">Mexico</option>
+                                <option value="UK">United Kingdom</option>
+
+                            </select>
+                        </div>
+                    </div>
                     <button class="btn btn-danger" style="top: 90%; position:fixed;transform: translateX(-50%); " @onclick="(() => RemoveAll())"> Finalize Payment </button>
                 </div>
             }
@@ -87,7 +123,7 @@ else
                                     <button class="btn btn-danger" @onclick="(() => TogglePopup(book.Author, book.Title, book.Cost, book.Type, book.DaysDue, book.Status, book))"> Pay </button>
                                     @if (showPopup)
                                     {
-                                        <div style="position: absolute; top: 68px; left: 50%;top:50% ;transform: translate(-50%,-50%); width: 700px; height: 700px; background-color: #e8f4f8; overflow: auto; opacity: 1; box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); text-align: center;overflow: hidden;">
+                                        <div class="paymentPopup">
                                             <button @onclick="Toggleclose" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
                                             <p>Payment</p>
                                             <p>Payment</p><p>Payment</p>
@@ -112,6 +148,7 @@ else
 </div>
 
 
+
 <style>
     .popup button {
         display: block;
@@ -129,17 +166,19 @@ else
     }
 
     .paymentPopup {
-        width: 420px;
-        padding: 30px 40px;
-        position: = fixed;
-        transform: translate(-50%,-50%);
+        position: absolute;
+        top: 200px;
         left: 50%;
-        top: 50%;
-        border-radius: 8px;
-        display: none;
-        font-family: “Poppins”,sans-serif;
+        top: 60%;
+        transform: translate(-50%,-50%);
+        width: 750px;
+        height: 750px;
+        background-color: #222222;
+        overflow: auto;
+        opacity: 1;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
         text-align: center;
-        background-color: #0855ae;
+        overflow: hidden;
     }
 
     .overdueContainer {
@@ -154,6 +193,15 @@ else
 
     .container {
         margin-top: 10x;
+    }
+    .card-body{
+        background-color: #eb9e98;
+        width: 300px;
+        border-radius: 10px;
+        margin-top: 15px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
     }
 </style>
 
@@ -280,5 +328,18 @@ else
         showPopup = !showPopup;
     }
 
+    private string creditCardNumberValue;
+    private string expiryDateValue;
+    private string cvvValue;
+    private string nameValue;
+    private string countryValue;
+    private string postalCodeValue;
 
+
+
+    private async Task AddPaymentMethod()
+    {
+        // add payment method logic here
+        //NavigationManager.NavigateTo("/Profile");
+    }
 }
