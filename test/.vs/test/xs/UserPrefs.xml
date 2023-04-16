@@ -1,4 +1,5 @@
 ﻿<Properties StartupConfiguration="{B783A845-A8D1-4747-8C02-38ECB8159D13}|https">
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
@@ -6,6 +7,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/OverdueDefault.razor">
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/Homepage.razor">
+>>>>>>> Stashed changes
     <Files>
       <File FileName="test/Pages/Homepage.razor" />
       <File FileName="test/Shared/NavMenu.razor" />
@@ -51,7 +55,11 @@
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
               <Node name="Pages" expanded="True">
+<<<<<<< Updated upstream
                 <Node name="OverdueDefault.razor" selected="True" />
+=======
+                <Node name="Homepage.razor" selected="True" />
+>>>>>>> Stashed changes
               </Node>
               <Node name="Properties" expanded="True" />
               <Node name="Shared" expanded="True">
@@ -70,5 +78,14 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+<<<<<<< Updated upstream
+=======
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+>>>>>>> Stashed changes
   <MonoDevelop.Ide.ItemProperties.test PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

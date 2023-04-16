@@ -9,113 +9,133 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = test
 build_property.RootNamespace = test
-build_property.ProjectDir = /Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/
+build_property.ProjectDir = /Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test
+build_property.MSBuildProjectDirectory = /Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/App.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/Cart.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Components/DueSoonShelf.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EdWVTb29uU2hlbGYucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Components/FormOne.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Gb3JtT25lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Components/FormTwo.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Gb3JtVHdvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Components/RegistrationPopup.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9SZWdpc3RyYXRpb25Qb3B1cC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/Cart.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FydC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/CreateAccount.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/CreateAccount.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3JlYXRlQWNjb3VudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/ForgotPasswordPage.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/CreateAccountTwo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3JlYXRlQWNjb3VudFR3by5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/ForgotPasswordPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRm9yZ290UGFzc3dvcmRQYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/History.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/History.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSGlzdG9yeS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/Hold.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/Hold.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9sZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/Homepage.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/Homepage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZXBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPage.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/LoginPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPageCart.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/LoginPageCart.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlQ2FydC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPageHistory.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/LoginPageHistory.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlSGlzdG9yeS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPageHold.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/LoginPageHold.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlSG9sZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPageMyBooks.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/LoginPageMyBooks.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlTXlCb29rcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPagePayments.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/LoginPagePayments.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlUGF5bWVudHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/LoginPageProfile.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/LoginPageProfile.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW5QYWdlUHJvZmlsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/MyBooks.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/MyBooks.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTXlCb29rcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/NavBar.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/NavBar.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTmF2QmFyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/Overdue.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/Overdue.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3ZlcmR1ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/OverdueCompactView.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/OverdueCompactView.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3ZlcmR1ZUNvbXBhY3RWaWV3LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/OverdueDefault.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/OverdueDefault.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvT3ZlcmR1ZURlZmF1bHQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/PaymentMethods.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/PaymentMethods.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGF5bWVudE1ldGhvZHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/Profile.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/Profile.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZmlsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/SeeAll.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Pages/SeeAll.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VlQWxsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Shared/SurveyPrompt.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/_Imports.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Shared/MainLayout.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-12berhuupc
 
-[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Shared/NavMenu.razor]
+[/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-wbe598c0rt
