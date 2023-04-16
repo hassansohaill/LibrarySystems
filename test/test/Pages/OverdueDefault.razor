@@ -191,10 +191,17 @@ else
 
     protected override void OnInitialized()
     {
-        calculateFee();
-        precision();
+
         bookDictionary = books.GroupBy(b => b.Title)
             .ToDictionary(g => g.Key, g => g.ToList());
+        if (ListOverdue.StringsOverdue.Count != 0)
+        {
+            calculateFee();
+            precision();
+        } else
+        {
+            fees = 0;
+        }
     }
 
 
@@ -204,11 +211,16 @@ else
     private void calculateFee()
     {
         fees = 0;
-        foreach (var book in books)
-        {
-            double intCost = double.Parse(book.Cost);
-            fees += intCost;
-        }
+
+            foreach (var book in books)
+            {
+                double intCost = double.Parse(book.Cost);
+                fees += intCost;
+            }
+            
+            
+            
+        
     }
     private void precision()
     {
