@@ -1,17 +1,16 @@
 ﻿@page "/OverdueDefault"
 
 <NavBar />
+@if (fees == 0)
+{
 
-
-
+    <p style="font-size: 18px;text-align: center;">You have no outstanding fees. You can continue browse items by returning <a href="/">Home</a>.</p>
+}    
+else
+   {
     <div class="overdueContainer">
-    @if (fees == 0)
-    {
+    
 
-        <p style="font-size: 18px;">You have no outstanding fees. You can continue browse items by returning <a href="/">Home</a>.</p>
-    }
-    else
-    {
         <body>
             <h1 class="overduesign">OVERDUE FEES</h1>
             <h1>Total Fees Due: $@feeOutput </h1>
@@ -39,9 +38,9 @@
             }
 
         }
-    }
+   
     </div>
-
+}
 
 
 <div class="container">
@@ -204,10 +203,14 @@
     private void calculateFee()
     {
         fees = 0;
-        foreach (var book in books)
+        foreach (var str in ListOverdue.StringsOverdue)
         {
-            double intCost = double.Parse(book.Cost);
-            fees += intCost;
+            foreach(var book in bookDictionary[str])
+            {
+                double intCost = double.Parse(book.Cost);
+                fees += intCost;
+            }
+            
         }
     }
     private void precision()
@@ -218,6 +221,7 @@
     private void RemoveBook(string title,Book selected)
     {
         ListOverdue.StringsOverdue.Remove(title);
+        bookDictionary.Remove(title);
         books.Remove(selected);
         Toggleclose();
         calculateFee();
@@ -252,6 +256,7 @@
     void RemoveAll()
     {
         ListOverdue.StringsOverdue.Clear();
+        bookDictionary.Clear();
         books.Clear();
         payAllTogglePopup();
         calculateFee();
