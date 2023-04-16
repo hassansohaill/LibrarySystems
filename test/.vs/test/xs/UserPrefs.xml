@@ -5,9 +5,9 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/Cart.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/OverdueDefault.razor">
     <Files>
-      <File FileName="test/Pages/Homepage.razor" />
+      <File FileName="test/Pages/Homepage.razor" Line="1" Column="1" />
       <File FileName="test/Shared/NavMenu.razor" />
       <File FileName="test/Shared/MainLayout.razor" />
       <File FileName="test/Properties/launchSettings.json" />
@@ -15,14 +15,14 @@
       <File FileName="test/_Imports.razor" />
       <File FileName="test/Pages/MyBooks.razor" />
       <File FileName="test/Shared/SurveyPrompt.razor" />
-      <File FileName="test/Pages/Overdue.razor" />
+      <File FileName="test/Pages/Overdue.razor" Line="1" Column="1" />
       <File FileName="test/Pages/CreateAccount.razor" />
-      <File FileName="test/Pages/Cart.razor" Line="9" Column="17" />
+      <File FileName="test/Pages/Cart.razor" Line="27" Column="137" />
       <File FileName="test/Pages/LoginPage.razor" />
       <File FileName="test/App.razor" />
-      <File FileName="test/Pages/Hold.razor" />
+      <File FileName="test/Pages/Hold.razor" Line="124" Column="40" />
       <File FileName="test/Pages/Profile.razor" />
-      <File FileName="test/Pages/OverdueDefault.razor" />
+      <File FileName="test/Pages/OverdueDefault.razor" Line="240" Column="6" />
       <File FileName="test/Shared/NavMenu.razor.css" />
       <File FileName="test/wwwroot/css/app.css" />
       <File FileName="test/Pages/History.razor" />
@@ -37,9 +37,9 @@
       <File FileName="test/Program.cs" />
       <File FileName="test/Shared/MainLayout.razor.css" />
       <File FileName="test/Pages/SeeAll.razor" />
-      <File FileName="test/Shared/Dictionary.cs" />
+      <File FileName="test/Shared/Dictionary.cs" Line="19" Column="131" />
       <File FileName="test/Pages/ForgotPasswordPage.razor" />
-      <File FileName="test/Pages/PaymentMethods.razor" />
+      <File FileName="test/Pages/PaymentMethods.razor" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -51,7 +51,7 @@
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
               <Node name="Pages" expanded="True">
-                <Node name="Cart.razor" selected="True" />
+                <Node name="OverdueDefault.razor" selected="True" />
               </Node>
               <Node name="Properties" expanded="True" />
               <Node name="Shared" expanded="True">
