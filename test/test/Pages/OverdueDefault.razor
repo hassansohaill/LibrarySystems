@@ -3,9 +3,22 @@
 <NavBar />
 
 <div class="overdueContainer">
-    <h1 class="overduesign">OVERDUE FEES</h1>
-    <h1>Total Fees Due: $12.68 </h1>
-    <button class="btn btn-danger" > Pay All </button>
+    <body>
+        <h1 class="overduesign">OVERDUE FEES</h1>
+        <h1>Total Fees Due: $@feeOutput </h1>
+        <button class="btn btn-danger" @onclick="(() =>payAllTogglePopup())"> Pay All </button>
+    </body>
+        
+        @if (showAllPopup)
+        {
+            <div style="position: absolute; top: 68px; left: 50%;top:50% ;transform: translate(-50%,-50%); width: 700px; height: 700px; background-color: #e8f4f8; overflow: auto; opacity: 1; box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); text-align: center;overflow: hidden;">
+                <button @onclick="payAllTogglePopup" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
+                <p>Payment</p> 
+                <p>Payment</p><p>Payment</p>
+                <p>Payment</p>
+                <button class="btn btn-danger" style="top: 90%; position:fixed;transform: translateX(-50%); " @onclick="(() => RemoveAll())"> Finalize Payment </button>
+            </div>
+        }
 </div>
 
 <div class="container">
@@ -32,7 +45,7 @@
                                 </td>
                                 <td>
                                     <p></p>
-                                    <p>Cost: @book.Cost</p>
+                                    <p>Cost: $@book.Cost</p>
                                 </td>
                                 <td>
                                     <button class="btn btn-danger" @onclick="(() =>  TogglePopup(book.Author, book.Title, book.Cost, book.Type, book.DaysDue, book.Status, book))"> Pay </button>
@@ -128,7 +141,7 @@
             DueDate = "03/01/2023",
             DaysDue = "40 Days",
             Status = "Ready to be picked up",
-            Cost = "$4.58",
+            Cost = "4.58",
         },
         new Book
         {
@@ -139,7 +152,7 @@
             DueDate = "03/21/2023",
             DaysDue = "20 Days",
             Status = "Waitlist Pos 10",
-            Cost = "$2.57"
+            Cost = "2.57"
         },
         new Book
         {
@@ -150,14 +163,32 @@
             DueDate = "04/05/2023",
             DaysDue = "5 Days",
             Status = "Waitlist Pos 4",
-            Cost = "$0.75"
+            Cost = "0.75"
         },
     };
+
+    double fees = 0;
+    string feeOutput="";
+    private void calculateFee()
+    {
+        fees = 0;
+        foreach(var book in books)
+        {
+            double intCost = double.Parse(book.Cost);
+            fees += intCost;
+        }
+    }
+    private void precision()
+    {
+        feeOutput = fees.ToString("F2");
+    }
 
     private void RemoveBook(Book remove)
     {
         books.Remove(remove);
         Toggleclose();
+        calculateFee();
+        precision();
     }
 
     private class Book
@@ -174,6 +205,7 @@
 
 
     bool showPopup = false;
+    bool showAllPopup = false;  
     string popupAuthor;
     string popupTitle;
     string popupCost;
@@ -194,10 +226,30 @@
         popupDate = dueDate;
         selected = selectBook;
     }
+
+    void RemoveAll()
+    {
+        books.Clear();
+        payAllTogglePopup();
+        calculateFee();
+        precision();
+    }
+
+    void payAllTogglePopup()
+    {
+        showAllPopup = !showAllPopup;
+    }
+
     void Toggleclose()
     {
         showPopup = !showPopup;
     }
+    protected override void OnInitialized()
+    {
+        calculateFee();
+        precision();
+    }
+
 
 }
 
