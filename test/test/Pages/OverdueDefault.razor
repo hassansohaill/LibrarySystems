@@ -52,17 +52,28 @@
                                     <img src="@book.CoverImage" alt="Book Cover" height="120" />
                                 </td>
                                 <td class="book-details">
-                                    <p>Title: @book.Title</p>
-                                    <p>Author: @book.Author</p>
-                                    <p>Type: @book.Type</p>
+                                    <b><p style="font-size:larger">@book.Title</p></b>
+                                    <p>by @book.Author</p>
+                                    @if (@book.Type == "paper")
+                                    {
+                                        <div style="color:black;">
+                                            <i class="fas fa-book"></i> Book
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div style="color:black; ">
+                                            <i class="fas fa-tablet-alt"></i> eBook
+                                        </div>
+                                    }
                                 </td>
                                 <td>
-                                    <p>Due Date: @book.DueDate,</p>
-                                    <p>Days Overdue: @book.DaysDue</p>
+                                    <p><b>Due Date:</b> @book.DueDate,</p>
+                                    <p><b>Days Overdue:</b> @book.DaysDue</p>
                                 </td>
                                 <td>
                                     <p></p>
-                                    <p>Cost: $@book.Cost</p>
+                                    <p><b>Cost:</b> $@book.Cost</p>
                                 </td>
                                 <td>
                                     <button class="btn btn-danger" @onclick="(() =>  TogglePopup(book.Author, book.Title, book.Cost, book.Type, book.DaysDue, book.Status, book))"> Pay </button>
