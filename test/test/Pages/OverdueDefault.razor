@@ -2,24 +2,20 @@
 
 <NavBar />
 
-@if (fees == 0)
-{
-    <h1 id="cart-title">My Bag</h1>
 
-    <p style="font-size: 18px;">You have no outstanding fees. You can continue browse items by returning <a href="/">Home</a>.</p>
-}
-else
-{
+
     <div class="overdueContainer">
+    @if (fees == 0)
+    {
+
+        <p style="font-size: 18px;">You have no outstanding fees. You can continue browse items by returning <a href="/">Home</a>.</p>
+    }
+    else
+    {
         <body>
-
-
-
             <h1 class="overduesign">OVERDUE FEES</h1>
             <h1>Total Fees Due: $@feeOutput </h1>
             <button class="btn btn-danger" @onclick="(() => payAllTogglePopup())"> Pay All </button>
-
-
         </body>
 
         @if (showAllPopup)
@@ -43,8 +39,9 @@ else
             }
 
         }
+    }
     </div>
-}
+
 
 
 <div class="container">
