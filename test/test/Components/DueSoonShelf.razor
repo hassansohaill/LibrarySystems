@@ -1,0 +1,172 @@
+﻿@inject NavigationManager NavigationManager
+
+@using test.Data
+@using System;
+@using static System.Net.Mime.MediaTypeNames;
+@using System.Net.NetworkInformation;
+@using System.Collections.Generic;
+
+
+
+<div style="margin-top: 20px; margin-left: 20px;">
+    <h4> Welcome <strong>@UserA.FirstName</strong>!</h4>
+    <p> Here are your upcoming due dates.</p>
+</div>
+
+<div class="bookshelf">
+
+    <div class="book-row">
+
+        @for (int x = 0; x < Math.Min(UserA.DueDates.Count, 3); x++)
+        {
+            <div class="book-with-title">
+                <img class="book" src=@UserA.DueDates[x].Item2.Image />
+                <div style="color: #007185; font-size: 15px; width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                    <p>@UserA.DueDates[x].Item2.Title</p>
+                    <strong>@getDaysLeft(UserA.DueDates[x].Item1)</strong>
+                </div>
+
+            </div>
+        }
+
+        <div class="button-box">
+            <button @onclick="@ViewMyBooks"> View all books</button>
+        </div>
+
+
+
+    </div>
+
+    <div class="trapezoid "></div>
+    <div class="rectangle"></div>
+
+</div>
+
+
+
+<style>
+
+    .bookshelf {
+        height: 310px;
+        position: relative;
+        margin: 20px;
+        justify-content: center;
+        display: flex;
+    }
+
+    .book-row {
+        display: flex;
+        flex-direction: row;
+        height: 250px;
+        position: absolute;
+        top: 35px;
+        z-index: 9999;
+    }
+
+    .trapezoid {
+        border-bottom: 30px solid #eae1d4;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        height: 300px;
+        width: 1350px;
+        position: absolute;
+        top: 0;
+    }
+
+    .rectangle {
+        height: 10px;
+        width: 1350px;
+        background-color: #f2eee8;
+        position: absolute;
+        top: 300px;
+    }
+
+    .book {
+        width: 150px;
+        height: 250px;
+        object-fit: cover;
+        display: inline-block;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+        margin-right: 20px;
+    }
+
+    .book-with-title {
+        display: flex;
+        flex-direction: row;
+        height: 250px;
+        width: 300px;
+        margin-left: 20px;
+    }
+
+    .button-box {
+        display: flex;
+        height: 250px;
+        width: 150px;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+@code{
+
+    DateTime Today = DateTime.Now;
+
+    User UserA = new User("Jane", "Doe", "JaneDoe@gmail.com", new DateTime(2000, 1, 1), 123456);
+
+    Book BookA = new Book() { Author = "David Goggins", Title = "Can't Hurt Me", Category = "Popular", Status = "Available", num = 1, Image = "images/Book1.png", Type = "ebook", Description = "For David Goggins, childhood was a nightmare -- poverty, prejudice, and physical abuse colored his days and haunted his nights. But through self-discipline, mental toughness, and hard work, Goggins transformed himself from a depressed, overweight young man with no future into a U.S. Armed Forces icon and one of the world's top endurance athletes. The only man in history to complete elite training as a Navy SEAL, Army Ranger, and Air Force Tactical Air Controller, he went on to set records in numerous endurance events, inspiring Outside magazine to name him \"The Fittest (Real) Man in America.\"\n\nIn Can't Hurt Me, he shares his astonishing life story and reveals that most of us tap into only 40% of our capabilities. Goggins calls this The 40% Rule, and his story illuminates a path that anyone can follow to push past pain, demolish fear, and reach their full potential." };
+    Book BookB = new Book() { Author = "Masashi Kishimoto", Title = "Naruto (Vol 1)", Category = "Popular", Status = "Available", num = 1, Image = "images/naruto.png", Type = "paper", Description = "Naruto is a young shinobi with an incorrigible knack for mischief. He’s got a wild sense of humor, but Naruto is completely serious about his mission to be the world’s greatest ninja! \"\n\nTwelve years ago the Village Hidden in the Leaves was attacked by a fearsome threat. A nine-tailed fox spirit claimed the life of the village leader, the Hokage, and many others. Today, the village is at peace and a troublemaking kid named Naruto is struggling to graduate from Ninja Academy. His goal may be to become the next Hokage, but his true destiny will be much more complicated. The adventure begins now! " };
+    Book BookC = new Book() { Author = "Eiichiro Oda", Title = "One Piece (Vol 100)", Category = "Popular", Status = "Available", num = 1, Image = "images/one piece.png", Type = "ebook", Description = "As a child Monkey D.Luffy dreamed of becoming King of the Pirates.But his life changed when he accidentally gained the power to stretch like rubber...at the cost of never being able to swim again! Years, later, Luffy sets off in search of the One Piece,said to be the greatest treasure in the world... \"\n\nThe big powers converge as Luffy, Law, and Kid face off against Kaido and Big Mom. Is there any hope of victory against this ultimate alliance?! Onigashima quakes with power as some of the fiercest pirates in the world go head-to-head!!" };
+
+    DateTime SignOutDateA = new DateTime(2023, 4, 3);
+    DateTime SignOutDateB = new DateTime(2023, 4, 3);
+    DateTime SignOutDateC = new DateTime(2023, 4, 11);
+
+    public void addBooks()
+    {
+        UserA.addSignedOutBook(SignOutDateA.AddDays(21), BookA);
+        UserA.addSignedOutBook(SignOutDateB.AddDays(21), BookB);
+        UserA.addSignedOutBook(SignOutDateC.AddDays(21), BookC);
+
+    }
+
+    protected override void OnInitialized()
+    {
+        addBooks();
+    }
+
+    public string getDaysLeft(DateTime date)
+    {
+        TimeSpan difference = date.Subtract(Today);
+        int daysLeft = difference.Days;
+
+        string dayString = " Due in ";
+        string due = "Due ";
+        string day = " day(s)";
+        string ago = " ago";
+        if (daysLeft > 0)
+        {
+            dayString = dayString + daysLeft + day;
+        }
+        else if (daysLeft == 0)
+        {
+            dayString = "Due today";
+        }
+        else
+        {
+            int overdue = daysLeft * (-1);
+            dayString = due + overdue + day + ago;
+        }
+
+        return dayString;
+    }
+
+    protected void ViewMyBooks()
+    {
+
+        NavigationManager.NavigateTo("/myBooks");
+    }
+
+
+    //Book BookD = new Book() { Author = , Title = "One Piece (Vol 100)", Category = "Popular", Status = "Available", num = 1, Image = "images/naruto.png", Type = "paper", Description = " " };
+
+}
