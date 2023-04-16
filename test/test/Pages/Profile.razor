@@ -113,6 +113,7 @@
                 @foreach (var creditCard in ListPaymentMethods.CreditList)
                 {
                     <div class="card">
+                        <button class="btn btn-danger" style="position:absolute; top:0; right:0;" @onclick="(() => RemoveCard(creditCard))">Remove Card</button>
                         <p class="card__number">xxxx xxxx xxxx @($"{creditCard.number[^4..]}")</p>
                         <p class="card__expiry">Expiry Date: @creditCard.expiry</p>
                         <p class="card__name">Name: @creditCard.name</p>
@@ -264,6 +265,11 @@
 
     private bool showPin = false;
     string pinNum => showPin ? UserA.Pin.ToString() : "xxxxxx";
+
+    private void RemoveCard(creditCards creditCard)
+    {
+        ListPaymentMethods.CreditList.Remove(creditCard);
+    }
 
     private async Task ChangePinVisibility()
     {
