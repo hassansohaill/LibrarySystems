@@ -19,6 +19,18 @@
     public static List<string> StringsOverdue{ get; set; } = new List<string> { "Outlive", "The Fifth Juror", "My Secret Sister" };
     }
 
+public struct creditCards
+{
+    public string name;
+    public string number;
+    public string expiry;
+    public string cvv;
+    public string postal;
+    public string country;
+}
 
-
+public static class ListPaymentMethods
+{
+    public static List<creditCards> CreditList { get; set; } = new List<creditCards>();   
+}
 

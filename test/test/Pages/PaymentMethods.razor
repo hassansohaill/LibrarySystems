@@ -72,10 +72,25 @@
     private string countryValue;
     private string postalCodeValue;
 
-    private async Task AddPaymentMethod()
+    public void AddPaymentMethod()
     {
-        // add payment method logic here
+        // create a new instance of the creditCards structure
+        creditCards newCreditCard = new creditCards
+            {
+                name = nameValue,
+                number = creditCardNumberValue,
+                expiry = expiryDateValue,
+                cvv = cvvValue,
+                postal = postalCodeValue,
+                country = countryValue
+            };
+
+        // add the new credit card to the creditList
+        ListPaymentMethods.CreditList.Add(newCreditCard);
+
+        // navigate back to the payment methods page
         NavigationManager.NavigateTo("/Profile");
     }
+
 }
 

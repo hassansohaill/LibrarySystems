@@ -110,19 +110,19 @@
                 </div>
 
                 <!--example payment method below. 'card' components created from adding payment method go below -->
-
-                <div style="display: flex; flex-direction: column; margin-left: 50px; margin-right: auto; ">
-                    <div style=" display: flex; flex-direction: column; margin-top: 50px;">
-                        <p> xxxx xxxx xxxx 1234</p>
-                        <p> 01/26</p>
-                        <p> John Doe</p>
+                @foreach (var creditCard in ListPaymentMethods.CreditList)
+                {
+                    <div class="card">
+                        <p class="card__number">xxxx xxxx xxxx @($"{creditCard.number[^4..]}")</p>
+                        <p class="card__expiry">Expiry Date: @creditCard.expiry</p>
+                        <p class="card__name">Name: @creditCard.name</p>
                     </div>
-
-                </div>
-
+                }
 
                 <!--link payment methods here -->
-                <input type="image" class="add-two" src="images/Add.png" />
+                <a href="/PaymentMethods">
+                    <img src="images/Add.png" alt="Add Payment Method" class="add-two" />
+                </a>
                 <p style="font-size: 100%; text-align:center; margin-top: 20px; margin-left: 70px;"> Add Payment Method</p>
 
 
@@ -143,6 +143,31 @@
 
 
 <style>
+    .card {
+        background-color: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 400px;
+    }
+
+    .card__number {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .card__expiry {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+    .card__name {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
     .header {
         position: relative;
         text-align: center;
@@ -234,6 +259,7 @@
 </style>
 
 @code{
+
     User UserA = new User("Jane", "Doe", "JaneDoe@gmail.com", new DateTime(2000, 1, 1), 123456);
 
     private bool showPin = false;
