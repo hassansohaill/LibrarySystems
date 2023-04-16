@@ -1,199 +1,195 @@
 {
   "Files": [
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/blazor.webassembly.js",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/blazor.webassembly.js",
       "PackagePath": "staticwebassets/_framework/blazor.webassembly.js"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/gdDfaJ0+.gz",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/MzXFE58C.gz",
       "PackagePath": "staticwebassets/_framework/blazor.webassembly.js.gz"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/obj/Debug/net7.0/scopedcss/bundle/test.styles.css",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/scopedcss/bundle/test.styles.css",
       "PackagePath": "staticwebassets/test.styles.css"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/.DS_Store",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/.DS_Store",
       "PackagePath": "staticwebassets/.DS_Store"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/css/app.css",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/css/app.css",
       "PackagePath": "staticwebassets/css/app.css"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/css/bootstrap/bootstrap.min.css",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/css/bootstrap/bootstrap.min.css",
       "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/css/bootstrap/bootstrap.min.css.map",
       "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/FONT-LICENSE",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/FONT-LICENSE",
       "PackagePath": "staticwebassets/css/open-iconic"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/ICON-LICENSE",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/ICON-LICENSE",
       "PackagePath": "staticwebassets/css/open-iconic"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/README.md",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/README.md",
       "PackagePath": "staticwebassets/css/open-iconic/README.md"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "PackagePath": "staticwebassets/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
       "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.eot"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
       "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.otf"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
       "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.svg"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
       "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.ttf"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
       "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.woff"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/favicon.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/favicon.png",
       "PackagePath": "staticwebassets/favicon.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/icon-192.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/icon-192.png",
       "PackagePath": "staticwebassets/icon-192.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/.DS_Store",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/.DS_Store",
       "PackagePath": "staticwebassets/images/.DS_Store"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Add.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Add.png",
       "PackagePath": "staticwebassets/images/Add.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book1.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book1.png",
       "PackagePath": "staticwebassets/images/Book1.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book10.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book10.png",
       "PackagePath": "staticwebassets/images/Book10.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book11.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book11.png",
       "PackagePath": "staticwebassets/images/Book11.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book12.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book12.png",
       "PackagePath": "staticwebassets/images/Book12.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book13.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book13.png",
       "PackagePath": "staticwebassets/images/Book13.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book14.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book14.png",
       "PackagePath": "staticwebassets/images/Book14.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book15.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book15.png",
       "PackagePath": "staticwebassets/images/Book15.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book16.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book16.png",
       "PackagePath": "staticwebassets/images/Book16.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book17.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book17.png",
       "PackagePath": "staticwebassets/images/Book17.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book18.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book18.png",
       "PackagePath": "staticwebassets/images/Book18.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book19.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book19.png",
       "PackagePath": "staticwebassets/images/Book19.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book2.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book2.png",
       "PackagePath": "staticwebassets/images/Book2.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book3.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book3.png",
       "PackagePath": "staticwebassets/images/Book3.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book4.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book4.png",
       "PackagePath": "staticwebassets/images/Book4.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book5.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book5.png",
       "PackagePath": "staticwebassets/images/Book5.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book6.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book6.png",
       "PackagePath": "staticwebassets/images/Book6.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book7.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book7.png",
       "PackagePath": "staticwebassets/images/Book7.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book8.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book8.png",
       "PackagePath": "staticwebassets/images/Book8.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/Book9.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/Book9.png",
       "PackagePath": "staticwebassets/images/Book9.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/New Text Document.txt",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/New Text Document.txt",
       "PackagePath": "staticwebassets/images/New Text Document.txt"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/ProfileIcon.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/ProfileIcon.png",
       "PackagePath": "staticwebassets/images/ProfileIcon.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/cv.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/cv.png",
       "PackagePath": "staticwebassets/images/cv.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/cvvv.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/cvvv.png",
       "PackagePath": "staticwebassets/images/cvvv.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/headerflower.jpeg",
-      "PackagePath": "staticwebassets/images/headerflower.jpeg"
-    },
-    {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/naruto.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/naruto.png",
       "PackagePath": "staticwebassets/images/naruto.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/one piece.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/one piece.png",
       "PackagePath": "staticwebassets/images/one piece.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/images/pen.png",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/pen.png",
       "PackagePath": "staticwebassets/images/pen.png"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/index.html",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/index.html",
       "PackagePath": "staticwebassets/index.html"
     },
     {
-      "Id": "/Users/devon/Desktop/cpsc481A2/OnlineLibrarySystem/test/test/wwwroot/sample-data/weather.json",
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/sample-data/weather.json",
       "PackagePath": "staticwebassets/sample-data/weather.json"
     },
     {
