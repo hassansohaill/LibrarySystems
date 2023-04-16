@@ -1,5 +1,8 @@
 ﻿@page "/Profile"
 
+@using test.Data
+
+
 <!DOCTYPE html>
 
 <head>
@@ -12,87 +15,21 @@
 
     <div style="
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         margin-top: 20px; ">
 
-        <div style=" display: flex; flex-direction:column; margin-top: 50px; margin-left : 50px;">
-            <div class="parent">
-                <img class="icon" src="images/ProfileIcon.png" />
+        <div class="header">
+            <img class="background-image" src="images/headerflower.jpeg" />
+            <div class="header-textbox">
+                <div class="header-text">
+                    My Profile
+                </div>
+            </div>
+
+
+            <div class="profile-pic">
                 <input type="image" class="add" src="images/Add.png" />
-
-            </div>
-
-            <div style=" margin-top: 25px; margin-left: 50px;">
-                <div style=" display: flex; flex-direction:row;">
-                    <h1 style="font-size: 125%;"> My Information</h1>
-                    <input type="image" class="pen" src="images/pen.png" />
-
-                </div>
-
-                <div style=" margin-top : 25px;">
-                    <p style="font-size: 100%;"> John Doe</p>
-                    <p style="font-size: 100%;"> Date of Birth: January 1st, 1999</p>
-                    <p style="font-size: 100%;"> Email Address: johndoe@gmail.com</p>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="vertical"> </div>
-
-
-
-        <div style=" display: flex; flex-direction:column; margin-left: auto; margin-right: auto;">
-
-            <div>
-                <h1 style="font-size: 200%; text-align:center;"> My Profile</h1>
-            </div>
-
-            <div style=" margin-top: 35px; margin-left: auto; margin-right: auto;">
-                <div class="library-card">
-                    <div style=" margin-top: 30px;">
-                        <h2 style="font-size: 150%; text-align:center;"> Library Card</h2>
-                    </div>
-
-                    <div style=" margin-top: 50px;">
-                        <p style=" text-align: center;"> 1234 5678 9101 2131 </p>
-                    </div>
-
-
-                    <div style=" display: flex; flex-direction:row; margin-top: 25px;">
-                        <div style=" margin:auto;">
-                            <p style=" text-align: center;"> xxxxxxx</p>
-                        </div>
-
-                        <div style=" margin:auto;">
-                            <p style=" text-align: center;"> John Doe</p>
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-            </div>
-
-            <div style=" margin-top: 60px; margin-left: -150px;">
-                <h1 style="font-size: 125%;"> Saved Payment Information</h1>
-            </div>
-
-            <div style=" display: flex; flex-direction:row;">
-                <div style=" display: flex; flex-direction: column; margin-top: 50px; margin-left: -150px;">
-                    <p> xxxx xxxx xxxx 1234</p>
-                    <p> 01/26</p>
-                    <p> John Doe</p>
-                </div>
-
-
-                <a href="/PaymentMethods">
-                    <img src="images/Add.png" alt="Add Payment Method" class="add-two" />
-                </a>
-                <p style="font-size: 100%; text-align:center; margin-left: 10px;"> Add Payment Method</p>
-
+                <img class="icon" src="images/ProfileIcon.png" />
 
             </div>
 
@@ -101,36 +38,165 @@
         </div>
 
 
+
+        <div style="
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        width: 90%;
+        position: relative;">
+
+            <div style=" display: flex; flex-direction:column; margin: 50px; left: 10%; position: absolute">
+
+
+                <div style=" margin-top: 25px; margin-left: 50px;">
+
+                    <div style=" display: flex; flex-direction:row;">
+                        <h1 style="font-size: 125%;"> My Information</h1>
+                        <input type="image" class="pen" src="images/pen.png" />
+
+                    </div>
+
+                    <div style=" margin-top : 25px;">
+                        <p style="font-size: 100%;"><strong>@UserA.FirstName</strong> <strong>@UserA.LastName</strong></p>
+                        <p style="font-size: 100%;"> Date of Birth: @UserA.DOB.ToString("dd MMMM yyyy")</p>
+                        <p style="font-size: 100%;"> Email Address: @UserA.Email</p>
+                    </div>
+
+                </div>
+
+                <div style=" margin-top: 35px; margin-left: auto; margin-right: auto;">
+                    <div class="library-card">
+                        <div style=" margin-top: 30px;">
+                            <h2 style="font-size: 150%; text-align:center;"> Library Card</h2>
+                        </div>
+
+                        <div style=" margin-top: 50px;">
+                            <p style=" text-align: center;"> @UserA.CardNum </p>
+                        </div>
+
+
+                        <div style=" display: flex; flex-direction:row; margin-top: 25px;">
+                            <div style=" margin:auto;">
+                                <button @onclick="ChangePinVisibility" style="background:none; border: none;">
+                                    <u style=" text-align: center;"> @pinNum</u>
+                                </button>
+
+                            </div>
+
+                            <div style=" margin:auto;">
+                                <p style=" text-align: center;"> <strong>@UserA.FirstName</strong> <strong>@UserA.LastName</strong></p>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="vertical"> </div>
+
+
+
+            <div style=" display: flex; flex-direction:column; margin: 50px; right: 10%; position: absolute;">
+
+
+
+                <div style=" margin-top: 25px; margin-left: 50px;">
+                    <h1 style="font-size: 125%;"> Saved Payment Information</h1>
+                </div>
+
+                <!--example payment method below. 'card' components created from adding payment method go below -->
+
+                <div style="display: flex; flex-direction: column; margin-left: 50px; margin-right: auto; ">
+                    <div style=" display: flex; flex-direction: column; margin-top: 50px;">
+                        <p> xxxx xxxx xxxx 1234</p>
+                        <p> 01/26</p>
+                        <p> John Doe</p>
+                    </div>
+
+                </div>
+
+
+                <!--link payment methods here -->
+                <input type="image" class="add-two" src="images/Add.png" />
+                <p style="font-size: 100%; text-align:center; margin-top: 20px; margin-left: 70px;"> Add Payment Method</p>
+
+
+
+
+            </div>
+
+
+
+
+        </div>
 
 
     </div>
+
+
 </body>
 
 
 <style>
+    .header {
+        position: relative;
+        text-align: center;
+    }
+
+    .header-text {
+        font-size: 225%;
+        font-weight: bold;
+    }
+
+    .header-textbox {
+        background-color: white;
+        position: absolute;
+        width: 200px;
+        height: 60px;
+        top: 8px;
+        left: 40px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: black;
+        border-radius: 12px;
+    }
+
+    .background-image {
+        width: 90%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 30px;
+        border-radius: 12px;
+    }
+
     .icon {
         position: relative;
-        width: 300px;
-        height: 300px;
+        width: 100px;
+        height: 100px;
         object-fit: cover;
         display: inline-block;
     }
 
-    .parent {
-        position: relative;
-        top: 0;
-        left: 0;
-        margin-left: 50px;
+    .profile-pic {
+        position: absolute;
+        top: 170px;
+        left: 175px;
     }
 
     .add {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50px;
-        height: 50px;
-        top: 10px;
-        left: 250px;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+        display: inline-block;
+        top: 45px;
+        left: 10px;
     }
 
     .add-two {
@@ -149,7 +215,8 @@
         border-left: 3px solid black;
         height: 600px;
         left: 50%;
-        margin-left: 100px;
+        margin: 50px;
+        position: absolute;
     }
 
     .card-box {
@@ -162,6 +229,34 @@
         border-style: solid;
         border-width: 1px;
         border-color: black;
+        border-radius: 12px;
     }
 </style>
+
+@code{
+    User UserA = new User("Jane", "Doe", "JaneDoe@gmail.com", new DateTime(2000, 1, 1), 123456);
+
+    private bool showPin = false;
+    string pinNum => showPin ? UserA.Pin.ToString() : "xxxxxx";
+
+    private async Task ChangePinVisibility()
+    {
+        if (showPin == false)
+        {
+            showPin = true;
+            await Task.Yield();
+
+        }
+        else
+        {
+            showPin = false;
+            await Task.Yield();
+
+        }
+
+    }
+
+
+}
+
 
