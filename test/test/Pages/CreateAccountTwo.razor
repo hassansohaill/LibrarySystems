@@ -1,0 +1,148 @@
+﻿@page "/createAccountTwo"
+
+@inject NavigationManager NavigationManager
+
+@using System.ComponentModel.DataAnnotations
+@using System.Text.Json
+@using test.Components
+
+
+<!DOCTYPE html>
+
+<head>
+    <PageTitle>CreateAccount</PageTitle>
+</head>
+
+
+<body>
+    <NavBar />
+
+    <div style=" display: flex; justify-content: center; margin: 2vh;">
+        <h1>Create Your Account</h1>
+    </div>
+
+
+    <div style=" display: flex; justify-content: center; align-items: center; margin: 10vh;">
+
+
+            <BSCard CardType="CardType.Card" style="width: 60vw; height: 50vh;">
+                <BSCard CardType="CardType.Body">
+                    <BSCard CardType="CardType.Title"> Step 2/2 - We just need a bit more info:</BSCard>
+                    <EditForm Model="@Model" OnValidSubmit="@Submit">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+
+                        <div class="form-group row" style="margin-top: 5%;">
+                            <div class="form-group col-5">
+                                <label>Email</label>
+                                <InputText @bind-Value="Model.Email" class="form-control" />
+                                <ValidationMessage For="@(() => Model.Email)" />
+                            </div>
+
+                            <div class="form-group col-5">
+                                <label>Confirm Email</label>
+                                <InputText @bind-Value="Model.ConfirmEmail" class="form-control" />
+                                <ValidationMessage For="@(() => Model.ConfirmEmail)" />
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row" style="margin-top: 5%;">
+                            <div class="form-group col-5">
+                                <label>Pin</label>
+                                <InputText placeholder="6 Numbers" @bind-Value="Model.Pin" class="form-control" />
+                                <ValidationMessage For="@(() => Model.Pin)" />
+                            </div>
+
+                            <div class="form-group col-5">
+                                <label>Confirm Pin</label>
+                                <InputText placeholder="6 Numbers" @bind-Value="Model.ConfirmPin" class="form-control" />
+                                <ValidationMessage For="@(() => Model.ConfirmPin)" />
+                            </div>
+
+                        </div>
+
+                        <div class="form-group form-check" style="margin-top: 5%;">
+                            <InputCheckbox @bind-Value="Model.AcceptTerms" id="acceptTerms" class="form-check-input" />
+                            <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+                            <ValidationMessage For="@(() => Model.AcceptTerms)" />
+                        </div>
+
+                        <div class="text-center" style="margin-top: 5%;">
+                            <button @onclick="@Back" class="btn btn-secondary">Back</button>
+                            <button type="submit" class="btn btn-primary mr-1">Register</button>
+                        </div>
+
+                    </EditForm>
+
+                </BSCard>
+
+            </BSCard>
+
+    </div>
+
+   <RegistrationPopup ParentShowPopup="@ShowPopup" ShowPopupChanged="@((value) => ShowPopup = value)" />
+
+</body>
+
+<style>
+    .header {
+        font-size: 150%;
+    }
+
+    .info-box {
+        width: 150px;
+        height: 50px;
+        border-width: 1px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+
+    .info-box-two {
+        width: 200px;
+        height: 50px;
+        border-width: 1px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+
+    .account-btn {
+        width: 150px;
+        height: 40px;
+        margin-top: 20px;
+    }
+
+    .login-btn {
+        width: 75px;
+        height: 30px;
+        margin-top: 10px;
+    }
+
+
+    .back-btn {
+        width: 75px;
+        height: 30px;
+    }
+</style>
+
+
+@code {
+
+    private ModelTwo Model { get; set; } = new ModelTwo();
+
+    private bool ShowPopup = false;
+
+    protected void Submit()
+    {
+        ShowPopup = true;
+    }
+
+    protected void Back()
+{
+        NavigationManager.NavigateTo("/createAccount");
+}
+
+
+}

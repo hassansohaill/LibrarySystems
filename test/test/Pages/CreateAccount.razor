@@ -1,66 +1,73 @@
 ﻿@page "/createAccount"
 
+@inject NavigationManager NavigationManager
+
+@using System.ComponentModel.DataAnnotations
+@using System.Text.Json
+@using test.Components
+
+
+
 <!DOCTYPE html>
 
 <head>
-    <PageTitle>Profile</PageTitle>
+    <PageTitle>CreateAccount</PageTitle>
 </head>
 
 
 <body>
     <NavBar />
 
-    <div style=" display: flex; flex-direction: row;">
-        <input type="image" src="images/back.png" class="back-btn"/>
-        <p> Back</p>
+    <div style=" display: flex; justify-content: center; margin: 2vh;">
+        <h1>Create Your Account</h1>
     </div>
 
-    <div style=" display: flex; flex-direction: column; align-items: center;">
 
+    <div style=" display: flex; justify-content: center; align-items: center; margin:10vh;">
 
-        <div style=" margin-top: 125px;">
-            <h1 class="header"> We just need a bit more information to create your account: </h1>
-        </div>
+        <BSCard CardType="CardType.Card" style="width: 60vw; height: 50vh;">
+            <BSCard CardType="CardType.Body">
+                <BSCard CardType="CardType.Title">Step 1/2 - Please tell us a bit about yourself:</BSCard>
+                <EditForm Model="@Model" OnValidSubmit="@Next">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
 
-        <div style=" display: flex;
-             flex-direction: row; margin-top: 20px;">
-            <input class="info-box-two" type="text" placeholder="Email Address">
-            <input class="info-box-two" type="text" placeholder="Confirm Email Address">
-        </div>
+                    <div class="form-group row" style="margin-top: 5%;">
+                        <div class="form-group col">
+                            <label>First Name</label>
+                            <InputText @bind-Value="Model.FirstName" class="form-control" />
+                            <ValidationMessage For="@(() => Model.FirstName)" />
+                        </div>
 
-        <div style=" display: flex;
-             flex-direction: row; margin-top: 20px;">
-            <input class="info-box" type="text" placeholder="Create Pin">
-            <input class="info-box" type="text" placeholder="Confirm Pin">
-        </div>
+                        <div class="form-group col">
+                            <label>Last Name</label>
+                            <InputText @bind-Value="Model.LastName" class="form-control" />
+                            <ValidationMessage For="@(() => Model.LastName)" />
+                        </div>
 
-        <div style=" display: flex;
-             flex-direction: row; margin-top: 20px;">
-            <input type="checkbox" />
-            <div style=" margin-left: 10px; margin-top: 10px;">
-                <p> I agree to the terms and conditions </p>
-            </div>
-          
-        </div>
+                    </div>
 
-        
+                    <div class="form-group row" style="margin-top: 5%;">
+                        <div class="form-group col">
+                            <label>Date of Birth</label>
+                            <InputDate @bind-Value="Model.DateOfBirth" class="form-control" />
+                            <ValidationMessage For="@(() => Model.DateOfBirth)" />
+                        </div>
+                    </div>
 
-        <button class="account-btn">
-            <p> Create Account</p>
-        </button>
+                    <div class="text-center" style="margin-top: 5%;">
+                        <button type="submit" class="btn btn-primary mr-1">Next</button>
+                    </div>
 
-        <div style=" margin-top: 70px;">
-            <p> Already have an account? </p>
-        </div>
+                </EditForm>
 
-        <button class="login-btn">
-            <p> Login</p>
-        </button>
+            </BSCard>
 
-
+        </BSCard>
 
 
     </div>
+
 </body>
 
 
@@ -69,7 +76,7 @@
         font-size: 150%;
     }
 
-    .info-box{
+    .info-box {
         width: 150px;
         height: 50px;
         border-width: 1px;
@@ -98,12 +105,23 @@
         height: 30px;
         margin-top: 10px;
     }
-        
 
-    .back-btn{
+
+    .back-btn {
         width: 75px;
         height: 30px;
     }
-
 </style>
 
+
+@code {
+
+    private ModelOne Model { get; set; } = new ModelOne();
+
+    protected void Next()
+    {
+        NavigationManager.NavigateTo("/createAccountTwo");
+    }
+
+
+}
