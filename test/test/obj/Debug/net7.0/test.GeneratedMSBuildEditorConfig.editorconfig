@@ -20,12 +20,32 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Components/DueSoonShelf.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EdWVTb29uU2hlbGYucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Components/FormOne.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Gb3JtT25lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Components/FormTwo.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Gb3JtVHdvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Components/RegistrationPopup.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9SZWdpc3RyYXRpb25Qb3B1cC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/Cart.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2FydC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/CreateAccount.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3JlYXRlQWNjb3VudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/CreateAccountTwo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3JlYXRlQWNjb3VudFR3by5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/ForgotPasswordPage.razor]

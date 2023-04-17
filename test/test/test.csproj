@@ -16,6 +16,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.3" PrivateAssets="all" />
     <PackageReference Include="BlazorStrap" Version="5.1.101" />
+    <PackageReference Include="BlazorStrap.V5" Version="5.1.101" />
   </ItemGroup>
 
   <ItemGroup>

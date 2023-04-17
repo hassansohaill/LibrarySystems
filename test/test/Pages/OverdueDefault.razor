@@ -277,19 +277,20 @@ else
     {
         fees = 0;
 
-            foreach (var book in books)
-            {
-                double intCost = double.Parse(book.Cost);
-                fees += intCost;
-            }
-            
-            
-            
-        
+        foreach (var book in books)
+        {
+            double intCost = double.Parse(book.Cost);
+            fees += intCost;
+        }
+
+
+
+
     }
     private void precision()
     {
         feeOutput = fees.ToString("F2");
+        ListOverdue.Fees = feeOutput;
     }
 
     private void RemoveBook(string title, Book selected)

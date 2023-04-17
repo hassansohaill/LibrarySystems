@@ -1,6 +1,7 @@
 ﻿@inject NavigationManager NavigationManager
 
 @using test.Data
+@using test.Components
 @using System;
 @using static System.Net.Mime.MediaTypeNames;
 @using System.Net.NetworkInformation;
@@ -10,22 +11,29 @@
 
 <div style="margin-top: 20px; margin-left: 20px;">
     <h4> Welcome <strong>@UserA.FirstName</strong>!</h4>
-    <p> Here are your upcoming due dates.</p>
+    @if (ListOverdue.StringsOverdue.Count == 0)
+{
+            <div></div>
+}
+else
+{
+            <p style="color: red;"><i class="fas fa-exclamation-circle"></i>You have @ListOverdue.StringsOverdue.Count items overdue! Click <a href="/OverdueDefault">here</a> to pay fines. </p>
+}
+    <p> Here are your upcoming due dates:</p>
 </div>
 
 <div class="bookshelf">
 
-    <div class="book-row">
+    <div style="height: 100px;" class="book-row">
 
         @for (int x = 0; x < Math.Min(UserA.DueDates.Count, 3); x++)
         {
-            <div class="book-with-title">
+            <div style="height:100px" class="book-with-title">
                 <img class="book" src=@UserA.DueDates[x].Item2.Image />
-                <div style="color: #007185; font-size: 15px; width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                <div style="color: #007185; font-size: 14px; width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                     <p>@UserA.DueDates[x].Item2.Title</p>
                     <strong>@getDaysLeft(UserA.DueDates[x].Item1)</strong>
                 </div>
-
             </div>
         }
 
@@ -52,6 +60,7 @@
         margin: 20px;
         justify-content: center;
         display: flex;
+        z-index: -1;
     }
 
     .book-row {
@@ -141,7 +150,7 @@
 
         string dayString = " Due in ";
         string due = "Due ";
-        string day = " day(s)";
+        string day = " days";
         string ago = " ago";
         if (daysLeft > 0)
         {

@@ -1662,3 +1662,7 @@ C:/Users/Kevin/source/repos/test/test/obj/Debug/net7.0/ref/test.dll
 /Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/qcGt1a8D.gz
 /Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/awmBFbtv.gz
 /Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/33iAO66P.gz
+/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/BlazorStrap.V5.dll
+/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/BlazorStrap.V5.dll.gz
+/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/BlazorStrap.V5.dll
+/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/sRaQcS6O.gz

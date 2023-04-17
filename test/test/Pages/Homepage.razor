@@ -3,17 +3,39 @@
 <!DOCTYPE html>
 @inject NavigationManager NavigationManager
 @using test.Shared
-
 <head>
     <PageTitle>Library Interface</PageTitle>
 </head>
-
 <NavBar />
 
 <body class="overlay">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @if (Globals.loginCondition)
+    {
+        <div style="display:flex; flex-direction: row">
+            <div>
+                <h4> Welcome <strong>Jane</strong>!</h4>
+                @if (ListOverdue.StringsOverdue.Count == 0)
+                {
+                    <div></div>
+                }
+                else
+                {
+                    <p style="color: red; padding: 0;"><i class="fas fa-exclamation-circle"></i> You have <b>$@ListOverdue.Fees </b> of unpaid fines! Click <a href="/OverdueDefault">here</a> to pay. </p>
+                    <p>You have checked out 3 items.Click <a href="/myBooks">here </a> to view</p>
+                }
+            </div>
+            <div>                      CODE HERE</div>
+        </div>
 
-    <div style="margin-top: 25px; display: flex; justify-content: center; align-items: center; position: relative">
+    }
+
+    else
+    {
+        <div></div>
+    }
+
+    <div style="margin-top: 10px; display: flex; justify-content: center; align-items: center; position: relative">
         <div style="display: flex; align-items: center;">
             <div>
                 <input class="search" type="text" placeholder="Search...">
@@ -284,6 +306,7 @@
             .toggle:hover, .bag-button:hover {
                 background-color: gray;
             }
+
         .bag-button2:hover {
             background-color: #e05e5e;
         }
@@ -346,7 +369,7 @@ else
         public string Image { get; set; }
         public string Type { get; set; }
         public int num { get; set; }
-        public string Description { get; set;}
+        public string Description { get; set; }
         public string Location { get; set; }
         public string Pickup { get; set; }
         public string Holding { get; set; }
@@ -573,6 +596,11 @@ else
         showFullText = !showFullText;
     }
 
+    private async Task Refresh()
+    {
+        await InvokeAsync(() => StateHasChanged());
+    }
 
 
-}
+
+        }

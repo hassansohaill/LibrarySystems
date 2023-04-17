@@ -173,6 +173,10 @@
       "PackagePath": "staticwebassets/images/cvvv.png"
     },
     {
+      "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/headerflower.jpeg",
+      "PackagePath": "staticwebassets/images/headerflower.jpeg"
+    },
+    {
       "Id": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/naruto.png",
       "PackagePath": "staticwebassets/images/naruto.png"
     },

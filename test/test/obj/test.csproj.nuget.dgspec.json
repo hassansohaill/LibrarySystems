@@ -42,6 +42,10 @@
               "target": "Package",
               "version": "[5.1.101, )"
             },
+            "BlazorStrap.V5": {
+              "target": "Package",
+              "version": "[5.1.101, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[7.0.3, )"

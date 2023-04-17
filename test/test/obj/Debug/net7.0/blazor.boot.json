@@ -9,6 +9,7 @@
     "assembly": {
       "BlazorComponentUtilities.dll": "sha256-UapksNiQg3lu5QM9uVSLyjEuzRH\/7o22fmcmxcLAAeI=",
       "BlazorStrap.dll": "sha256-PRUjNnGAWh\/xaba4XG8w+tiOBANk0J5IK+cpH1kj8hw=",
+      "BlazorStrap.V5.dll": "sha256-WbiCEwg6CuGZqlhW2JQmdNxNpYiXiohgHuwkQc89b9Q=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-QP+9ib2tHpYrkwMTIkh60aO49DKTGwJBAA5RaITVGDE=",
       "Microsoft.AspNetCore.Components.dll": "sha256-sCo2GmgrMtZQSY+teWT1XlU93C\/x75FDwL155zjC5TI=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-x+mgWzFuhFpGICdKYW5hmKJ3HUUw4GrXhMFi17T4JIM=",
@@ -200,13 +201,13 @@
       "mscorlib.dll": "sha256-3H8zsATEgIcRSRoZhWYtgfKT5VniJvhcYxLruf8koAY=",
       "netstandard.dll": "sha256-bbx+pnJNmXZyPqAgESJnWLJsbfuAl0UflLCdl9slPYE=",
       "System.Private.CoreLib.dll": "sha256-pUYF+nr8SzfBMCLc3FM2i\/YivXJlzztdLin+aUsoqP0=",
-      "test.dll": "sha256-uNx9g\/uUGHMD4KsrM1IS3moUdeEzbBqVdbLcuyUIT2Y="
+      "test.dll": "sha256-fNCbjIEUG3im2mVwtEvceVAUsS80nEB4KbBaUpCgHwU="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "test.pdb": "sha256-TYDd5uwWz2vJYCgC25vM6CumvJhlTO\/UDh0O9mZRis4="
+      "test.pdb": "sha256-rt\/6VFKTI4TpSaiO3K6njFBQSednkbvMIXGM38nTB3o="
     },
     "runtime": {
       "dotnet.7.0.4.9h66m8xu50.js": "sha256-3l+4ZYRWpGMbBjNqeIqO9T\/65euaOzIvRlVX2SySvFQ=",

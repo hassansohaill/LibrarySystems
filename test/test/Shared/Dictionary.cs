@@ -17,7 +17,8 @@
     public static class ListOverdue
     {
     public static List<string> StringsOverdue{ get; set; } = new List<string> { "Outlive", "The Fifth Juror", "My Secret Sister" };
-    }
+    public static string Fees = "7.49";
+}
 
 public struct creditCards
 {

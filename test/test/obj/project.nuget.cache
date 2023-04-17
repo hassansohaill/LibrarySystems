@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "iPaDv5xVzSU9rOizE/1Tu88D7GwCYBUxs5uXNjgupr69s944mK6ZAEApHoAIaYzXinQQ1ZX5msxPbmPSI+4SNg==",
+  "dgSpecHash": "dK9ZekOdJ4pFTON8JGh5cbg235ukX+c/noVKPaYl11HdIUkZBxAgnrQuBoKWsIO4z35Rp0MuQ+cxyCOYKFMGlg==",
   "success": true,
   "projectFilePath": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/test.csproj",
   "expectedPackageFiles": [
     "/Users/darpalpatel/.nuget/packages/blazorcomponentutilities/1.7.1/blazorcomponentutilities.1.7.1.nupkg.sha512",
     "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/blazorstrap.5.1.101.nupkg.sha512",
+    "/Users/darpalpatel/.nuget/packages/blazorstrap.v5/5.1.101/blazorstrap.v5.5.1.101.nupkg.sha512",
     "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.authorization/7.0.4/microsoft.aspnetcore.authorization.7.0.4.nupkg.sha512",
     "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.components/7.0.4/microsoft.aspnetcore.components.7.0.4.nupkg.sha512",
     "/Users/darpalpatel/.nuget/packages/microsoft.aspnetcore.components.analyzers/7.0.4/microsoft.aspnetcore.components.analyzers.7.0.4.nupkg.sha512",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "R4f0AuTawl956yL3gLg+B8QIP1gweWPdPgtbnhch2Zk=",
+  "Hash": "EZlXH2N0lMGG7y51g/5yGi/U5WYn/cyPZnL+tjApZjE=",
   "Source": "test",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/Users/darpalpatel/.nuget/packages/blazorstrap.v5/5.1.101/staticwebassets/BlazorStrap.V5.bundle.scp.css",
+      "SourceId": "BlazorStrap.V5",
+      "SourceType": "Package",
+      "ContentRoot": "/Users/darpalpatel/.nuget/packages/blazorstrap.v5/5.1.101/staticwebassets/",
+      "BasePath": "_content/BlazorStrap.V5",
+      "RelativePath": "BlazorStrap.V5.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/blazorstrap.v5/5.1.101/staticwebassets/BlazorStrap.V5.bundle.scp.css"
+    },
     {
       "Identity": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/staticwebassets/BlazorStrap.bundle.scp.css",
       "SourceId": "BlazorStrap",
@@ -151,6 +168,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/blazorstrap/5.1.101/lib/net7.0/BlazorStrap.dll"
+    },
+    {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/BlazorStrap.V5.dll",
+      "SourceId": "test",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/BlazorStrap.V5.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/darpalpatel/.nuget/packages/blazorstrap.v5/5.1.101/lib/net7.0/BlazorStrap.V5.dll"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/dotnet.7.0.4.9h66m8xu50.js",
@@ -6256,6 +6290,23 @@
       "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/System.IO.FileSystem.Watcher.dll"
     },
     {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/sRaQcS6O.gz",
+      "SourceId": "test",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/BlazorStrap.V5.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/BlazorStrap.V5.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/bin/Debug/net7.0/wwwroot/_framework/BlazorStrap.V5.dll"
+    },
+    {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/obj/Debug/net7.0/build-gz/SX8WMGHD.gz",
       "SourceId": "test",
       "SourceType": "Computed",
@@ -7682,6 +7733,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/cvvv.png"
+    },
+    {
+      "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/headerflower.jpeg",
+      "SourceId": "test",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "images/headerflower.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/headerflower.jpeg"
     },
     {
       "Identity": "/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/wwwroot/images/naruto.png",
