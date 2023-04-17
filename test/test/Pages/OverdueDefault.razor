@@ -33,13 +33,11 @@ else
             {
                 <div class = "paymentPopup">
                     <button @onclick="payAllTogglePopup" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
-                    <section style="margin-top:5px;">
-                        <div class="container py-3 h-75">
-                            <div class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="row d-flex justify-content-center align-items-center">
                                 <div class="col-8 col-md-8 col-lg-8 col-xl-8">
-                                    <div class="card" style="background-color: #222222; border-radius: 1rem; ">
-                                        <div class="card-body p-4 text-center">
-                                            <div class="mb-md-4 mt-md-3 pb-4">
+                                    <div id = "paymentmethodadd" class="card" style="background-color: #222222; border-radius: 1rem; ">
+                                        <div class="card-body text-center">
+                                            <div class="mb-md-4 mt-md-3">
                                                 <h2 class="fw-bold mb-2 text-uppercase" style="color: #ffffff;">Add Payment Method</h2>
                                                 <div class="form-outline mb-4">
                                                     <label for="typeCardHolderName" style="color: #ffffff; text-align: left; display: block;">Cardholder Name</label>
@@ -87,8 +85,6 @@ else
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
                     <button class="btn btn-danger" style="top: 90%; position:fixed;transform: translateX(-50%); " @onclick="(() => RemoveAll())"> Finalize Payment </button>
                 </div>
             }
@@ -168,6 +164,9 @@ else
 
 
 <style>
+    #paymentmethodadd{
+        margin-top: -50px;
+    }
     .popup button {
         display: block;
         margin: 0 0 20px auto;
@@ -185,7 +184,7 @@ else
 
     .paymentPopup {
         position: absolute;
-        top: 200px;
+        top: 20px;
         left: 50%;
         top: 60%;
         transform: translate(-50%,-50%);
@@ -194,7 +193,7 @@ else
         background-color: #222222;
         overflow: auto;
         opacity: 1;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 10px #222222;
         text-align: center;
         overflow: hidden;
     }
@@ -210,7 +209,7 @@ else
     }
 
     .container {
-        margin-top: 10x;
+        margin-top: 10px;
     }
     #overduenoti{
         background-color: #eb9e98;
