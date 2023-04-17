@@ -106,7 +106,7 @@ else
                             </tbody>
                         </table>
                         <p style="color: #ffffff; margin-top: 10px;font-size: 25px;">Total Cost: $@feeOutput</p>
-                        <button class="btn btn-danger" style="position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px; " @onclick="(() => RemoveAll())"> Finalize Payment </button>
+                            <button class="btn btn-danger" style="position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px; " @onclick="(() => RemoveAll())"> Complete Payment </button>
                     </div>
 
                 }else
@@ -166,7 +166,6 @@ else
                             </tbody>
                         </table>
                         <p style="color: #ffffff; margin-top: 10px;font-size: 25px;">Total Cost: $@feeOutput</p>
-                        <button class="btn btn-danger" style="position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px; " @onclick="(() => RemoveAll())"> Finalize Payment </button>
                     </div>
 
 
@@ -262,7 +261,7 @@ else
                         </tbody>
                     </table>
                     <p style="color: #ffffff; margin-top: 10px;font-size: 25px;">Total Cost: $@feeOutput</p>
-                    <button class="btn btn-danger" style=" position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px;" @onclick="(() => RemoveAll())"> Finalize Payment </button>
+                        <button class="btn btn-danger" style=" position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px;" @onclick="(() => RemoveAll())"> Complete Payment </button>
                 </div>
             }
 
@@ -386,7 +385,7 @@ else
                                                             </tbody>
                                                         </table>
                                                     <p style="color: #ffffff; margin-top: 10px;font-size: 25px;">Total Cost: $@popupCost</p>
-                                                        <button class="btn btn-danger" style="position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px; " @onclick="(() => RemoveAll())"> Finalize Payment </button>
+                                                        <button class="btn btn-danger" style="position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px; " @onclick="(() => RemoveBook(popupTitle))"> Complete Payment </button>
                                                     </div>
 
                                                 }
@@ -442,7 +441,7 @@ else
                                                             </tbody>
                                                         </table>
                                                     <p style="color: #ffffff; margin-top: 10px;font-size: 25px;">Total Cost: $@popupCost</p>
-                                                        <button class="btn btn-danger" style="position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px; " @onclick="(() => RemoveAll())"> Finalize Payment </button>
+                                                      
                                                     </div>
 
 
@@ -534,7 +533,7 @@ else
                                                         </tbody>
                                                     </table>
                                                 <p style="color: #ffffff; margin-top: 10px;font-size: 25px;">Total Cost: $@popupCost</p>
-                                                    <button class="btn btn-danger" style=" position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px;" @onclick="(() => RemoveAll())"> Finalize Payment </button>
+                                                    <button class="btn btn-danger" style=" position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px;" @onclick="(() => RemoveBook(popupTitle))"> Complete Payment </button>
                                                 </div>
                                             }
 
@@ -696,10 +695,14 @@ else
     {
         fees = 0;
 
-        foreach (var book in books)
+        foreach (var str in ListOverdue.StringsOverdue)
         {
-            double intCost = double.Parse(book.Cost);
-            fees += intCost;
+            foreach(var book in bookDictionary[str])
+            {
+                double intCost = double.Parse(book.Cost);
+                fees += intCost;
+            }
+            
         }
 
 
@@ -712,10 +715,9 @@ else
         ListOverdue.Fees = feeOutput;
     }
 
-    private void RemoveBook(string title, Book selected)
+    private void RemoveBook(string title)
     {
         ListOverdue.StringsOverdue.Remove(title);
-        books.Remove(selected);
         Toggleclose();
         calculateFee();
         precision();
