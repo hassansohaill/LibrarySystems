@@ -21,24 +21,160 @@ else
 
         @if (showAllPopup)
         {
-            @if (savedPayment)
+            @if (selectPayment)
             {
-                <div style="position: absolute; top: 68px; left: 50%;top:50% ;transform: translate(-50%,-50%); width: 700px; height: 700px; background-color: #e8f4f8; overflow: auto; opacity: 1; box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); text-align: center;overflow: hidden;">
-                    <button @onclick="payAllTogglePopup" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
+                @if (savedPayment)
+                {
+                    <div class="paymentPopup">
+                        <button @onclick="payAllTogglePopup" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
+                        <div class="row d-flex justify-content-center align-items-center" style="width: 700px; height:600px; top:10%">
+                            <div class="col-8 col-md-8 col-lg-8 col-xl-8">
+                                <div id="paymentmethodadd" class="card" style="background-color: #222222; border-radius: 1rem; ">
+                                    <div class="card-body text-center">
+                                        <div class="mb-md-4 mt-md-3">
+                                            <h2 class="fw-bold mb-2 text-uppercase" style="color: #ffffff;">Payment Method</h2>
+                                            <div class="form-outline mb-4">
+                                                <label for="typeCardHolderName" style="color: #ffffff; text-align: left; display: block;">Cardholder Name</label>
+                                                <p style="color: #ffffff; text-align: left; display: block;"> John Doe</p>
+                                            </div>
+                                            <div class="form-outline mb-4">
+                                                <label for="typeCreditCardNumber" style="color: #ffffff; text-align: left; display: block;">Credit Card Number</label>
+                                                <p style="color: #ffffff; text-align: left; display: block;"> XXXX XXXX XXXX 1234</p>
+                                            </div>
+                                            <div class="form-group row mb-4">
+                                                <div class="col-md-6">
+                                                    <label for="typeExpiryDate" style="color: #ffffff; text-align: left; display: block;">Expiry Date</label>
+                                                    <p style="color: #ffffff; text-align: left; display: block;"> 09/26</p>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="typeCVV" style="color: #ffffff; text-align: left; display: block;">CVV</label>
+                                                    <input type="text" id="typeCVV" placeholder="CVV" style="max-width: 100px" class="form-control" @bind="cvvValue" />
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <img src="images/cv.png" width="100" height="60" style="margin-left: 0px;" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group row mb-4">
+                                                <div class="col-md-6">
+                                                    <label for="typePostalCode" style="color: #ffffff; text-align: left; display: block;">Postal Code</label>
+                                                    <p style="color: #ffffff; text-align: left; display: block;"> T1A 7B3</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="typeCountry" style="color: #ffffff; text-align: left; display: block;">Country</label>
+                                                    <p style="color: #ffffff; text-align: left; display: block;"> Canada</p>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #007bff; border-color: #007bff; margin-top: 25px;" @onclick="ChangePaymentMethod">
+                                                Use Different Payment
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <button class="btn btn-danger" style="top: 90%; position:fixed;transform: translateX(-50%); " @onclick="(() => RemoveAll())"> Finalize Payment </button>
-                </div>
+                        </div>
+
+
+                        <table class="listofprice">
+                            <tbody style="font-size: 20px;">
+                                @foreach (var str in ListOverdue.StringsOverdue)
+                                {
+                                    foreach (var book in bookDictionary[str])
+                                    {
+                                        <tr style="color: #ffffff;border: 1px solid white;">
+                                            <td style="padding-right: 20px;">
+                                                Book: @book.Title
+                                            </td>
+                                            <td style="padding-right: 20px;">
+                                                Days Overdue: @book.DaysDue
+                                            </td>
+                                            <td>
+                                                Cost: $@book.Cost
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                        <p style="color: #ffffff; margin-top: 10px;font-size: 25px;">Total Cost: $@feeOutput</p>
+                        <button class="btn btn-danger" style="position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px; " @onclick="(() => RemoveAll())"> Finalize Payment </button>
+                    </div>
+
+                }else
+                {
+                    <div class="paymentPopup">
+                        <button @onclick="payAllTogglePopup" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
+                        <div class="row d-flex justify-content-center align-items-center" style="width: 700px; height:600px; top:10%">
+                            <div class="col-8 col-md-8 col-lg-8 col-xl-8">
+                                <div id="paymentmethodadd" class="card" style="background-color: #222222; border-radius: 1rem; ">
+                                    <div class="card-body text-center">
+                                        <div class="mb-md-4 mt-md-3">
+                                            <h2 class="fw-bold mb-2 text-uppercase" style="color: #ffffff;">Saved Payments</h2>
+                                            <div class="form-outline mb-4" style="display:flex; flex-direction: row">
+                                                <div>
+                                                    <label for="typeCardHolderName" style="color: #ffffff; text-align: left; display: block;">Cardholder Name: John Doe</label>
+                                                    <label for="typeCreditCardNumber" style="color: #ffffff; text-align: left; display: block;">Credit Card Number: XXXX XXXX XXXX 1234</label>
+                                                    <label for="typeExpiryDate" style="color: #ffffff; text-align: left; display: block;">Expiry Date: 09/26   Postal Code: T1A 7B3</label>
+                                                </div>
+                                                <div>
+                                                    <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #007bff; border-color: #007bff; margin-top: 25px;" @onclick="SavedPaymentMethod">
+                                                        Use This
+                                                    </button>
+                                                </div>
+
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #007bff; border-color: #007bff; margin-top: 25px;" @onclick="SeparatePaymentMethod">
+                                                Seperate Payment
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <table class="listofprice">
+                            <tbody style="font-size: 20px;">
+                                @foreach (var str in ListOverdue.StringsOverdue)
+                                {
+                                    foreach (var book in bookDictionary[str])
+                                    {
+                                        <tr style="color: #ffffff;border: 1px solid white;">
+                                            <td style="padding-right: 20px;">
+                                                Book: @book.Title
+                                            </td>
+                                            <td style="padding-right: 20px;">
+                                                Days Overdue: @book.DaysDue
+                                            </td>
+                                            <td>
+                                                Cost: $@book.Cost
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                        <p style="color: #ffffff; margin-top: 10px;font-size: 25px;">Total Cost: $@feeOutput</p>
+                        <button class="btn btn-danger" style="position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px; " @onclick="(() => RemoveAll())"> Finalize Payment </button>
+                    </div>
+
+
+                   
+                }
+                
             }
             else
             {
                 <div class = "paymentPopup">
                     <button @onclick="payAllTogglePopup" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
-                            <div class="row d-flex justify-content-center align-items-center">
+                    <div class="row d-flex justify-content-center align-items-center" style="width: 700px; height:600px;">
                                 <div class="col-8 col-md-8 col-lg-8 col-xl-8">
                                     <div id = "paymentmethodadd" class="card" style="background-color: #222222; border-radius: 1rem; ">
                                         <div class="card-body text-center">
                                             <div class="mb-md-4 mt-md-3">
-                                                <h2 class="fw-bold mb-2 text-uppercase" style="color: #ffffff;">Add Payment Method</h2>
+                                                <h2 class="fw-bold mb-2 text-uppercase" style="color: #ffffff;">Payment Method</h2>
                                                 <div class="form-outline mb-4">
                                                     <label for="typeCardHolderName" style="color: #ffffff; text-align: left; display: block;">Cardholder Name</label>
                                                     <input type="text" id="typeCardName" class="form-control" placeholder="Enter name as written on the card" @bind="nameValue" />
@@ -77,15 +213,47 @@ else
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #007bff; border-color: #007bff; margin-top: 25px;" @onclick="AddPaymentMethod">
-                                                    Add Payment Method
-                                                </button>
+                                                <div>
+                                                    <div>
+                                                        <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #007bff; border-color: #007bff; margin-top: 25px;" @onclick="ChangePaymentMethod">
+                                                            Use Different Payment
+                                                        </button>
+                                                    </div>
+                                            <div>
+                                                <input type="checkbox" id="myCheckbox" name="myCheckbox">
+                                                <label for="myCheckbox" style="color: #ffffff;">Add to Saved Payments</label>
+                                            </div>
+                                            
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                    <button class="btn btn-danger" style="top: 90%; position:fixed;transform: translateX(-50%); " @onclick="(() => RemoveAll())"> Finalize Payment </button>
+                    <table class="listofprice">
+                        <tbody style="font-size: 20px;">
+                            @foreach (var str in ListOverdue.StringsOverdue)
+                            {
+                                foreach (var book in bookDictionary[str])
+                                {
+                                    <tr style="color: #ffffff;border: 1px solid white;">
+                                        <td style="padding-right: 20px;">
+                                            Book: @book.Title
+                                        </td>
+                                        <td style ="padding-right: 20px;">
+                                            Days Overdue: @book.DaysDue
+                                        </td>
+                                        <td>
+                                            Cost: $@book.Cost
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                    <p style="color: #ffffff; margin-top: 10px;font-size: 25px;">Total Cost: $@feeOutput</p>
+                    <button class="btn btn-danger" style=" position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px;" @onclick="(() => RemoveAll())"> Finalize Payment </button>
                 </div>
             }
 
@@ -137,13 +305,231 @@ else
                                     <button class="btn btn-danger" @onclick="(() => TogglePopup(book.Author, book.Title, book.Cost, book.Type, book.DaysDue, book.Status, book))"> Pay </button>
                                     @if (showPopup)
                                     {
-                                        <div class="paymentPopup">
-                                            <button @onclick="Toggleclose" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
-                                            <p>Payment</p>
-                                            <p>Payment</p><p>Payment</p>
-                                            <p>Payment</p>
-                                            <button class="btn btn-danger" style="top: 90%; position:fixed;transform: translateX(-50%); " @onclick="(() => RemoveBook(popupTitle,selected))"> Finalize Payment </button>
-                                        </div>
+                                            @if (selectPayment)
+                                            {
+                                                @if (savedPayment)
+                                                {
+                                                    <div class="paymentPopup">
+                                                        <button @onclick="ClosePopup" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
+                                                        <div class="row d-flex justify-content-center align-items-center" style="width: 700px; height:600px; top:10%">
+                                                            <div class="col-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <div id="paymentmethodadd" class="card" style="background-color: #222222; border-radius: 1rem; ">
+                                                                    <div class="card-body text-center">
+                                                                        <div class="mb-md-4 mt-md-3">
+                                                                            <h2 class="fw-bold mb-2 text-uppercase" style="color: #ffffff;">Payment Method</h2>
+                                                                            <div class="form-outline mb-4">
+                                                                                <label for="typeCardHolderName" style="color: #ffffff; text-align: left; display: block;">Cardholder Name</label>
+                                                                                <p style="color: #ffffff; text-align: left; display: block;"> John Doe</p>
+                                                                            </div>
+                                                                            <div class="form-outline mb-4">
+                                                                                <label for="typeCreditCardNumber" style="color: #ffffff; text-align: left; display: block;">Credit Card Number</label>
+                                                                                <p style="color: #ffffff; text-align: left; display: block;"> XXXX XXXX XXXX 1234</p>
+                                                                            </div>
+                                                                            <div class="form-group row mb-4">
+                                                                                <div class="col-md-6">
+                                                                                    <label for="typeExpiryDate" style="color: #ffffff; text-align: left; display: block;">Expiry Date</label>
+                                                                                    <p style="color: #ffffff; text-align: left; display: block;"> 09/26</p>
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <label for="typeCVV" style="color: #ffffff; text-align: left; display: block;">CVV</label>
+                                                                                    <input type="text" id="typeCVV" placeholder="CVV" style="max-width: 100px" class="form-control" @bind="cvvValue" />
+                                                                                </div>
+                                                                                <div class="col-md-3">
+                                                                                    <img src="images/cv.png" width="100" height="60" style="margin-left: 0px;" />
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group row mb-4">
+                                                                                <div class="col-md-6">
+                                                                                    <label for="typePostalCode" style="color: #ffffff; text-align: left; display: block;">Postal Code</label>
+                                                                                    <p style="color: #ffffff; text-align: left; display: block;"> T1A 7B3</p>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <label for="typeCountry" style="color: #ffffff; text-align: left; display: block;">Country</label>
+                                                                                    <p style="color: #ffffff; text-align: left; display: block;"> Canada</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #007bff; border-color: #007bff; margin-top: 25px;" @onclick="ChangePaymentMethod">
+                                                                                Use Different Payment
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <table class="listofprice">
+                                                            <tbody style="font-size: 20px;">
+                                             
+                                                                        <tr style="color: #ffffff;border: 1px solid white;">
+                                                                            <td style="padding-right: 20px;">
+                                                                                Book: @popupTitle
+                                                                            </td>
+                                                                            <td style="padding-right: 20px;">
+                                                                                Days Overdue: @popupDueDays
+                                                                            </td>
+                                                                            <td>
+                                                                                Cost: $@popupCost
+                                                                            </td>
+                                                                        </tr>
+                                                          
+                                                            </tbody>
+                                                        </table>
+                                                    <p style="color: #ffffff; margin-top: 10px;font-size: 25px;">Total Cost: $@popupCost</p>
+                                                        <button class="btn btn-danger" style="position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px; " @onclick="(() => RemoveAll())"> Finalize Payment </button>
+                                                    </div>
+
+                                                }
+                                                else
+                                                {
+                                                    <div class="paymentPopup">
+                                                    <button @onclick="ClosePopup" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
+                                                        <div class="row d-flex justify-content-center align-items-center" style="width: 700px; height:600px; top:10%">
+                                                            <div class="col-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <div id="paymentmethodadd" class="card" style="background-color: #222222; border-radius: 1rem; ">
+                                                                    <div class="card-body text-center">
+                                                                        <div class="mb-md-4 mt-md-3">
+                                                                            <h2 class="fw-bold mb-2 text-uppercase" style="color: #ffffff;">Saved Payments</h2>
+                                                                            <div class="form-outline mb-4" style="display:flex; flex-direction: row">
+                                                                                <div>
+                                                                                    <label for="typeCardHolderName" style="color: #ffffff; text-align: left; display: block;">Cardholder Name: John Doe</label>
+                                                                                    <label for="typeCreditCardNumber" style="color: #ffffff; text-align: left; display: block;">Credit Card Number: XXXX XXXX XXXX 1234</label>
+                                                                                    <label for="typeExpiryDate" style="color: #ffffff; text-align: left; display: block;">Expiry Date: 09/26   Postal Code: T1A 7B3</label>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #007bff; border-color: #007bff; margin-top: 25px;" @onclick="SavedPaymentMethod">
+                                                                                        Use This
+                                                                                    </button>
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                            <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #007bff; border-color: #007bff; margin-top: 25px;" @onclick="SeparatePaymentMethod">
+                                                                                Seperate Payment
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <table class="listofprice">
+                                                            <tbody style="font-size: 20px;">
+                                                            <tr style="color: #ffffff;border: 1px solid white;">
+                                                                <td style="padding-right: 20px;">
+                                                                    Book: @popupTitle
+                                                                </td>
+                                                                <td style="padding-right: 20px;">
+                                                                    Days Overdue: @popupDueDays
+                                                                </td>
+                                                                <td>
+                                                                    Cost: $@popupCost
+                                                                </td>
+                                                            </tr>
+                                                 
+                                                            </tbody>
+                                                        </table>
+                                                    <p style="color: #ffffff; margin-top: 10px;font-size: 25px;">Total Cost: $@popupCost</p>
+                                                        <button class="btn btn-danger" style="position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px; " @onclick="(() => RemoveAll())"> Finalize Payment </button>
+                                                    </div>
+
+
+
+                                                }
+
+                                            }
+                                            else
+                                            {
+                                                <div class="paymentPopup">
+                                                <button @onclick="ClosePopup" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
+                                                    <div class="row d-flex justify-content-center align-items-center" style="width: 700px; height:600px;">
+                                                        <div class="col-8 col-md-8 col-lg-8 col-xl-8">
+                                                            <div id="paymentmethodadd" class="card" style="background-color: #222222; border-radius: 1rem; ">
+                                                                <div class="card-body text-center">
+                                                                    <div class="mb-md-4 mt-md-3">
+                                                                        <h2 class="fw-bold mb-2 text-uppercase" style="color: #ffffff;">Payment Method</h2>
+                                                                        <div class="form-outline mb-4">
+                                                                            <label for="typeCardHolderName" style="color: #ffffff; text-align: left; display: block;">Cardholder Name</label>
+                                                                            <input type="text" id="typeCardName" class="form-control" placeholder="Enter name as written on the card" @bind="nameValue" />
+                                                                        </div>
+                                                                        <div class="form-outline mb-4">
+                                                                            <label for="typeCreditCardNumber" style="color: #ffffff; text-align: left; display: block;">Credit Card Number</label>
+                                                                            <input type="text" id="typeCreditCardNumber" class="form-control" placeholder="1234 1234 1234 1234" @bind="creditCardNumberValue" />
+                                                                        </div>
+                                                                        <div class="form-group row mb-4">
+                                                                            <div class="col-md-6">
+                                                                                <label for="typeExpiryDate" style="color: #ffffff; text-align: left; display: block;">Expiry Date</label>
+                                                                                <input type="text" id="typeExpiryDate" placeholder="MM/YY" style="max-width: 220px;" class="form-control" @bind="expiryDateValue" />
+                                                                            </div>
+                                                                            <div class="col-md-3">
+                                                                                <label for="typeCVV" style="color: #ffffff; text-align: left; display: block;">CVV</label>
+                                                                                <input type="text" id="typeCVV" placeholder="CVV" style="max-width: 100px" class="form-control" @bind="cvvValue" />
+                                                                            </div>
+                                                                            <div class="col-md-3">
+                                                                                <img src="images/cv.png" width="100" height="60" style="margin-left: 0px;" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group row mb-4">
+                                                                            <div class="col-md-6">
+                                                                                <label for="typePostalCode" style="color: #ffffff; text-align: left; display: block;">Postal Code</label>
+                                                                                <input type="text" id="typePostalCode" placeholder="000 000" style="max-width: 220px;" class="form-control" @bind="postalCodeValue" />
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <label for="typeCountry" style="color: #ffffff; text-align: left; display: block;">Country</label>
+                                                                                <select id="typeCountry" style="max-width: 250px;" class="form-select" @bind="countryValue">
+                                                                                    <option value="">Select Country</option>
+                                                                                    <option value="USA">United States of America</option>
+                                                                                    <option value="Canada">Canada</option>
+                                                                                    <option value="Mexico">Mexico</option>
+                                                                                    <option value="UK">United Kingdom</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div>
+                                                                                <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #007bff; border-color: #007bff; margin-top: 25px;" @onclick="ChangePaymentMethod">
+                                                                                    Use Different Payment
+                                                                                </button>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input type="checkbox" id="myCheckbox" name="myCheckbox">
+                                                                                <label for="myCheckbox" style="color: #ffffff;">Add to Saved Payments</label>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <table class="listofprice">
+                                                        <tbody style="font-size: 20px;">
+
+                                                        <tr style="color: #ffffff;border: 1px solid white;">
+                                                            <td style="padding-right: 20px;">
+                                                                Book: @popupTitle
+                                                            </td>
+                                                            <td style="padding-right: 20px;">
+                                                                Days Overdue: @popupDueDays
+                                                            </td>
+                                                            <td>
+                                                                Cost: $@popupCost
+                                                            </td>
+                                                        </tr>
+                                            
+                                                        </tbody>
+                                                    </table>
+                                                <p style="color: #ffffff; margin-top: 10px;font-size: 25px;">Total Cost: $@popupCost</p>
+                                                    <button class="btn btn-danger" style=" position:absolute; left:50%; transform: translateX(-50%); margin-bottom:40px;" @onclick="(() => RemoveAll())"> Finalize Payment </button>
+                                                </div>
+                                            }
+
+                                       
                                     }
 
                                 </td>.
@@ -164,6 +550,13 @@ else
 
 
 <style>
+    .listofprice {
+        border: 1px solid white; 
+        left:50%;
+        transform: translateX(-50%);
+
+        position: relative; text-align: left; 
+    }
     #paymentmethodadd{
         margin-top: -50px;
     }
@@ -186,16 +579,15 @@ else
         position: absolute;
         top: 20px;
         left: 50%;
-        top: 60%;
-        transform: translate(-50%,-50%);
-        width: 750px;
-        height: 750px;
+        top: 12%;
+        transform: translate(-50%);
+        width: 700px;
+        height: 800px;
         background-color: #222222;
-        overflow: auto;
         opacity: 1;
         box-shadow: 0 0 10px #222222;
         text-align: center;
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     .overdueContainer {
@@ -306,6 +698,7 @@ else
     bool savedPayment = false;
     bool showPopup = false;
     bool showAllPopup = false;
+    bool selectPayment = false;
     string popupAuthor;
     string popupTitle;
     string popupCost;
@@ -355,9 +748,30 @@ else
 
 
 
-    private async Task AddPaymentMethod()
+    private void AddPaymentMethod()
     {
-        // add payment method logic here
-        //NavigationManager.NavigateTo("/Profile");
+        selectPayment = true;
     }
+    private void ChangePaymentMethod()
+    {
+        selectPayment = true;
+        savedPayment = false;
+    }
+    private void SavedPaymentMethod()
+    {
+        savedPayment = true;
+    }
+    private void SeparatePaymentMethod()
+    {
+        selectPayment = false;
+        savedPayment = false;
+    }
+    private void ClosePopup()
+    {
+        savedPayment = false;
+        showPopup = false;
+        showAllPopup = false;
+        selectPayment = false;
+    }
+
 }
