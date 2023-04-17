@@ -1,82 +1,112 @@
 ﻿@page "/History"
-
-<PageTitle>History</PageTitle>
-
 <NavBar />
 
-<p>
-    <br />
-</p>
+<h1 class="header-style"> Account History </h1>
 
-<h3>Account History</h3>
-<hr />
-
-<p>
-    <br />
-</p>
-
-<table>
-    <tr>
-        <td>Book</td>
-        <td>Check Out Date</td>
-        <td>Return By</td>
-        <td>Date Returned</td>
-    </tr>
-    <tr>
-        <td>Naruto Volume 100</td>
-        <td>March, 5th, 2023</td>
-        <td>March, 28th, 2023</td>
-        <td>March, 12th, 2023</td>
-    </tr>
-    <tr>
-        <td>One Piece Volume 1</td>
-        <td>February, 20th, 2023</td>
-        <td>
-            March, 10th, 2023 &nbsp <button class="link5"> Pay Fees </button>
-        </td>
-        <td>Not Returned</td>
-    </tr>
-    <tr>
-        <td>Bleach volume 6</td>
-        <td>March, 2nd, 2023</td>
-        <td>
-            March, 20th, 2023 &nbsp <button class="link6"> Extend </button>
-        </td>
-        <td>Not Returned</td>
-    </tr>
-    <tr>
-        <td>Can't Hurt Me</td>
-        <td>February, 28th, 2023</td>
-        <td>
-            March, 15th, 2023 &nbsp <button class="link6"> Extend </button>
-        </td>
-        <td>Not Returned</td>
-    </tr>
-</table>
-
-<style>
-    .link5 {
-        background-color: lightgrey;
-        color: red;
-        border: 2px solid #000000;
-    }
-
-    .link6 {
-        background-color: lightgrey;
-        color: deepskyblue;
-        border: 2px solid #000000;
-    }
-
-    table {
-        width: 1300px;
-    }
-
-    table, td {
-        border: solid #000;
-    }
-</style>
+<head>
+    <PageTitle>My Books On Hold</PageTitle>
+    <link rel="stylesheet" href="../wwwroot/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../wwwroot/css/Hold.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr id="tableheader">
+                            <th scope="col" @onclick="(() => ToggleArrow())">Book Title<i class="bi @(isAscending ? "bi-sort-up" : "bi-sort-down")"></i></th>
+                            <th scope="col" @onclick="(() => ToggleArrow())">Library<i class="bi @(isAscending ? "bi-sort-up" : "bi-sort-down")"></i></th>
+                            <th scope="col" @onclick="(() => ToggleArrow())">Date Signed Out<i class="bi @(isAscending ? "bi-sort-up" : "bi-sort-down")"></i></th>
+                            <th scope="col" @onclick="(() => ToggleArrow())">Date Return Deadline<i class="bi @(isAscending ? "bi-sort-up" : "bi-sort-down")"></i></th>
+                            <th scope="col" @onclick="(() => ToggleArrow())">Status<i class="bi @(isAscending ? "bi-sort-up" : "bi-sort-down")"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div style="display: flex; align-items: center;">
+                                    <img src="/Images/Book1.png" alt="Book Cover" height="80" style="margin-right: 1rem;" />
+                                    <div>
+                                        <h4 style="margin-bottom: 0;">Can't Hurt Me</h4>
+                                        <p style="font-size: 0.8rem; margin-top: 0;">by <span style="font-size: 0.7rem; font-style: italic;">David Goggins</span></p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Foothills Library</td>
+                            <td>4/12/2023</td>
+                            <td>4/15/2023</td>
+                            <td><p style="font-weight: bold; color: red;">OVERDUE</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="display: flex; align-items: center;">
+                                    <img src="/Images/Book2.png" alt="Book Cover" height="80" style="margin-right: 1rem;" />
+                                    <div>
+                                        <h4 style="margin-bottom: 0;">My Secret Sister</h4>
+                                        <p style="font-size: 0.8rem; margin-top: 0;">by <span style="font-size: 0.7rem; font-style: italic;">Lauren Westwood</span></p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Foothills Library</td>
+                            <td>4/16/2023</td>
+                            <td>4/25/2023</td>
+                            <td><p style="font-weight: bold; color: dodgerblue;">BORROWING</p></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="display: flex; align-items: center;">
+                                    <img src="/Images/Book3.png" alt="Book Cover" height="80" style="margin-right: 1rem;" />
+                                    <div>
+                                        <h4 style="margin-bottom: 0;">The Fifth Juror</h4>
+                                        <p style="font-size: 0.8rem; margin-top: 0;">by <span style="font-size: 0.7rem; font-style: italic;">Lori Lacefield</span></p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Foothills Library</td>
+                            <td>4/02/2023</td>
+                            <td>4/16/2023</td>
+                            <td>
+                                <p style="font-weight: bold; color: green;">RETURNED</p>
+                                <p>4/12/2023</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
 
 @code {
+    private bool isAscending = true;
 
+    private void ToggleArrow()
+    {
+        isAscending = !isAscending;
+    }
 }
 
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    #test {
+        color: black;
+    }
+
+    #tableheader {
+        border: 1px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+
+    /* Center the table */
+    .container {
+        margin-top: 2rem;
+    }
+
+</style>
