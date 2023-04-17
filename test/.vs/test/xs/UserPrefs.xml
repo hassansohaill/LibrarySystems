@@ -5,22 +5,22 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/Hold.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/SeeAll.razor">
     <Files>
-      <File FileName="test/Pages/Homepage.razor" />
+      <File FileName="test/Pages/Homepage.razor" Line="74" Column="27" />
       <File FileName="test/Shared/NavMenu.razor" />
       <File FileName="test/Shared/MainLayout.razor" />
       <File FileName="test/Properties/launchSettings.json" />
       <File FileName="test/wwwroot/index.html" />
       <File FileName="test/_Imports.razor" />
-      <File FileName="test/Pages/MyBooks.razor" />
+      <File FileName="test/Pages/MyBooks.razor" Line="35" Column="21" />
       <File FileName="test/Shared/SurveyPrompt.razor" />
       <File FileName="test/Pages/Overdue.razor" />
-      <File FileName="test/Pages/CreateAccount.razor" />
-      <File FileName="test/Pages/Cart.razor" />
+      <File FileName="test/Pages/CreateAccount.razor" Line="1" Column="1" />
+      <File FileName="test/Pages/Cart.razor" Line="1" Column="1" />
       <File FileName="test/Pages/LoginPage.razor" />
       <File FileName="test/App.razor" />
-      <File FileName="test/Pages/Hold.razor" Line="16" Column="26" />
+      <File FileName="test/Pages/Hold.razor" />
       <File FileName="test/Pages/Profile.razor" />
       <File FileName="test/Pages/OverdueDefault.razor" />
       <File FileName="test/Shared/NavMenu.razor.css" />
@@ -36,7 +36,7 @@
       <File FileName="test/Pages/LoginPageCart.razor" />
       <File FileName="test/Program.cs" />
       <File FileName="test/Shared/MainLayout.razor.css" />
-      <File FileName="test/Pages/SeeAll.razor" />
+      <File FileName="test/Pages/SeeAll.razor" Line="45" Column="50" />
       <File FileName="test/Shared/Dictionary.cs" />
       <File FileName="test/Pages/ForgotPasswordPage.razor" />
       <File FileName="test/Pages/PaymentMethods.razor" />
@@ -56,7 +56,7 @@
               <Node name="Components" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
-                <Node name="Hold.razor" selected="True" />
+                <Node name="SeeAll.razor" selected="True" />
               </Node>
               <Node name="Properties" expanded="True" />
               <Node name="Shared" expanded="True">
