@@ -13,7 +13,7 @@ else
 
     <h1 id="cart-title" style="text-align: center" >Overdue Fees</h1>
 
-    <div class="card-body">
+    <div id = "overduenoti" class="card-body">
         
         <p style="font-size: 20px;"><i class="fas fa-exclamation-triangle"></i>Total fees due:<b> <p style="font-size:45px;">$@feeOutput</p></b> </p>
         <button class="btn btn-danger" style="font-size: 21px;" @onclick="(() => payAllTogglePopup())"> Pay All </button>
@@ -33,44 +33,62 @@ else
             {
                 <div class = "paymentPopup">
                     <button @onclick="payAllTogglePopup" class="toggle" type="button" style=" display: block; margin:  1% 1% 20px auto;background-color: transparent;background: #03549a;width: 40px;height: 40px;cursor: pointer;font-size: 25px;border-radius: 100%;"> &times  </button>
-                    <div class="form-outline mb-4">
-                        <label for="typeCardHolderName" style="color: #ffffff; text-align: left; display: block; ">Cardholder Name</label>
-                        <input type="text" id="typeCardName" class="form-control"  style="position: relative; width = 90%" placeholder="Enter name as written on the card" @bind="nameValue" />
-                    </div>
-                    <div class="form-outline mb-4">
-                        <label for="typeCreditCardNumber" style="color: #ffffff; text-align: left; display: block;">Credit Card Number</label>
-                        <input type="text" id="typeCreditCardNumber" class="form-control" placeholder="1234 1234 1234 1234" @bind="creditCardNumberValue" />
-                    </div>
-                    <div class="form-group row mb-4">
-                        <div class="col-md-6">
-                            <label for="typeExpiryDate" style="color: #ffffff; text-align: left; display: block;">Expiry Date</label>
-                            <input type="text" id="typeExpiryDate" placeholder="MM/YY" style="max-width: 220px;" class="form-control" @bind="expiryDateValue" />
-                        </div>
-                        <div class="col-md-3">
-                            <label for="typeCVV" style="color: #ffffff; text-align: left; display: block;">CVV</label>
-                            <input type="text" id="typeCVV" placeholder="CVV" style="max-width: 100px" class="form-control" @bind="cvvValue" />
-                        </div>
-                        <div class="col-md-3">
-                            <img src="images/cv.png" width="100" height="60" style="margin-left: 0px;" />
-                        </div>
-                    </div>
-                    <div class="form-group row mb-4">
-                        <div class="col-md-6">
-                            <label for="typePostalCode" style="color: #ffffff; text-align: left; display: block;">Postal Code</label>
-                            <input type="text" id="typePostalCode" placeholder="000 000" style="max-width: 220px;" class="form-control" @bind="postalCodeValue" />
-                        </div>
-                        <div class="col-md-6">
-                            <label for="typeCountry" style="color: #ffffff; text-align: left; display: block;">Country</label>
-                            <select id="typeCountry" style="max-width: 250px;" class="form-select" @bind="countryValue">
-                                <option value="">Select Country</option>
-                                <option value="USA">United States of America</option>
-                                <option value="Canada">Canada</option>
-                                <option value="Mexico">Mexico</option>
-                                <option value="UK">United Kingdom</option>
+                    <section style="margin-top:5px;">
+                        <div class="container py-3 h-75">
+                            <div class="row d-flex justify-content-center align-items-center h-100">
+                                <div class="col-8 col-md-8 col-lg-8 col-xl-8">
+                                    <div class="card" style="background-color: #222222; border-radius: 1rem; ">
+                                        <div class="card-body p-4 text-center">
+                                            <div class="mb-md-4 mt-md-3 pb-4">
+                                                <h2 class="fw-bold mb-2 text-uppercase" style="color: #ffffff;">Add Payment Method</h2>
+                                                <div class="form-outline mb-4">
+                                                    <label for="typeCardHolderName" style="color: #ffffff; text-align: left; display: block;">Cardholder Name</label>
+                                                    <input type="text" id="typeCardName" class="form-control" placeholder="Enter name as written on the card" @bind="nameValue" />
+                                                </div>
+                                                <div class="form-outline mb-4">
+                                                    <label for="typeCreditCardNumber" style="color: #ffffff; text-align: left; display: block;">Credit Card Number</label>
+                                                    <input type="text" id="typeCreditCardNumber" class="form-control" placeholder="1234 1234 1234 1234" @bind="creditCardNumberValue" />
+                                                </div>
+                                                <div class="form-group row mb-4">
+                                                    <div class="col-md-6">
+                                                        <label for="typeExpiryDate" style="color: #ffffff; text-align: left; display: block;">Expiry Date</label>
+                                                        <input type="text" id="typeExpiryDate" placeholder="MM/YY" style="max-width: 220px;" class="form-control" @bind="expiryDateValue" />
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label for="typeCVV" style="color: #ffffff; text-align: left; display: block;">CVV</label>
+                                                        <input type="text" id="typeCVV" placeholder="CVV" style="max-width: 100px" class="form-control" @bind="cvvValue" />
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <img src="images/cv.png" width="100" height="60" style="margin-left: 0px;" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row mb-4">
+                                                    <div class="col-md-6">
+                                                        <label for="typePostalCode" style="color: #ffffff; text-align: left; display: block;">Postal Code</label>
+                                                        <input type="text" id="typePostalCode" placeholder="000 000" style="max-width: 220px;" class="form-control" @bind="postalCodeValue" />
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="typeCountry" style="color: #ffffff; text-align: left; display: block;">Country</label>
+                                                        <select id="typeCountry" style="max-width: 250px;" class="form-select" @bind="countryValue">
+                                                            <option value="">Select Country</option>
+                                                            <option value="USA">United States of America</option>
+                                                            <option value="Canada">Canada</option>
+                                                            <option value="Mexico">Mexico</option>
+                                                            <option value="UK">United Kingdom</option>
 
-                            </select>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #007bff; border-color: #007bff; margin-top: 25px;" @onclick="AddPaymentMethod">
+                                                    Add Payment Method
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                     <button class="btn btn-danger" style="top: 90%; position:fixed;transform: translateX(-50%); " @onclick="(() => RemoveAll())"> Finalize Payment </button>
                 </div>
             }
@@ -194,7 +212,7 @@ else
     .container {
         margin-top: 10x;
     }
-    .card-body{
+    #overduenoti{
         background-color: #eb9e98;
         width: 300px;
         border-radius: 10px;
