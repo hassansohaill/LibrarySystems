@@ -1,7 +1,6 @@
 ﻿@page "/History"
 <NavBar />
 
-<h1 class="header-style"> Account History </h1>
 
 <head>
     <PageTitle>My Books On Hold</PageTitle>
@@ -10,6 +9,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 <body>
+        <div class="header-container">
+        <div class="header-text">
+            Account History
+        </div>
+    </div>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col">
@@ -60,7 +65,7 @@
                                     <img src="/Images/Book3.png" alt="Book Cover" height="80" style="margin-right: 1rem;" />
                                     <div>
                                         <h4 style="margin-bottom: 0;">The Fifth Juror</h4>
-                                        <p style="font-size: 0.8rem; margin-top: 0;">by <span style="font-size: 0.7rem; font-style: italic;">Lori Lacefield</span></p>
+                                        <p style="font-size: 0.8rem; margin-top: 0;">by <span style="font-size: 0.7rem;">Lori Lacefield</span></p>
                                     </div>
                                 </div>
                             </td>
@@ -88,7 +93,26 @@
     }
 }
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
+    .header-container {
+        text-align: left;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 20px;
+    }
+
+    .header-text {
+        font-size: 225%;
+        font-weight: bold;
+        border: 2px solid black;
+        border-radius: 10px;
+        display: inline-block;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
     body {
         margin: 0;
         padding: 0;

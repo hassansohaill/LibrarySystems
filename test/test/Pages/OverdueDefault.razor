@@ -1,17 +1,26 @@
 ﻿@page "/OverdueDefault"
 
+
+<body>
+
+
 <NavBar />
 
+
+<div class="header-container">
+  <div class="header-text">
+    Overdue Fees
+  </div>
+</div>
 @if (fees == 0)
 {
-    <h1 id="cart-title" style= "text-align: center">Overdue Fees</h1>
+  
 
     <p style="font-size: 18px;text-align: center">You have no outstanding fees. You can continue browse items by returning <a href="/">Home</a>.</p>
 }
 else
 {
 
-    <h1 id="cart-title" style="text-align: center" >Overdue Fees</h1>
 
     <div id = "overduenoti" class="card-body">
         
@@ -160,10 +169,28 @@ else
         <div class="col-lg-1"></div>
     </div>
 </div>
+</body>
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
+    .header-container {
+        text-align: left;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 20px;
+    }
+
+    .header-text {
+        font-size: 225%;
+        font-weight: bold;
+        border: 2px solid black;
+        border-radius: 10px;
+        display: inline-block;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
     #paymentmethodadd{
         margin-top: -50px;
     }
