@@ -48,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3JlYXRlQWNjb3VudFR3by5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/Extendpage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXh0ZW5kcGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/ForgotPasswordPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRm9yZ290UGFzc3dvcmRQYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -122,6 +126,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/SeeAll.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VlQWxsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Pages/UpdatedMyBooks.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXBkYXRlZE15Qm9va3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/darpalpatel/Documents/GitHub/OnlineLibrarySystem/test/test/Shared/SurveyPrompt.razor]

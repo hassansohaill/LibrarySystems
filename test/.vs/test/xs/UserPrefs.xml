@@ -5,7 +5,7 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/OverdueDefault.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test/Pages/Hold.razor">
     <Files>
       <File FileName="test/Pages/Homepage.razor" />
       <File FileName="test/Shared/NavMenu.razor" />
@@ -20,9 +20,9 @@
       <File FileName="test/Pages/Cart.razor" />
       <File FileName="test/Pages/LoginPage.razor" />
       <File FileName="test/App.razor" />
-      <File FileName="test/Pages/Hold.razor" />
+      <File FileName="test/Pages/Hold.razor" Line="16" Column="26" />
       <File FileName="test/Pages/Profile.razor" />
-      <File FileName="test/Pages/OverdueDefault.razor" Line="64" Column="42" />
+      <File FileName="test/Pages/OverdueDefault.razor" />
       <File FileName="test/Shared/NavMenu.razor.css" />
       <File FileName="test/wwwroot/css/app.css" />
       <File FileName="test/Pages/History.razor" />
@@ -40,6 +40,9 @@
       <File FileName="test/Shared/Dictionary.cs" />
       <File FileName="test/Pages/ForgotPasswordPage.razor" />
       <File FileName="test/Pages/PaymentMethods.razor" />
+      <File FileName="test/Pages/CreateAccountTwo.razor" />
+      <File FileName="test/Components/DueSoonShelf.razor" />
+      <File FileName="test/Components/RegistrationPopup.razor" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -50,20 +53,17 @@
                 <Node name="FrameworkReferences" expanded="True" />
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
+              <Node name="Components" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
-                <Node name="OverdueDefault.razor" selected="True" />
+                <Node name="Hold.razor" selected="True" />
               </Node>
               <Node name="Properties" expanded="True" />
               <Node name="Shared" expanded="True">
                 <Node name="MainLayout.razor" expanded="True" />
                 <Node name="NavMenu.razor" expanded="True" />
               </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True">
-                  <Node name="bootstrap" expanded="True" />
-                  <Node name="open-iconic" expanded="True" />
-                </Node>
-              </Node>
+              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>

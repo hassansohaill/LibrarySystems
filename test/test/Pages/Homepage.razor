@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @if (Globals.loginCondition)
     {
-        <div style="display:flex; flex-direction: row; padding-left: 8px; padding-right: 8px; border: 2px solid black; border-radius: 10px; display: inline-block;">
+        <div style="display: flex; background-color: #d1cdcd; box-shadow: 0 0 5px #ccc; flex-direction: row; padding-left: 8px; padding-right: 8px; margin-top: 7px; border: 0.5px solid black; border-radius: 10px; display: inline-block; ">
             <div>
                 <h4> Welcome <strong>Jane</strong>!</h4>
                 @if (ListOverdue.StringsOverdue.Count == 0)
@@ -22,8 +22,9 @@
                 else
                 {
                     <p style="color: red; padding: 0;"><i class="fas fa-exclamation-circle"></i> You have <b>$@ListOverdue.Fees </b> of unpaid fines! Click <a href="/OverdueDefault">here</a> to pay. </p>
-                    <p>You have checked out 3 items.Click <a href="/myBooks">here </a> to view</p>
+
                 }
+                <p>You have checked out 3 items. Click <a href="/myBooks">here </a> to view</p>
             </div>
         </div>
 
