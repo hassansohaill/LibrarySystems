@@ -197,7 +197,7 @@
                                 </button>
                             </div>
                             <div>
-                                <button style="margin-top: 20px; font-size: 17px; " class="bag-button">
+                                <button @onclick="(e) => ToCheckout(popupTitle,e)" style="margin-top: 20px; font-size: 17px; " class="bag-button">
                                     <span> Checkout </span>
                                     <i class="fas fa-arrow-right"></i>
                                 </button>
@@ -213,7 +213,7 @@
                                 </button>
                             </div>
                             <div>
-                                <button style="margin-top: 20px; font-size: 17px; " class="bag-button">
+                                <button @onclick="(e) => ToCheckout(popupTitle,e)" style="margin-top: 20px; font-size: 17px; " class="bag-button">
                                     <span> Checkout </span>
                                     <i class="fas fa-arrow-right"></i>
                                 </button>
@@ -409,6 +409,12 @@ else
             .ToDictionary(g => g.Key, g => g.ToList());
     }
 
+    private async Task ToCheckout(string title, MouseEventArgs e)
+    {
+        await Task.Delay(1000);
+        ListCart.StringsCart.Add(title);
+        NavigationManager.NavigateTo("/Cart");
+    }
 
     async Task AddHold(string title, string position)
     {

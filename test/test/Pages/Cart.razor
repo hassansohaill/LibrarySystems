@@ -26,7 +26,18 @@
         <div class="row">
             <div class="col-lg-9">
            
-
+                @if(showPopup)
+                {
+                        <div class="popup-overlay">
+                            <div class="popup-content">
+                                <h3>Signing Out @popupNumber Book(s)...</h3>
+                                <p>Pickup Location: Foothills Library</p>
+                                <p>Are you sure you want to proceed?</p>
+                                <button class="btn btn-success" @onclick="(e) => CompleteSign()">Confirm Signout</button>
+                                <button class="btn btn-danger" @onclick="(() => { showPopup = false; popupNumber = 0; })">Cancel</button>
+                            </div>
+                        </div>
+                }
                 @if (ListCart.StringsCart.Count == 0)
                     {
 
@@ -86,19 +97,19 @@
 
 
             <div style="margin-top: 45px; " class="col-lg-3">
-                <div class="card">
+                <div class="card" id = "test">
                     <div style="background-color: #dedcd9 " class="card-body">
                         <h5 class="card-title">Order Summary</h5>
                         <p class="card-text">Total Number of Books: @ListCart.StringsCart.Count</p>
                         <p class="card-text">Nearest Return Date: N/A</p>
                         @if (ListCart.StringsCart.Count == 0)
                             {
-                            <button style="background-color: #c2bfbc; border: none" class="btn btn-primary" disabled>Complete Signout</button>
+                            <button style="background-color: #c2bfbc; border: none"class="btn btn-primary" id = "disabledBtn" disabled>Complete Signout</button>
 
                             }
                             else
                             {
-                            <button style="background-color: #5c5854; border: none" class="btn btn-primary">Complete Signout</button>
+                            <button style="background-color: green; border: none" @onclick="(e) => TogglePopup(ListCart.StringsCart.Count)" class="btn btn-primary">Complete Signout</button>
                             }
 
                     </div>
@@ -111,8 +122,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-    .btn btn-primary:hover {
-        background-color: gray;
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .popup-content {
+        background-color: #fff;
+        padding: 20px;
+        max-width: 500px;
+        text-align: center;
+        border-radius: 5px;
+        z-index: 9999;
+    }
+
+    #test {
+        z-index:999;
     }
 
     .header-container {
@@ -134,6 +167,9 @@
 
 </style>
 @code {
+    public bool showPopup = false;
+    public int popupNumber;
+
     public class Book
     {
         public string Author { get; set; }
@@ -185,6 +221,18 @@
     private void RemoveBookCart(string title)
     {
         ListCart.StringsCart.Remove(title);
+    }
+
+    private void TogglePopup(int count)
+    {
+        showPopup = !showPopup;
+        popupNumber = count;
+    }
+
+    private void CompleteSign()
+    {
+        showPopup = !showPopup;
+        ListCart.StringsCart.Clear();
     }
 
     //private void CheckOut()
