@@ -11,6 +11,9 @@ namespace test.Data
         public string Type { get; set; }
         public int num { get; set; }
         public string Description { get; set; }
+        public string Location { get; set; }
+        public string Pickup { get; set; }
+        public string Holding { get; set; }
 
     }
 }

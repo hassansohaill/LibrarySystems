@@ -38,10 +38,10 @@
     <div style="margin-top: 10px; display: flex; justify-content: center; align-items: center; position: relative">
         <div style="display: flex; align-items: center;">
             <div>
-                <input class="search" type="text" placeholder="Search...">
+                <input class="search" type="text" placeholder="Search..." @bind="@SearchTerm" @oninput="@((e) => { SearchTerm=(string)e.Value;})">
             </div>
             <div>
-                <button style="opacity: 75%; height: 34px; border: 1px solid;">Search</button>
+                <button style="opacity: 75%; height: 34px; border: 1px solid;" @onclick="@PerformSearch">Search</button>
             </div>
         </div>
         <div style="right: 0; position: absolute">
@@ -606,6 +606,14 @@ else
     {
         await InvokeAsync(() => StateHasChanged());
     }
+
+    private string SearchTerm { get; set; }
+
+    protected void PerformSearch()
+    {
+        NavigationManager.NavigateTo($"/searchResults/{SearchTerm}");
+    }
+
 
 
 

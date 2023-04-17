@@ -1,7 +1,8 @@
 ﻿@inject NavigationManager NavigationManager
 
 @using test.Data
-@using test.Components
+@using test.Shared
+
 @using System;
 @using static System.Net.Mime.MediaTypeNames;
 @using System.Net.NetworkInformation;
@@ -11,15 +12,7 @@
 
 <div style="margin-top: 20px; margin-left: 20px;">
     <h4> Welcome <strong>@UserA.FirstName</strong>!</h4>
-    @if (ListOverdue.StringsOverdue.Count == 0)
-{
-            <div></div>
-}
-else
-{
-            <p style="color: red;"><i class="fas fa-exclamation-circle"></i>You have @ListOverdue.StringsOverdue.Count items overdue! Click <a href="/OverdueDefault">here</a> to pay fines. </p>
-}
-    <p> Here are your upcoming due dates:</p>
+    <p> Here are your upcoming due dates.</p>
 </div>
 
 <div class="bookshelf">
@@ -34,11 +27,16 @@ else
                     <p>@UserA.DueDates[x].Item2.Title</p>
                     <strong>@getDaysLeft(UserA.DueDates[x].Item1)</strong>
                 </div>
+
             </div>
         }
 
         <div class="button-box">
-            <button @onclick="@ViewMyBooks"> View all books</button>
+            <p>You have checked out 3 items. Click <a href="/myBooks">here </a> to view</p>
+            <button style="margin-bottom:10px; margin-top:10px;" @onclick="@ViewMyBooks"> View all books</button>
+            <p style="color: red; padding: 0;"><i class="fas fa-exclamation-circle"></i> You have $3 of unpaid fines!  </p>
+            <button style="margin-bottom:10px; margin-top:10px;" @onclick="@ViewOverdue"> View fees</button>
+
         </div>
 
 
@@ -52,6 +50,8 @@ else
 
 
 
+
+
 <style>
 
     .bookshelf {
@@ -60,7 +60,6 @@ else
         margin: 20px;
         justify-content: center;
         display: flex;
-        z-index: -1;
     }
 
     .book-row {
@@ -104,7 +103,7 @@ else
         flex-direction: row;
         height: 250px;
         width: 300px;
-        margin-left: 20px;
+        margin-left: 30px;
     }
 
     .button-box {
@@ -113,6 +112,8 @@ else
         width: 150px;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+        margin-left: 20px;
     }
 </style>
 
@@ -150,7 +151,7 @@ else
 
         string dayString = " Due in ";
         string due = "Due ";
-        string day = " days";
+        string day = " day(s)";
         string ago = " ago";
         if (daysLeft > 0)
         {
@@ -174,7 +175,11 @@ else
 
         NavigationManager.NavigateTo("/myBooks");
     }
+    protected void ViewOverdue()
+    {
 
+        NavigationManager.NavigateTo("/OverdueDefault");
+    }
 
     //Book BookD = new Book() { Author = , Title = "One Piece (Vol 100)", Category = "Popular", Status = "Available", num = 1, Image = "images/naruto.png", Type = "paper", Description = " " };
 
