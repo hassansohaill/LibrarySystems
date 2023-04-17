@@ -1,21 +1,23 @@
 ﻿@page "/Hold"
+
+@inject NavigationManager NavigationManager
 @using test.Shared
 
-<NavBar />
+<PageTitle>Hold</PageTitle>
 
-<h1> @this.index</h1>
 
-<head>
-    <PageTitle>My Books On Hold</PageTitle>
-    <link rel="stylesheet" href="../wwwroot/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="../wwwroot/css/Hold.css" />
-</head>
 
 <body>
+    <NavBar />
+    <div class="header-container">
+        <div class="header-text">
+            Books On Hold
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-11">
-                <h1 id="hold-title">On Hold</h1>
                 <div>
                     <input class="search" type="text" placeholder="Search...">
                 </div>
@@ -67,6 +69,27 @@
     </div>
 </body>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    .header-container {
+        text-align: left;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 20px;
+    }
+
+    .header-text {
+        font-size: 225%;
+        font-weight: bold;
+        border: 2px solid black;
+        border-radius: 10px;
+        display: inline-block;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+</style>
 
 @code {
     [Parameter]

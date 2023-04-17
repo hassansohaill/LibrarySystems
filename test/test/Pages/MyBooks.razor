@@ -1,33 +1,30 @@
 ﻿@page "/myBooks"
 
-
 @inject NavigationManager NavigationManager
 @using test.Shared
 
 <PageTitle>myBooks</PageTitle>
 
-<NavBar />
 
-<p>
-    <br />
-</p>
+<body>
+    <NavBar />
 
-<h3>My Books</h3>
+<div class="header-container">
+  <div class="header-text">
+    My Books
+  </div>
+</div>
 
-<p>
-    <br />
-</p>
-
-<div class="ebooks">
+    <div class="ebooks">
     <h4>EBooks:</h4>
     <hr />
     <div class="bookrow">
         <div>
             <img class="book1" src="@book1.Image" />
             <div style="
-                color: blue;
+                color: black;
                 width: 150px;
-                font-size:15px">
+                font-size:18px">
                 @book1.Title
             </div>
             <div style="
@@ -44,9 +41,9 @@
         <div>
             <img class="book1" src="@book2.Image" />
             <div style="
-                color: blue;
+                color: black;
                 width: 150px;
-                font-size:15px">
+                font-size:18px">
                 @book2.Title
             </div>
             <div style="
@@ -55,9 +52,10 @@
                 <p>Due on: @book2.Holding</p>
             </div>
             <div class="extend">
-                <form action="/extendPage"> 
+                <a href="/ExtendPage">
                     <button class="link3"> Extend </button>
-                </form>
+                </a>
+                    
             </div>
         </div>
     </div>
@@ -73,9 +71,9 @@
         <div>
             <img class="book1" src="@book3.Image" />
             <div style="
-                color: blue;
+                color: black;
                 width: 150px;
-                font-size:15px">
+                font-size:18px">
                 @book3.Title
             </div>
             <div style="
@@ -91,11 +89,31 @@
         </div>
     </div>
 </div>
+</body>
+
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
+
+     .header-container {
+        text-align: left;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-bottom: 20px;
+    }
+      .header-text {
+        font-size: 225%;
+        font-weight: bold;
+        border: 2px solid black;
+        border-radius: 10px;
+        display: inline-block;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+
     .ebooks {
         display: block
     }
@@ -160,9 +178,9 @@
             new Book() { Author = "Celeste Ng ", Title = "Our Missing Hearts", Category = "Popular" , Status = "Available" , num = 19 , Image = "images/Book19.png", Type = "paper", Location = "Turner Hill", Pickup = "Ready for pickup", Holding = "04/28/23", Description = ""},
     };
 
-    public Book book1 = new Book() { Author = "David Goggins", Title = "Can't Hurt Me", Category = "Popular", Status = "Available", num = 1, Image = "images/Book1.png", Type = "paper", Location = "Foxtowne", Pickup = "Waitlist Pos 4", Holding = new DateTime(2023, 4, 28).ToString("dd MMMM yyyy"), Description = "For David Goggins, childhood was a nightmare -- poverty, prejudice, and physical abuse colored his days and haunted his nights. But through self-discipline, mental toughness, and hard work, Goggins transformed himself from a depressed, overweight young man with no future into a U.S. Armed Forces icon and one of the world's top endurance athletes. The only man in history to complete elite training as a Navy SEAL, Army Ranger, and Air Force Tactical Air Controller, he went on to set records in numerous endurance events, inspiring Outside magazine to name him \"The Fittest (Real) Man in America.\"\n\nIn Can't Hurt Me, he shares his astonishing life story and reveals that most of us tap into only 40% of our capabilities. Goggins calls this The 40% Rule, and his story illuminates a path that anyone can follow to push past pain, demolish fear, and reach their full potential." };
+    public Book book1 = new Book() { Author = "David Goggins", Title = "Can't Hurt Me", Category = "Popular", Status = "Available", num = 1, Image = "images/Book1.png", Type = "paper", Location = "Foxtowne", Pickup = "Waitlist Pos 4", Holding = new DateTime(2023, 4, 14).ToString("dd MMMM yyyy"), Description = "For David Goggins, childhood was a nightmare -- poverty, prejudice, and physical abuse colored his days and haunted his nights. But through self-discipline, mental toughness, and hard work, Goggins transformed himself from a depressed, overweight young man with no future into a U.S. Armed Forces icon and one of the world's top endurance athletes. The only man in history to complete elite training as a Navy SEAL, Army Ranger, and Air Force Tactical Air Controller, he went on to set records in numerous endurance events, inspiring Outside magazine to name him \"The Fittest (Real) Man in America.\"\n\nIn Can't Hurt Me, he shares his astonishing life story and reveals that most of us tap into only 40% of our capabilities. Goggins calls this The 40% Rule, and his story illuminates a path that anyone can follow to push past pain, demolish fear, and reach their full potential." };
     public Book book2 = new Book() { Author = "Nicholas Sparks", Title = "Dreamland", Category = "New Releases", Status = "Available", num = 18, Image = "images/Book18.png", Type = "ebook", Location = "Foxtowne", Pickup = "Waitlist Pos 1", Holding = new DateTime(2023,5,10).ToString("dd MMMM yyyy"), Description = "Colby Mills once felt destined for a musical career, until tragedy grounded his aspirations. Now the head of a small family farm in North Carolina, he spontaneously takes a gig playing at a bar in St. Pete's Beach, Florida, seeking a rare break from his duties at home. \n\nBut when he meets Morgan Lee, his world is turned upside-down, making him wonder if the responsibilities he has shouldered need dictate his life forever. The daughter of affluent Chicago doctors, Morgan has graduated from a prestigious college music program with the ambition to move to Nashville and become a star. Romantically and musically, she and Colby complete each other in a way that neither has ever known.\n\nWhile they are falling headlong in love, Beverly is on a heart-pounding journey of another kind. Fleeing an abusive husband with her six-year-old son, she is trying to piece together a life for them in a small town far off the beaten track. With money running out and danger seemingly around every corner, she makes a desperate decision that will rewrite everything she knows to be true.\n\nIn the course of a single unforgettable week, two young people will navigate the exhilarating heights and heartbreak of first love. Hundreds of miles away, Beverly will put her love for her young son to the test. And fate will draw all three people together in a web of life-altering connections . . . forcing each to wonder whether the dream of a better life can ever survive the weight of the past." };
-    public Book book3 = new Book() { Author = "Celeste Ng ", Title = "Our Missing Hearts", Category = "Popular" , Status = "Available" , num = 19 , Image = "images/Book19.png", Type = "paper", Location = "Turner Hill", Pickup = "Ready for pickup", Holding = new DateTime(2023, 5, 20).ToString("dd MMMM yyyy"), Description = ""};
+    public Book book3 = new Book() { Author = "Celeste Ng ", Title = "Our Missing Hearts", Category = "Popular" , Status = "Available" , num = 19 , Image = "images/Book19.png", Type = "paper", Location = "Turner Hill", Pickup = "Ready for pickup", Holding = new DateTime(2023, 4, 10).ToString("dd MMMM yyyy"), Description = ""};
 
     private Dictionary<string, List<Book>> bookDictionary;
 
